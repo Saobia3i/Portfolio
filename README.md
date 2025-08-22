@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio
 
-![Profile Banner](portfolio/assets/profile.png)
+![Profile Banner](assets/profile.png)
 
 ## 👋 Hello, I'm **Saobia Islam**
 Tech Enthusiast | Front End Developer |
@@ -41,7 +41,7 @@ This repository contains my personal portfolio website built with:
 ---
 
 ## 📬 Connect with Me
-- **LinkedIn:** [linkedin.com/in/your-link](#)
+- **LinkedIn:** [https://www.linkedin.com/in/saobia-islam-1b173b284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app](#)
 - **GitHub:** [github.com/Saobia3i](#)
 - **Email:** islamsaobia@gmail.com 
 
