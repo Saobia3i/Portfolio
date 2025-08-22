@@ -1,16 +1,15 @@
 # 🌐 Personal Portfolio
 
-![Profile Banner](assets/profile.jpg)
+![Profile Banner](portfolio/assets/profile.png)
 
-## 👋 Hello, I'm **Saobia**
-Curious | Driven | Tech Enthusiast  
-Exploring IT & Web Development | Passionate about Tech  
-
+## 👋 Hello, I'm **Saobia Islam**
+Tech Enthusiast | Front End Developer |
+Exploring IT & Web Development 
 ---
 
 ## 🚀 About Me
 - 💻 Aspiring **Full-Stack Developer**
-- 🌱 Currently learning **React, JavaScript, and Web Development**
+- 🌱 Currently learning **Mern,MySQL and Web Development**
 - 🔍 Passionate about **IT, Problem-Solving, and Continuous Learning**
 - 📚 Motto: **"Always Learning, Always Growing"**
 
@@ -19,8 +18,7 @@ Exploring IT & Web Development | Passionate about Tech
 ## 🛠 Skills
 - **Frontend:** HTML, CSS, JavaScript  
 - **Tools:** Git, GitHub  
-- **Currently Exploring:** React, Node.js, and Web Design Best Practices  
-
+- **Currently Exploring:** React, Node.js, Next.js, Laravel, My SQL and Web Designing
 ---
 
 ## 📂 Project Overview
@@ -32,7 +30,7 @@ This repository contains my personal portfolio website built with:
 ---
 
 ## 🔗 Live Demo
-👉 [**View My Portfolio**](https://your-username.github.io/Portfolio/)  
+👉 [**View My Portfolio**](https://Saobia3i.github.io/Portfolio/)  
 
 ---
 
@@ -44,12 +42,12 @@ This repository contains my personal portfolio website built with:
 
 ## 📬 Connect with Me
 - **LinkedIn:** [linkedin.com/in/your-link](#)
-- **GitHub:** [github.com/your-username](#)
-- **Email:** your-email@example.com  
+- **GitHub:** [github.com/Saobia3i](#)
+- **Email:** islamsaobia@gmail.com 
 
 ---
 
 ### 📄 How to Use:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Portfolio.git
+   git clone https://github.com/Saobia3i/Portfolio.git
