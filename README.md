@@ -1,310 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saobia Islam | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-      scroll-behavior: smooth;
-    }
+# 🌐 Personal Portfolio
 
-    body {
-      background-color: #fff;
-      color: #0a0a0a;
-      transition: all 0.3s ease;
-    }
+![Profile Banner](assets/profile.jpg)
 
-    body.dark {
-      background-color: #0a0a0a;
-      color: #fff;
-    }
+## 👋 Hello, I'm **Saobia**
+Curious | Driven | Tech Enthusiast  
+Exploring IT & Web Development | Passionate about Tech  
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+---
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #001f3f;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+## 🚀 About Me
+- 💻 Aspiring **Full-Stack Developer**
+- 🌱 Currently learning **React, JavaScript, and Web Development**
+- 🔍 Passionate about **IT, Problem-Solving, and Continuous Learning**
+- 📚 Motto: **"Always Learning, Always Growing"**
 
-    header h1 {
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
+---
 
-    .dark-mode-toggle {
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      background-color: #fff;
-      color: #001f3f;
-      border: none;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+## 🛠 Skills
+- **Frontend:** HTML, CSS, JavaScript  
+- **Tools:** Git, GitHub  
+- **Currently Exploring:** React, Node.js, and Web Design Best Practices  
 
-    .dark .dark-mode-toggle {
-      background-color: #001f3f;
-      color: #fff;
-      border: 1px solid #fff;
-    }
+---
 
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+## 📂 Project Overview
+This repository contains my personal portfolio website built with:
+- ✅ **HTML5** for structure  
+- ✅ **CSS3** for styling  
+- ✅ **Responsive Design** for all devices  
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #001f3f;
-    }
+---
 
-    body.dark section h2 {
-      color: #1e90ff;
-    }
+## 🔗 Live Demo
+👉 [**View My Portfolio**](https://your-username.github.io/Portfolio/)  
 
-    .intro {
-      text-align: center;
-      padding: 6rem 2rem;
-      background-color: #f1f1f1;
-    }
+---
 
-    body.dark .intro {
-      background-color: #111;
-    }
+## 📸 Screenshots
+### Portfolio Home:
+![Portfolio Screenshot](assets/screenshot.png)
 
-    .intro h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+---
 
-    .intro p {
-      font-size: 1.2rem;
-      color: #555;
-    }
+## 📬 Connect with Me
+- **LinkedIn:** [linkedin.com/in/your-link](#)
+- **GitHub:** [github.com/your-username](#)
+- **Email:** your-email@example.com  
 
-    body.dark .intro p {
-      color: #ccc;
-    }
+---
 
-    .skills, .experience, .projects, .certificates {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .card {
-      flex: 1 1 300px;
-      background-color: #f7f7f7;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-      text-align: center;
-    }
-
-    body.dark .card {
-      background-color: #222;
-      box-shadow: 0px 5px 15px rgba(255,255,255,0.05);
-    }
-
-    .card h3 {
-      margin-bottom: 0.8rem;
-      color: #001f3f;
-    }
-
-    body.dark .card h3 {
-      color: #1e90ff;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #001f3f;
-      color: #fff;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    body.dark .contact a {
-      background-color: #1e90ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #001f3f;
-      color: #fff;
-    }
-
-    /* Profile Picture */
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid #001f3f;
-    }
-
-    /* Certificates Images */
-    #certificates .card img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Responsive */
-    @media(max-width:768px){
-      header {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .skills, .experience, .projects, .certificates {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Saobia Islam</h1>
-    <button class="dark-mode-toggle">Dark Mode</button>
-  </header>
-
-  <!-- Intro Section -->
-  <section class="intro">
-    <img src="assets/profile.png" alt="Saobia Islam" class="profile-pic">
-    <h1>Hello, I'm Saobia Islam</h1>
-    <p>A passionate Computer Engineer always open to learning IT-based technologies and building amazing projects.</p>
-    <p>Skills include WordPress, Google Sites, Microsoft Apps, Adobe Lightroom & Premiere Pro, React, MERN, Flutter, and more.</p>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I have learned programming languages like C, C++, Java, JavaScript, Dart, HTML, CSS, Assembly, and MySQL. I enjoy creating web applications and IT-based solutions. Currently exploring Laravel and enhancing my database skills with MySQL.</p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>Programming Languages</h3>
-        <p>C, C++, Java, JavaScript, Dart, HTML, CSS, Assembly, MySQL</p>
-      </div>
-      <div class="card">
-        <h3>Frameworks & Tools</h3>
-        <p>React.js, Node.js, MERN, Flutter, Git, WordPress, Google Sites, Adobe Lightroom, Adobe Premiere Pro, Microsoft Office</p>
-      </div>
-      <div class="card">
-        <h3>Passion</h3>
-        <p>IT-based work, web development, learning new technologies, creative problem solving.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>MERN Full Stack Website</h3>
-        <p>Mainly worked on frontend using React & Node.js.</p>
-      </div>
-      <div class="card">
-        <h3>Laravel & MySQL Projects</h3>
-        <p>Currently working on backend and database-driven applications.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
-      <div class="card">
-        <h3>IT Officer - Various Clubs</h3>
-        <p>Worked as IT Officer for several clubs managing websites and tech-related tasks.</p>
-      </div>
-      <div class="card">
-        <h3>Assistant Officer - Website Team, AUST Robotics Club</h3>
-        <p>Currently managing and improving club website and tech infrastructure.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certificates Section -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="certificates">
-      <div class="card">
-        <img src="assets/Video.png" alt="Certificate 1">
-        <p>Video Editing Course</p>
-      </div>
-      <div class="card">
-        <img src="assets/ssex.jpeg" alt="Certificate 2">
-        <p>Senior Sub executive oh Web Team at austrc</p>
-      </div>
-      <div class="card">
-        <img src="assets/bestin.jpg" alt="Certificate 2">
-        <p>Best House In-charge</p>
-      </div>
-      <div class="card">
-        <img src="assets/partic.png" alt="Certificate 2">
-        <p>Participation Certificate</p>
-      </div>
-      <!-- Add more certificates by copying the card block -->
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:islamsaobia@gmail.com">islamsaobia@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/">Saobia Islam</a></p>
-    <p>GitHub: <a href="https://github.com/Saobia3i">Saobia3i</a></p>
-    <p>Google Sites: <a href="https://sites.google.com/view/saobiaislamtinni">Saobia Islam</a></p>
-    <!--<a href="#">Download Resume</a>-->
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Saobia Islam. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.dark-mode-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if(document.body.classList.contains('dark')){
-        toggle.textContent = 'Light Mode';
-      } else {
-        toggle.textContent = 'Dark Mode';
-      }
-    });
-  </script>
-
-</body>
-</html>
+### 📄 How to Use:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Portfolio.git
