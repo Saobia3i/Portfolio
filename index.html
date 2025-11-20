@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saobia Islam | Full Stack Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     /* General Reset */
     * {
@@ -50,19 +52,31 @@
 
     .dark-mode-toggle {
       cursor: pointer;
-      padding: 0.5rem 1rem;
-      background-color: #fff;
-      color: #001f3f;
-      border: none;
-      border-radius: 5px;
-      font-weight: 500;
+      padding: 0.5rem;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
       transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
     }
 
-    .dark .dark-mode-toggle {
-      background-color: #001f3f;
-      color: #fff;
-      border: 1px solid #fff;
+    .dark-mode-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .dark-mode-toggle .material-icons {
+      font-size: 24px;
+    }
+
+    body.dark .dark-mode-toggle:hover {
+      background-color: rgba(115, 210, 222, 0.1);
+      border-color: #73d2de;
     }
 
     section {
@@ -81,8 +95,8 @@
     }
 
     body.dark section h2 {
-      color: #6188dc;
-      border-bottom-color: #6188dc;
+      color: #73d2de;
+      border-bottom-color: #73d2de;
     }
 
     .intro {
@@ -152,7 +166,7 @@
     }
 
     body.dark .card h3 {
-      color: #6188dc;
+      color: #73d2de;
     }
 
     .card p {
@@ -192,11 +206,11 @@
     }
 
     body.dark .card a.project-link {
-      background-color: #6188dc;
+      background-color: #218380;
     }
 
     body.dark .card a.project-link:hover {
-      background-color: #6188dc;
+      background-color: #1a6b68;
     }
 
     /* Contact Section Centered */
@@ -223,11 +237,11 @@
     }
 
     body.dark .contact a {
-      background-color: #6188dc;
+      background-color: #218380;
     }
 
     body.dark .contact a:hover {
-      background-color: #6188dc;
+      background-color: #1a6b68;
     }
 
     footer {
@@ -291,7 +305,9 @@
 
   <header>
     <h1>Saobia Islam</h1>
-    <button class="dark-mode-toggle">Dark Mode</button>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <span class="material-icons">dark_mode</span>
+    </button>
   </header>
 
   <!-- Intro Section -->
@@ -303,14 +319,14 @@
   </section>
 
   <!-- About Section -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>I am a dedicated Computer Engineer with a passion for building innovative web applications and IT solutions. Since 2021, I have been actively involved in IT-related work across various non-profit organizations, developing full-stack applications using MERN stack, Next.js, and Laravel. My expertise spans frontend development, backend architecture, database design, and UI/UX design using Figma and AI-powered tools.</p>
-  
-  <p style="margin-top: 1rem;">My journey in IT began with graphic design—creating logos, posters, and visual content—alongside proficiency in Microsoft Office tools and team management. I have hands-on experience with Adobe Creative Suite and continue to expand my skillset daily. Web development is not just my profession—it's my hobby and passion.</p>
-  
-  <p style="margin-top: 1rem;">I am currently pursuing Computer Science and Engineering at Ahsanullah University of Science and Technology, having completed my HSC in 2022 with GPA 5.00 from South Point School and College.</p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a dedicated Computer Engineer with a passion for building innovative web applications and IT solutions. Since 2021, I have been actively involved in IT-related work across various non-profit organizations, developing full-stack applications using MERN stack, Next.js, and Laravel. My expertise spans frontend development, backend architecture, database design, and UI/UX design using Figma and AI-powered tools.</p>
+    
+    <p style="margin-top: 1rem;">My journey in IT began with graphic design—creating logos, posters, and visual content—alongside proficiency in Microsoft Office tools and team management. I have hands-on experience with Adobe Creative Suite and continue to expand my skillset daily. Web development is not just my profession—it's my hobby and passion.</p>
+    
+    <p style="margin-top: 1rem;">I am currently pursuing Computer Science and Engineering at Ahsanullah University of Science and Technology, having completed my HSC in 2022 with GPA 5.00 from South Point School and College, Dhaka Board.</p>
+  </section>
 
   <!-- Skills Section -->
   <section id="skills">
@@ -443,7 +459,7 @@
   <section id="contact" class="contact">
     <h2>Get In Touch</h2>
     <p style="font-size: 1.1rem;">I'm always open to discussing new projects, opportunities, and collaborations.</p>
-    <p><strong>Email:</strong> <a href="mailto:islamsaobia@gmail.com" style="background: none; padding: 0; color: #6188dc;">islamsaobia@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:islamsaobia@gmail.com" style="background: none; padding: 0; color: #73d2de;">islamsaobia@gmail.com</a></p>
     <div style="margin-top: 2rem;">
       <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/" target="_blank">LinkedIn Profile</a>
       <a href="https://github.com/Saobia3i" target="_blank">GitHub Portfolio</a>
@@ -458,13 +474,11 @@
 
   <script>
     const toggle = document.querySelector('.dark-mode-toggle');
+    const icon = toggle.querySelector('.material-icons');
+    
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
-      if(document.body.classList.contains('dark')){
-        toggle.textContent = 'Light Mode';
-      } else {
-        toggle.textContent = 'Dark Mode';
-      }
+      icon.textContent = document.body.classList.contains('dark') ? 'light_mode' : 'dark_mode';
     });
   </script>
 
