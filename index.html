@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saobia Islam | Portfolio</title>
+  <title>Saobia Islam | Full Stack Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     /* General Reset */
@@ -73,36 +73,47 @@
 
     section h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: #001f3f;
+      border-bottom: 3px solid #001f3f;
+      display: inline-block;
+      padding-bottom: 0.5rem;
     }
 
     body.dark section h2 {
-      color: #1e90ff;
+      color: #6188dc;
+      border-bottom-color: #6188dc;
     }
 
     .intro {
       text-align: center;
       padding: 6rem 2rem;
-      background-color: #f1f1f1;
+      background: linear-gradient(135deg, #001f3f 0%, #004080 100%);
+      color: #fff;
     }
 
     body.dark .intro {
-      background-color: #111;
+      background: linear-gradient(135deg, #000 0%, #001f3f 100%);
     }
 
     .intro h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     .intro p {
       font-size: 1.2rem;
-      color: #555;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 1rem auto;
     }
 
-    body.dark .intro p {
-      color: #ccc;
+    .intro .tagline {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+      color: #ffdd57;
     }
 
     .skills, .experience, .projects, .certificates {
@@ -117,8 +128,12 @@
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
     }
 
     body.dark .card {
@@ -126,18 +141,76 @@
       box-shadow: 0px 5px 15px rgba(255,255,255,0.05);
     }
 
+    body.dark .card:hover {
+      box-shadow: 0px 10px 25px rgba(255,255,255,0.1);
+    }
+
     .card h3 {
       margin-bottom: 0.8rem;
       color: #001f3f;
+      font-size: 1.3rem;
     }
 
     body.dark .card h3 {
-      color: #1e90ff;
+      color: #6188dc;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    body.dark .card p {
+      color: #ccc;
+    }
+
+    .card .tech-stack {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    body.dark .card .tech-stack {
+      color: #aaa;
+    }
+
+    .card a.project-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #001f3f;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+      margin-right: 0.5rem;
+    }
+
+    .card a.project-link:hover {
+      background-color: #003366;
+    }
+
+    body.dark .card a.project-link {
+      background-color: #6188dc;
+    }
+
+    body.dark .card a.project-link:hover {
+      background-color: #6188dc;
+    }
+
+    /* Contact Section Centered */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 1rem;
     }
 
     .contact a {
       display: inline-block;
-      margin-top: 1rem;
+      margin: 0.5rem;
       padding: 0.8rem 1.5rem;
       background-color: #001f3f;
       color: #fff;
@@ -145,8 +218,16 @@
       transition: 0.3s;
     }
 
+    .contact a:hover {
+      background-color: #003366;
+    }
+
     body.dark .contact a {
-      background-color: #1e90ff;
+      background-color: #6188dc;
+    }
+
+    body.dark .contact a:hover {
+      background-color: #6188dc;
     }
 
     footer {
@@ -163,7 +244,8 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
-      border: 3px solid #001f3f;
+      border: 4px solid #ffdd57;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
     }
 
     /* Certificates Images */
@@ -173,11 +255,30 @@
       margin-bottom: 0.5rem;
     }
 
+    /* About Section Styling */
+    #about p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    body.dark #about p {
+      color: #ddd;
+    }
+
     /* Responsive */
     @media(max-width:768px){
       header {
         flex-direction: column;
         gap: 1rem;
+      }
+
+      .intro h1 {
+        font-size: 2rem;
+      }
+
+      .intro p {
+        font-size: 1rem;
       }
 
       .skills, .experience, .projects, .certificates {
@@ -197,101 +298,162 @@
   <section class="intro">
     <img src="assets/profile.png" alt="Saobia Islam" class="profile-pic">
     <h1>Hello, I'm Saobia Islam</h1>
-    <p>A passionate Computer Engineer always open to learning IT-based technologies and building amazing projects.</p>
-    <p>Skills include WordPress, Google Sites, Microsoft Apps, Adobe Lightroom & Premiere Pro, React, MERN, Flutter, and more.</p>
+    <p>Full Stack Developer | UI/UX Designer | Graphics Designer</p>
+    <p class="tagline">Building innovative web solutions with passion and dedication</p>
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I have learned programming languages like C, C++, Java, JavaScript, Dart, HTML, CSS, Assembly, and MySQL. I enjoy creating web applications and IT-based solutions. Currently exploring Laravel and enhancing my database skills with MySQL.</p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a dedicated Computer Engineer with a passion for building innovative web applications and IT solutions. Since 2021, I have been actively involved in IT-related work across various non-profit organizations, developing full-stack applications using MERN stack, Next.js, and Laravel. My expertise spans frontend development, backend architecture, database design, and UI/UX design using Figma and AI-powered tools.</p>
+  
+  <p style="margin-top: 1rem;">My journey in IT began with graphic design—creating logos, posters, and visual content—alongside proficiency in Microsoft Office tools and team management. I have hands-on experience with Adobe Creative Suite and continue to expand my skillset daily. Web development is not just my profession—it's my hobby and passion.</p>
+  
+  <p style="margin-top: 1rem;">I am currently pursuing Computer Science and Engineering at Ahsanullah University of Science and Technology, having completed my HSC in 2022 with GPA 5.00 from South Point School and College.</p>
+</section>
 
   <!-- Skills Section -->
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="skills">
       <div class="card">
         <h3>Programming Languages</h3>
-        <p>C, C++, Java, JavaScript, Dart, HTML, CSS, Assembly, MySQL</p>
+        <p>C, C++, Java, JavaScript, Dart, HTML, CSS, Assembly, SQL</p>
       </div>
       <div class="card">
-        <h3>Frameworks & Tools</h3>
-        <p>React.js, Node.js, MERN, Flutter, Git, WordPress, Google Sites, Adobe Lightroom, Adobe Premiere Pro, Microsoft Office</p>
+        <h3>Frameworks & Libraries</h3>
+        <p>React.js, Node.js, Express.js, Next.js, Laravel, Flutter, Tailwind CSS</p>
       </div>
       <div class="card">
-        <h3>Passion</h3>
-        <p>IT-based work, web development, learning new technologies, creative problem solving.</p>
+        <h3>Databases</h3>
+        <p>MySQL, MongoDB</p>
+      </div>
+      <div class="card">
+        <h3>Design & Multimedia</h3>
+        <p>Figma, UI/UX Design, Adobe Lightroom, Adobe Premiere Pro, Logo Design, Poster Design</p>
+      </div>
+      <div class="card">
+        <h3>Tools & Platforms</h3>
+        <p>Git, GitHub, WordPress, Google Sites, Microsoft Word, Microsoft Excel, Vercel</p>
+      </div>
+      <div class="card">
+        <h3>Core Competencies</h3>
+        <p>Full Stack Development, Frontend Specialization, Database Architecture, Responsive Design, Team Management, Graphic Design</p>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section (Before Experience) -->
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
     <div class="projects">
+
       <div class="card">
-        <h3>MERN Full Stack Website</h3>
-        <p>Mainly worked on frontend using React & Node.js.</p>
+        <h3>Quote-Verse</h3>
+        <p>A full-stack web application for browsing and discovering quotes across multiple categories. Designed and developed independently with a focus on clean UI and seamless user experience.</p>
+        <p class="tech-stack">Tech Stack: MERN (MongoDB, Express.js, React.js, Node.js)</p>
+        <a href="https://github.com/Saobia3i/Quote-Verse" target="_blank" class="project-link">View on GitHub</a>
       </div>
+
       <div class="card">
-        <h3>Laravel & MySQL Projects</h3>
-        <p>Currently working on backend and database-driven applications.</p>
+        <h3>iCanteen - Smart Canteen Management System</h3>
+        <p>A comprehensive canteen management platform with secure database architecture. Built both frontend and backend from scratch, enabling efficient order processing and inventory management.</p>
+        <p class="tech-stack">Tech Stack: React.js, Laravel, MySQL</p>
+        <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" class="project-link">View on GitHub</a>
       </div>
+
+      <div class="card">
+        <h3>TSA - Cybersecurity EdTech Platform</h3>
+        <p>An educational technology platform focused on cybersecurity training and awareness. Developed with modern web technologies to deliver interactive learning experiences.</p>
+        <p class="tech-stack">Tech Stack: Next.js</p>
+        <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" class="project-link">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Robomania 2.0 - AUST Robotics Club Event</h3>
+        <p>Event website for AUST Robotics Club's flagship robotics competition. Collaborated with the web development team to create an engaging platform for participants and visitors.</p>
+        <p class="tech-stack">Tech Stack: MERN (MongoDB, Express.js, React.js, Node.js)</p>
+        <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" class="project-link">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Frontend Development Assignment</h3>
+        <p>A responsive frontend project developed as part of CSE-3100 coursework, demonstrating proficiency in modern web design principles and user interface implementation.</p>
+        <p class="tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
+        <a href="https://github.com/Saobia3i/cse-3100" target="_blank" class="project-link">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Green Gadgets - E-commerce Platform</h3>
+        <p>Collaborative group project for an eco-friendly gadget marketplace. Contributed to multiple pages and features, with individual contributions tracked in dedicated branches.</p>
+        <p class="tech-stack">Tech Stack: MERN Stack</p>
+        <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" class="project-link">View on GitHub</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- Experience Section -->
+  <!-- Experience Section (After Projects) -->
   <section id="experience">
     <h2>Experience</h2>
     <div class="experience">
+      
       <div class="card">
-        <h3>IT Officer - Various Clubs</h3>
-        <p>Worked as IT Officer for several clubs managing websites and tech-related tasks.</p>
+        <h3>Assistant Director - Web Development Team</h3>
+        <p><strong>AUST Robotics Club</strong> | Current</p>
+        <p>Leading the web development team under my supervision, functioning as a software company within the club. Managing full-stack website development projects including the official club website and event platforms. Overseeing team coordination, project planning, and technical implementation.</p>
+        <p style="margin-top: 1rem;"><strong>Key Projects:</strong></p>
+        <a href="https://www.austrc.com/" target="_blank" class="project-link">AUST RC Official Website</a>
+        <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-link">AUST Rover Challenge 2.0</a>
       </div>
+
       <div class="card">
-        <h3>Assistant Officer - Website Team, AUST Robotics Club</h3>
-        <p>Currently managing and improving club website and tech infrastructure.</p>
+        <h3>IT Specialist</h3>
+        <p><strong>Various Non-Profit Organizations</strong> | 2021 - Present</p>
+        <p>Providing IT support, graphic design, and digital solutions for multiple clubs and organizations. Expertise includes logo design, poster creation, Microsoft Office tools (Word, Excel), team management, and remote collaboration on various IT projects.</p>
       </div>
+
     </div>
   </section>
 
   <!-- Certificates Section -->
   <section id="certificates">
-    <h2>Certificates</h2>
+    <h2>Certificates & Achievements</h2>
     <div class="certificates">
       <div class="card">
-        <img src="assets/Video.png" alt="Certificate 1">
-        <p>Video Editing Course</p>
+        <img src="assets/ssex.jpeg" alt="Senior Sub Executive Certificate">
+        <p><strong>Senior Sub Executive</strong> - Web Team, AUST Robotics Club</p>
       </div>
       <div class="card">
-        <img src="assets/ssex.jpeg" alt="Certificate 2">
-        <p>Senior Sub executive oh Web Team at austrc</p>
+        <img src="assets/Video.png" alt="Video Editing Certificate">
+        <p><strong>Video Editing Course</strong> - Adobe Premiere Pro Certification</p>
       </div>
       <div class="card">
-        <img src="assets/bestin.jpg" alt="Certificate 2">
-        <p>Best House In-charge</p>
+        <img src="assets/bestin.jpg" alt="Best House In-charge">
+        <p><strong>Best House In-charge</strong> - Leadership Recognition</p>
       </div>
       <div class="card">
-        <img src="assets/partic.png" alt="Certificate 2">
-        <p>Participation Certificate</p>
+        <img src="assets/partic.png" alt="Participation Certificate">
+        <p><strong>Participation Certificate</strong> - Technical Event</p>
       </div>
-      <!-- Add more certificates by copying the card block -->
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:islamsaobia@gmail.com">islamsaobia@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/">Saobia Islam</a></p>
-    <p>GitHub: <a href="https://github.com/Saobia3i">Saobia3i</a></p>
-    <p>Google Sites: <a href="https://sites.google.com/view/saobiaislamtinni">Saobia Islam</a></p>
-    <!--<a href="#">Download Resume</a>-->
+  <!-- Contact Section (Centered) -->
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <p style="font-size: 1.1rem;">I'm always open to discussing new projects, opportunities, and collaborations.</p>
+    <p><strong>Email:</strong> <a href="mailto:islamsaobia@gmail.com" style="background: none; padding: 0; color: #6188dc;">islamsaobia@gmail.com</a></p>
+    <div style="margin-top: 2rem;">
+      <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/" target="_blank">LinkedIn Profile</a>
+      <a href="https://github.com/Saobia3i" target="_blank">GitHub Portfolio</a>
+      <a href="https://sites.google.com/view/saobiaislamtinni" target="_blank">Google Sites</a>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Saobia Islam. All rights reserved.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Built with passion and dedication to excellence</p>
   </footer>
 
   <script>
