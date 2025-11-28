@@ -3,430 +3,976 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saobia Islam | Full Stack Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Material Icons -->
+  <title>Saobia Islam | Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
-    /* General Reset */
+    /* ===== RESET ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #fff;
-      color: #0a0a0a;
-      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     body.dark {
-      background-color: #0a0a0a;
-      color: #fff;
+      background: #0a0a0a;
+      color: #e8e8e8;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 31, 63, 0.9);
+      border-bottom: 1px solid rgba(115, 210, 222, 0.2);
+      padding: 0.8rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background-color: #001f3f;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 1.8rem;
-      letter-spacing: 1px;
+    nav .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #73d2de;
     }
 
-    .dark-mode-toggle {
-      cursor: pointer;
-      padding: 0.5rem;
-      background-color: transparent;
-      color: #fff;
-      border: 2px solid rgba(255, 255, 255, 0.3);
+    .theme-toggle {
+      background: transparent;
+      border: 2px solid rgba(115, 210, 222, 0.5);
       border-radius: 50%;
-      transition: 0.3s;
+      width: 38px;
+      height: 38px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-    }
-
-    .dark-mode-toggle:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .dark-mode-toggle .material-icons {
-      font-size: 24px;
-    }
-
-    body.dark .dark-mode-toggle:hover {
-      background-color: rgba(115, 210, 222, 0.1);
-      border-color: #73d2de;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #001f3f;
-      border-bottom: 3px solid #001f3f;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
-    body.dark section h2 {
+      cursor: pointer;
+      transition: all 0.3s ease;
       color: #73d2de;
-      border-bottom-color: #73d2de;
     }
 
-    .intro {
+    .theme-toggle:hover {
+      background: rgba(115, 210, 222, 0.1);
+      border-color: #73d2de;
+      transform: rotate(180deg);
+    }
+
+    /* ===== HERO SECTION - ALWAYS NAVY BLUE ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 6rem 2rem;
-      background: linear-gradient(135deg, #001f3f 0%, #004080 100%);
-      color: #fff;
+      padding: 6rem 2rem 3rem;
+      position: relative;
+      /* ALWAYS navy blue gradient - no change between modes */
+      background: linear-gradient(135deg, #020f1c 0%, #021529 25%, #04192e 50%, #051c33 75%, #06294c 100%) !important;
+      overflow: hidden;
     }
 
-    body.dark .intro {
-      background: linear-gradient(135deg, #000 0%, #001f3f 100%);
+    /* Canvas for mouse effect */
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
     }
 
-    .intro h1 {
+    /* Animated particles background */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(115, 210, 222, 0.3);
+      pointer-events: none;
+      animation: float-particle 15s infinite ease-in-out;
+    }
+
+    @keyframes float-particle {
+      0%, 100% { 
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+      }
+      25% { 
+        transform: translate(50px, -100px) scale(1.2);
+        opacity: 0.5;
+      }
+      50% { 
+        transform: translate(-30px, -50px) scale(0.8);
+        opacity: 0.4;
+      }
+      75% { 
+        transform: translate(80px, 50px) scale(1.1);
+        opacity: 0.6;
+      }
+    }
+
+    /* Grid pattern overlay */
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(115, 210, 222, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(115, 210, 222, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    .profile-container {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 1.5rem;
+      animation: fadeInScale 1s ease;
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      align-content: center;
+      object-fit: cover;
+      border: 3px solid #73d2de;
+      box-shadow: 0 0 30px rgba(115, 210, 222, 0.4), 0 0 60px rgba(115, 210, 222, 0.2);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 40px rgba(115, 210, 222, 0.6), 0 0 80px rgba(115, 210, 222, 0.3);
+    }
+
+    /* Hero text - ALWAYS white/cyan */
+    .hero h1 {
       font-size: 2.8rem;
-      margin-bottom: 1rem;
       font-weight: 700;
+      color: #ffffff !important;
+      margin-bottom: 0.8rem;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease 0.2s backwards;
+      letter-spacing: 0.5px;
     }
 
-    .intro p {
+    .hero .name-highlight {
+      color: #73d2de !important;
+    }
+
+    .hero .subtitle {
       font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 1rem auto;
-    }
-
-    .intro .tagline {
-      font-size: 1.4rem;
+      color: #73d2de !important;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease 0.4s backwards;
       font-weight: 500;
-      margin-top: 1.5rem;
-      color: #ffdd57;
     }
 
-    .skills, .experience, .projects, .certificates {
+    .hero .bio {
+      max-width: 650px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9) !important;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease 0.6s backwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease 0.8s backwards;
+    }
+
+    .btn {
+      padding: 0.75rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: #73d2de;
+      color: #001f3f;
+      box-shadow: 0 4px 15px rgba(115, 210, 222, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #5fc4d1;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(115, 210, 222, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #001f3f;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    body.dark .section-title {
+      color: #73d2de;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #001f3f 0%, #73d2de 100%);
+      border-radius: 2px;
+    }
+
+    /* Light mode sections background */
+    body:not(.dark) section:not(.hero) {
+      background: #fff;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* ===== ABOUT ===== */
+    .about-list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-list li {
+      padding: 0.7rem 1rem;
+      background: rgba(0, 31, 63, 0.05);
+      border-radius: 8px;
+      border-left: 3px solid #001f3f;
+      transition: all 0.3s ease;
+      font-size: 0.98rem;
+    }
+
+    body.dark .about-list li {
+      background: rgba(115, 210, 222, 0.08);
+      border-left-color: #73d2de;
+      color: #e8e8e8;
+    }
+
+    .about-list li:hover {
+      background: rgba(0, 31, 63, 0.1);
+      transform: translateX(8px);
+    }
+
+    body.dark .about-list li:hover {
+      background: rgba(115, 210, 222, 0.15);
+    }
+
+    /* ===== TECH STACK ===== */
+    .tech-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 0.7rem;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .card {
-      flex: 1 1 300px;
-      background-color: #f7f7f7;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
-    }
-
-    body.dark .card {
-      background-color: #222;
-      box-shadow: 0px 5px 15px rgba(255,255,255,0.05);
-    }
-
-    body.dark .card:hover {
-      box-shadow: 0px 10px 25px rgba(255,255,255,0.1);
-    }
-
-    .card h3 {
-      margin-bottom: 0.8rem;
+    .tech-item {
+      background: rgba(0, 31, 63, 0.08);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 31, 63, 0.15);
       color: #001f3f;
-      font-size: 1.3rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
     }
 
-    body.dark .card h3 {
+    body.dark .tech-item {
+      background: rgba(115, 210, 222, 0.1);
+      border-color: rgba(115, 210, 222, 0.3);
       color: #73d2de;
     }
 
-    .card p {
-      line-height: 1.6;
-      color: #555;
+    .tech-item:hover {
+      background: #001f3f;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 31, 63, 0.2);
     }
 
-    body.dark .card p {
+    body.dark .tech-item:hover {
+      background: #73d2de;
+      color: #001f3f;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(0, 31, 63, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    body.dark .project-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(115, 210, 222, 0.2);
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #001f3f 0%, #73d2de 100%);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0, 31, 63, 0.15);
+    }
+
+    body.dark .project-card:hover {
+      box-shadow: 0 8px 25px rgba(115, 210, 222, 0.2);
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      color: #001f3f;
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+
+    body.dark .project-card h3 {
+      color: #73d2de;
+    }
+
+    .project-card p {
+      color: #555;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    body.dark .project-card p {
       color: #ccc;
     }
 
-    .card .tech-stack {
-      margin-top: 0.8rem;
-      font-size: 0.9rem;
-      color: #666;
-      font-style: italic;
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
     }
 
-    body.dark .card .tech-stack {
+    .tech-tag {
+      background: rgba(0, 31, 63, 0.08);
+      color: #001f3f;
+      padding: 0.25rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(0, 31, 63, 0.15);
+    }
+
+    body.dark .tech-tag {
+      background: rgba(115, 210, 222, 0.12);
+      color: #73d2de;
+      border-color: rgba(115, 210, 222, 0.25);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .project-btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+    }
+
+    .btn-live {
+      background: #001f3f;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 31, 63, 0.2);
+    }
+
+    .btn-live:hover {
+      background: #003366;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 31, 63, 0.3);
+    }
+
+    .btn-github {
+      background: transparent;
+      color: #001f3f;
+      border: 1.5px solid #001f3f;
+    }
+
+    body.dark .btn-github {
+      color: #73d2de;
+      border-color: #73d2de;
+    }
+
+    .btn-github:hover {
+      background: #001f3f;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    body.dark .btn-github:hover {
+      background: #73d2de;
+      color: #001f3f;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .experience-grid {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .experience-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 4px solid #001f3f;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    body.dark .experience-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-left-color: #73d2de;
+    }
+
+    .experience-card:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(0, 31, 63, 0.12);
+    }
+
+    .experience-card h3 {
+      color: #001f3f;
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+    }
+
+    body.dark .experience-card h3 {
+      color: #73d2de;
+    }
+
+    .experience-card .company {
+      color: #666;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    body.dark .experience-card .company {
       color: #aaa;
     }
 
-    .card a.project-link {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #001f3f;
-      color: #fff;
-      border-radius: 5px;
+    .experience-card p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.92rem;
+    }
+
+    body.dark .experience-card p {
+      color: #ccc;
+    }
+
+    /* ===== CERTIFICATES ===== */
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .certificate-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 31, 63, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    body.dark .certificate-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(115, 210, 222, 0.2);
+    }
+
+    .certificate-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 31, 63, 0.15);
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid #001f3f;
+    }
+
+    body.dark .certificate-card img {
+      border-bottom-color: #73d2de;
+    }
+
+    .certificate-card .cert-content {
+      padding: 1rem;
+    }
+
+    .certificate-card p {
+      color: #333;
       font-size: 0.9rem;
-      transition: 0.3s;
-      margin-right: 0.5rem;
+      font-weight: 500;
     }
 
-    .card a.project-link:hover {
-      background-color: #003366;
+    body.dark .certificate-card p {
+      color: #e8e8e8;
     }
 
-    body.dark .card a.project-link {
-      background-color: #218380;
-    }
-
-    body.dark .card a.project-link:hover {
-      background-color: #1a6b68;
-    }
-
-    /* Contact Section Centered */
-    .contact {
+    /* ===== WAKATIME ===== */
+    .wakatime-section {
       text-align: center;
+      background: rgba(0, 31, 63, 0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border: 1px solid rgba(0, 31, 63, 0.1);
     }
 
-    .contact p {
+    body.dark .wakatime-section {
+      background: rgba(115, 210, 222, 0.05);
+      border-color: rgba(115, 210, 222, 0.15);
+    }
+
+    .wakatime-section h3 {
+      color: #001f3f;
       margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
 
-    .contact a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #001f3f;
+    body.dark .wakatime-section h3 {
+      color: #73d2de;
+    }
+
+    .wakatime-section a {
+      color: #001f3f;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    body.dark .wakatime-section a {
+      color: #73d2de;
+    }
+
+    .wakatime-section a:hover {
+      color: #73d2de;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .contact-link {
+      width: 50px;
+      height: 50px;
+      background: #001f3f;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
       color: #fff;
-      border-radius: 5px;
-      transition: 0.3s;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(0, 31, 63, 0.2);
     }
 
-    .contact a:hover {
-      background-color: #003366;
+    body.dark .contact-link {
+      background: #73d2de;
+      color: #001f3f;
     }
 
-    body.dark .contact a {
-      background-color: #218380;
+    .contact-link:hover {
+      background: #73d2de;
+      color: #001f3f;
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 6px 15px rgba(115, 210, 222, 0.4);
     }
 
-    body.dark .contact a:hover {
-      background-color: #1a6b68;
+    body.dark .contact-link:hover {
+      background: #001f3f;
+      color: #73d2de;
     }
 
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #001f3f;
-      color: #fff;
+      background: #001f3f;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 3rem;
     }
 
-    /* Profile Picture */
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 4px solid #ffdd57;
-      box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    footer p {
+      font-size: 0.9rem;
     }
 
-    /* Certificates Images */
-    #certificates .card img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-    }
-
-    /* About Section Styling */
-    #about p {
-      line-height: 1.8;
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    body.dark #about p {
-      color: #ddd;
-    }
-
-    /* Responsive */
-    @media(max-width:768px){
-      header {
-        flex-direction: column;
-        gap: 1rem;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      section {
+        padding: 2.5rem 1.5rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
       }
 
-      .intro h1 {
-        font-size: 2rem;
-      }
-
-      .intro p {
-        font-size: 1rem;
-      }
-
-      .skills, .experience, .projects, .certificates {
-        flex-direction: column;
+      nav {
+        padding: 0.7rem 1.5rem;
       }
     }
   </style>
 </head>
-<body>
+<body class="dark">
 
-  <header>
-    <h1>Saobia Islam</h1>
-    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
-      <span class="material-icons">dark_mode</span>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Saobia Islam</div>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <span class="material-icons">light_mode</span>
     </button>
-  </header>
+  </nav>
 
-  <!-- Intro Section -->
-  <section class="intro">
-    <img src="assets/profile.png" alt="Saobia Islam" class="profile-pic">
-    <h1>Hello, I'm Saobia Islam</h1>
-    <p>Full Stack Developer | UI/UX Designer | Graphics Designer</p>
-    <p class="tagline">Building innovative web solutions with passion and dedication</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="particles" id="particles-container"></div>
+
+    <div class="profile-container">
+      <img src="assets/profile.png" alt="Saobia Islam" class="profile-img">
+    </div>
+    <h1>Hi there, I'm <span class="name-highlight">Saobia Islam</span></h1>
+    <p class="subtitle">Full Stack Developer | UI/UX Designer | Graphics Designer</p>
+    <p class="bio">
+      Welcome to my portfolio — explore the products I'm crafting, the stacks I'm learning, and the experiments that push me forward. Specialized in creating beautiful, responsive frontends.
+    </p>
+    <div class="cta-buttons">
+      <a href="#projects" class="btn btn-primary">
+        <span class="material-icons">code</span>
+        View Projects
+      </a>
+      <a href="#contact" class="btn btn-secondary">
+        <span class="material-icons">email</span>
+        Get in Touch
+      </a>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>I am a dedicated Computer Engineer with a passion for building innovative web applications and IT solutions. Since 2021, I have been actively involved in IT-related work across various non-profit organizations, developing full-stack applications using MERN stack, Next.js, and Laravel. My expertise spans frontend development, backend architecture, database design, and UI/UX design using Figma and AI-powered tools.</p>
-    
-    <p style="margin-top: 1rem;">My journey in IT began with graphic design—creating logos, posters, and visual content—alongside proficiency in Microsoft Office tools and team management. I have hands-on experience with Adobe Creative Suite and continue to expand my skillset daily. Web development is not just my profession—it's my hobby and passion.</p>
-    
-    <p style="margin-top: 1rem;">I am currently pursuing Computer Science and Engineering at Ahsanullah University of Science and Technology, having completed my HSC in 2022 with GPA 5.00 from South Point School and College, Dhaka Board.</p>
+    <h2 class="section-title">About Me</h2>
+    <ul class="about-list">
+      <li>CSE student at <strong>AUST (Ahsanullah University of Science and Technology)</strong></li>
+      <li>Building web  with modern <strong>MERN</strong> & <strong>Next.js</strong></li>
+      <li>Currently focusing on <strong>Next.js</strong>, <strong>AI Automation</strong> & <strong>Cyber Security</strong></li>
+      <li>Open to collaborating on <strong>e‑commerce</strong>, <strong>edtech</strong>, and other modern web projects</li>
+
+    </ul>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>Programming Languages</h3>
-        <p>C, C++, Java, JavaScript, Dart, HTML, CSS, Assembly, SQL</p>
-      </div>
-      <div class="card">
-        <h3>Frameworks & Libraries</h3>
-        <p>React.js, Node.js, Express.js, Next.js, Laravel, Flutter, Tailwind CSS</p>
-      </div>
-      <div class="card">
-        <h3>Databases</h3>
-        <p>MySQL, MongoDB</p>
-      </div>
-      <div class="card">
-        <h3>Design & Multimedia</h3>
-        <p>Figma, UI/UX Design, Adobe Lightroom, Adobe Premiere Pro, Logo Design, Poster Design</p>
-      </div>
-      <div class="card">
-        <h3>Tools & Platforms</h3>
-        <p>Git, GitHub, WordPress, Google Sites, Microsoft Word, Microsoft Excel, Vercel</p>
-      </div>
-      <div class="card">
-        <h3>Core Competencies</h3>
-        <p>Full Stack Development, Frontend Specialization, Database Architecture, Responsive Design, Team Management, Graphic Design</p>
-      </div>
+  <!-- Tech Stack Section -->
+  <section id="tech">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="tech-grid">
+      <span class="tech-item">React.js</span>
+      <span class="tech-item">Next.js</span>
+      <span class="tech-item">TypeScript</span>
+      <span class="tech-item">JavaScript</span>
+      <span class="tech-item">Tailwind CSS</span>
+      <span class="tech-item">MUI</span>
+      <span class="tech-item">Ant Design</span>
+      <span class="tech-item">Shadcn</span>
+      <span class="tech-item">Aceternity UI</span>
+      <span class="tech-item">Framer Motion</span>
+      <span class="tech-item">Node.js</span>
+      <span class="tech-item">Express.js</span>
+      <span class="tech-item">Laravel</span>
+      <span class="tech-item">Flutter</span>
+      <span class="tech-item">MySQL</span>
+      <span class="tech-item">MongoDB</span>
+      <span class="tech-item">Firebase</span>
+      <span class="tech-item">Supabase</span>
+      <span class="tech-item">Git & GitHub</span>
+      <span class="tech-item">Vercel</span>
+      <span class="tech-item">Railway</span>
+      <span class="tech-item">Figma</span>
     </div>
   </section>
 
-  <!-- Projects Section (Before Experience) -->
+  <!-- Projects Section -->
   <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
 
-      <div class="card">
-        <h3>Quote-Verse</h3>
-        <p>A full-stack web application for browsing and discovering quotes across multiple categories. Designed and developed independently with a focus on clean UI and seamless user experience.</p>
-        <p class="tech-stack">Tech Stack: MERN (MongoDB, Express.js, React.js, Node.js)</p>
-        <a href="https://github.com/Saobia3i/Quote-Verse" target="_blank" class="project-link">View on GitHub</a>
+      <div class="project-card">
+        <h3>Tensor Security Academy (TSA)</h3>
+        <p>A modern cybersecurity & AI-focused edtech landing page with rich animations and responsive design.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Framer Motion</span>
+          <span class="tech-tag">MUI</span>
+        </div>
+        <div class="project-links">
+          <a href="https://tsa-edtech-company.vercel.app/" target="_blank" class="project-btn btn-live">
+            <span class="material-icons" style="font-size: 18px;">visibility</span>
+            View Live
+          </a>
+          <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px;">code</span>
+            GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>iCanteen - Smart Canteen Management System</h3>
-        <p>A comprehensive canteen management platform with secure database architecture. Built both frontend and backend from scratch, enabling efficient order processing and inventory management.</p>
-        <p class="tech-stack">Tech Stack: React.js, Laravel, MySQL</p>
-        <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" class="project-link">View on GitHub</a>
+      <div class="project-card">
+        <h3>QuoteVerse – Quote Generator</h3>
+        <p>A minimal, responsive React app that fetches and displays random quotes to keep you inspired.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Framer Motion</span>
+        </div>
+        <div class="project-links">
+          <a href="https://quote-verse-psi.vercel.app/" target="_blank" class="project-btn btn-live">
+            <span class="material-icons" style="font-size: 18px;">visibility</span>
+            View Live
+          </a>
+          <a href="https://github.com/Saobia3i/Quote-Verse" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px;">code</span>
+            GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>TSA - Cybersecurity EdTech Platform</h3>
-        <p>An educational technology platform focused on cybersecurity training and awareness. Developed with modern web technologies to deliver interactive learning experiences.</p>
-        <p class="tech-stack">Tech Stack: Next.js</p>
-        <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" class="project-link">View on GitHub</a>
+      <div class="project-card">
+        <h3>iCanteen – Canteen Management</h3>
+        <p>Full‑stack smart canteen system streamlining ordering, menu management, and staff operations.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Laravel</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">Ant Design</span>
+        </div>
+        <div class="project-links">
+          <a href="https://i-canteen.vercel.app/" target="_blank" class="project-btn btn-live">
+            <span class="material-icons" style="font-size: 18px;">visibility</span>
+            View Live
+          </a>
+          <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px;">code</span>
+            GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Robomania 2.0 - AUST Robotics Club Event</h3>
-        <p>Event website for AUST Robotics Club's flagship robotics competition. Collaborated with the web development team to create an engaging platform for participants and visitors.</p>
-        <p class="tech-stack">Tech Stack: MERN (MongoDB, Express.js, React.js, Node.js)</p>
-        <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" class="project-link">View on GitHub</a>
+      <div class="project-card">
+        <h3>Robomania 2.0</h3>
+        <p>Event website for AUST Robotics Club's flagship robotics competition with team collaboration.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">MERN Stack</span>
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Node.js</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px;">code</span>
+            GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="card">
+      <div class="project-card">
         <h3>Frontend Development Assignment</h3>
-        <p>A responsive frontend project developed as part of CSE-3100 coursework, demonstrating proficiency in modern web design principles and user interface implementation.</p>
-        <p class="tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
-        <a href="https://github.com/Saobia3i/cse-3100" target="_blank" class="project-link">View on GitHub</a>
+        <p>Responsive frontend project demonstrating modern web design principles (CSE-3100).</p>
+        <div class="tech-tags">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Saobia3i/cse-3100" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px;">code</span>
+            GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Green Gadgets - E-commerce Platform</h3>
-        <p>Collaborative group project for an eco-friendly gadget marketplace. Contributed to multiple pages and features, with individual contributions tracked in dedicated branches.</p>
-        <p class="tech-stack">Tech Stack: MERN Stack</p>
-        <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" class="project-link">View on GitHub</a>
+      <div class="project-card">
+        <h3>Green Gadgets – E-commerce</h3>
+        <p>Collaborative eco-friendly gadget marketplace with multiple features and team contributions.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">MERN Stack</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Express.js</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px;">code</span>
+            GitHub
+          </a>
+        </div>
       </div>
 
     </div>
+
+    <div class="wakatime-section">
+      <h3>WakaTime Insights</h3>
+      <a href="https://wakatime.com/@Saobia" target="_blank">
+        <img src="https://wakatime.com/badge/user/7f0860ba-774e-43d9-8390-34249079bba4.svg" alt="WakaTime">
+      </a>
+      <p style="margin-top: 1rem; font-size: 0.95rem;">
+        View detailed graphs: <a href="https://wakatime.com/insights?tweet=true" target="_blank">WakaTime Insights</a>
+      </p>
+    </div>
   </section>
 
-  <!-- Experience Section (After Projects) -->
+  <!-- Experience Section -->
   <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-grid">
       
-      <div class="card">
+      <div class="experience-card">
         <h3>Assistant Director - Web Development Team</h3>
-        <p><strong>AUST Robotics Club</strong> | Current</p>
-        <p>Leading the web development team under my supervision, functioning as a software company within the club. Managing full-stack website development projects including the official club website and event platforms. Overseeing team coordination, project planning, and technical implementation.</p>
+        <p class="company"><strong>AUST Robotics Club</strong> | Current</p>
+        <p>Leading the web development team, managing full-stack website projects including the official club website and event platforms. Overseeing team coordination, project planning, and technical implementation.</p>
         <p style="margin-top: 1rem;"><strong>Key Projects:</strong></p>
-        <a href="https://www.austrc.com/" target="_blank" class="project-link">AUST RC Official Website</a>
-        <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-link">AUST Rover Challenge 2.0</a>
+        <div class="project-links" style="margin-top: 0.8rem;">
+          <a href="https://www.austrc.com/" target="_blank" class="project-btn btn-live">AUST RC Website</a>
+          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-btn btn-live">Rover Challenge 2.0</a>
+        </div>
       </div>
 
-      <div class="card">
+      <div class="experience-card">
         <h3>IT Specialist</h3>
-        <p><strong>Various Non-Profit Organizations</strong> | 2021 - Present</p>
-        <p>Providing IT support, graphic design, and digital solutions for multiple clubs and organizations. Expertise includes logo design, poster creation, Microsoft Office tools (Word, Excel), team management, and remote collaboration on various IT projects.</p>
+        <p class="company"><strong>Various Non-Profit Organizations</strong> | 2021 - Present</p>
+        <p>Providing IT support, graphic design, and digital solutions for multiple clubs and organizations. Expertise includes logo design, poster creation, Microsoft Office tools, team management, and remote collaboration on IT projects.</p>
       </div>
 
     </div>
@@ -434,52 +980,188 @@
 
   <!-- Certificates Section -->
   <section id="certificates">
-    <h2>Certificates & Achievements</h2>
-    <div class="certificates">
-      <div class="card">
+    <h2 class="section-title">Certificates & Achievements</h2>
+    <div class="certificates-grid">
+      
+      <div class="certificate-card">
         <img src="assets/ssex.jpeg" alt="Senior Sub Executive Certificate">
-        <p><strong>Senior Sub Executive</strong> - Web Team, AUST Robotics Club</p>
+        <div class="cert-content">
+          <p><strong>Senior Sub Executive</strong><br>Web Team, AUST Robotics Club</p>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="certificate-card">
         <img src="assets/Video.png" alt="Video Editing Certificate">
-        <p><strong>Video Editing Course</strong> - Adobe Premiere Pro Certification</p>
+        <div class="cert-content">
+          <p><strong>Video Editing Course</strong><br>Adobe Premiere Pro Certification</p>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="certificate-card">
         <img src="assets/bestin.jpg" alt="Best House In-charge">
-        <p><strong>Best House In-charge</strong> - Leadership Recognition</p>
+        <div class="cert-content">
+          <p><strong>Best House In-charge</strong><br>Leadership Recognition</p>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="certificate-card">
         <img src="assets/partic.png" alt="Participation Certificate">
-        <p><strong>Participation Certificate</strong> - Technical Event</p>
+        <div class="cert-content">
+          <p><strong>Participation Certificate</strong><br>Technical Event</p>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Contact Section (Centered) -->
-  <section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p style="font-size: 1.1rem;">I'm always open to discussing new projects, opportunities, and collaborations.</p>
-    <p><strong>Email:</strong> <a href="mailto:islamsaobia@gmail.com" style="background: none; padding: 0; color: #73d2de;">islamsaobia@gmail.com</a></p>
-    <div style="margin-top: 2rem;">
-      <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/" target="_blank">LinkedIn Profile</a>
-      <a href="https://github.com/Saobia3i" target="_blank">GitHub Portfolio</a>
-      <a href="https://sites.google.com/view/saobiaislamtinni" target="_blank">Google Sites</a>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Connect With Me</h2>
+    <p style="text-align: center; font-size: 1.05rem; margin-bottom: 1.5rem; color: #666;">
+      I'm always open to discussing new projects, opportunities, and collaborations.
+    </p>
+    <div class="contact-grid">
+      <a href="mailto:islamsaobia@gmail.com" class="contact-link" aria-label="Email">
+        <span class="material-icons">email</span>
+      </a>
+      <a href="https://github.com/Saobia3i" target="_blank" class="contact-link" aria-label="GitHub">
+        <span class="material-icons">code</span>
+      </a>
+      <!-- <a href="https://portfolio-one-mu-x50381zq9b.vercel.app/" target="_blank" class="contact-link" aria-label="Portfolio"> -->
+        <!-- <span class="material-icons">link</span> -->
+      <!-- </a> -->
+      <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/" target="_blank" class="contact-link" aria-label="LinkedIn">
+        <span class="material-icons">business_center</span>
+      </a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Saobia Islam. All rights reserved.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Built with passion and dedication to excellence</p>
+    <p style="margin-top: 0.5rem;">Built with passion and dedication to excellence</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    const toggle = document.querySelector('.dark-mode-toggle');
+    // Theme Toggle
+    const toggle = document.querySelector('.theme-toggle');
     const icon = toggle.querySelector('.material-icons');
     
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       icon.textContent = document.body.classList.contains('dark') ? 'light_mode' : 'dark_mode';
     });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ===== HERO CANVAS - MOUSE GLOW =====
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    const hero = document.querySelector('.hero');
+    
+    function resizeCanvas() {
+      canvas.width = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let particles = [];
+
+    class Particle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 3 + 2;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+        this.life = 100;
+      }
+      
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.life -= 2;
+        if (this.size > 0.2) this.size -= 0.05;
+      }
+      
+      draw() {
+        ctx.fillStyle = `rgba(115, 210, 222, ${this.life / 100})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+      
+      for (let i = 0; i < 3; i++) {
+        particles.push(new Particle(mouseX, mouseY));
+      }
+    });
+
+    hero.addEventListener('touchmove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const touch = e.touches[0];
+      mouseX = touch.clientX - rect.left;
+      mouseY = touch.clientY - rect.top;
+      
+      for (let i = 0; i < 3; i++) {
+        particles.push(new Particle(mouseX, mouseY));
+      }
+    });
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      const gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 150);
+      gradient.addColorStop(0, 'rgba(115, 210, 222, 0.3)');
+      gradient.addColorStop(0.5, 'rgba(115, 210, 222, 0.1)');
+      gradient.addColorStop(1, 'rgba(115, 210, 222, 0)');
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      particles = particles.filter(p => p.life > 0);
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // ===== FLOATING PARTICLES =====
+    const particlesContainer = document.getElementById('particles-container');
+    const particleCount = 15;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.width = Math.random() * 6 + 3 + 'px';
+      particle.style.height = particle.style.width;
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 15 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particlesContainer.appendChild(particle);
+    }
   </script>
 
 </body>
