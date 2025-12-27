@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saobia Islam | Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <style>
     /* ===== RESET ===== */
     * {
@@ -15,7 +16,7 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       background: #f5f5f5;
       color: #1a1a1a;
       line-height: 1.6;
@@ -45,7 +46,7 @@
     nav .logo {
       font-size: 1.3rem;
       font-weight: 700;
-      color: #73d2de;
+      color: #ffff;
     }
 
     .theme-toggle {
@@ -59,7 +60,7 @@
       justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease;
-      color: #73d2de;
+      color: #d5e7e9;
     }
 
     .theme-toggle:hover {
@@ -79,7 +80,12 @@
       padding: 6rem 2rem 3rem;
       position: relative;
       /* ALWAYS navy blue gradient - no change between modes */
-      background: linear-gradient(135deg, #020f1c 0%, #021120 25%, #04192e 50%, #051c33 75%, #06294c 100%) !important;
+      background: linear-gradient(135deg,
+          #020f1c 0%,
+          #021120 25%,
+          #04192e 50%,
+          #051c33 75%,
+          #06294c 100%) !important;
       overflow: hidden;
     }
 
@@ -110,19 +116,24 @@
     }
 
     @keyframes float-particle {
-      0%, 100% { 
+
+      0%,
+      100% {
         transform: translate(0, 0) scale(1);
         opacity: 0.3;
       }
-      25% { 
+
+      25% {
         transform: translate(50px, -100px) scale(1.2);
         opacity: 0.5;
       }
-      50% { 
+
+      50% {
         transform: translate(-30px, -50px) scale(0.8);
         opacity: 0.4;
       }
-      75% { 
+
+      75% {
         transform: translate(80px, 50px) scale(1.1);
         opacity: 0.6;
       }
@@ -130,12 +141,12 @@
 
     /* Grid pattern overlay */
     .hero::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: 
-        linear-gradient(rgba(115, 210, 222, 0.03) 1px, transparent 1px),
+      background-image: linear-gradient(rgba(115, 210, 222, 0.03) 1px,
+          transparent 1px),
         linear-gradient(90deg, rgba(115, 210, 222, 0.03) 1px, transparent 1px);
       background-size: 50px 50px;
       pointer-events: none;
@@ -153,6 +164,7 @@
         opacity: 0;
         transform: scale(0.8);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -166,14 +178,16 @@
       align-content: center;
       object-fit: cover;
       border: 3px solid #73d2de;
-      box-shadow: 0 0 30px rgba(115, 210, 222, 0.4), 0 0 60px rgba(115, 210, 222, 0.2);
+      box-shadow: 0 0 30px rgba(115, 210, 222, 0.4),
+        0 0 60px rgba(115, 210, 222, 0.2);
       transition: all 0.4s ease;
       position: relative;
     }
 
     .profile-img:hover {
       transform: scale(1.08);
-      box-shadow: 0 0 40px rgba(115, 210, 222, 0.6), 0 0 80px rgba(115, 210, 222, 0.3);
+      box-shadow: 0 0 40px rgba(115, 210, 222, 0.6),
+        0 0 80px rgba(115, 210, 222, 0.3);
     }
 
     /* Hero text - ALWAYS white/cyan */
@@ -218,6 +232,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -293,7 +308,7 @@
     }
 
     .section-title::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -8px;
       left: 50%;
@@ -309,7 +324,7 @@
       background: #fff;
       margin-bottom: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     /* ===== ABOUT ===== */
@@ -408,7 +423,7 @@
     }
 
     .project-card::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -541,7 +556,7 @@
       border-radius: 12px;
       padding: 1.5rem;
       border-left: 4px solid #001f3f;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
     }
 
@@ -734,11 +749,11 @@
       .hero h1 {
         font-size: 2.2rem;
       }
-      
+
       section {
         padding: 2.5rem 1.5rem;
       }
-      
+
       .projects-grid {
         grid-template-columns: 1fr;
       }
@@ -749,8 +764,8 @@
     }
   </style>
 </head>
-<body class="dark">
 
+<body class="dark">
   <!-- Navigation -->
   <nav>
     <div class="logo">Saobia Islam</div>
@@ -765,12 +780,14 @@
     <div class="particles" id="particles-container"></div>
 
     <div class="profile-container">
-      <img src="assets/profile.png" alt="Saobia Islam" class="profile-img">
+      <img src="assets/profile.png" alt="Saobia Islam" class="profile-img" />
     </div>
     <h1>Hi there, I'm <span class="name-highlight">Saobia Islam</span></h1>
     <p class="subtitle">Full Stack Developer | Designer</p>
     <p class="bio">
-      Welcome to my portfolio — explore the products I'm crafting, the stacks I'm learning, and the experiments that push me forward. Specialized in creating beautiful, responsive frontends.
+      Welcome to my portfolio — explore the products I'm crafting, the stacks
+      I'm learning, and the experiments that push me forward. Specialized in
+      creating beautiful, responsive frontends.
     </p>
     <div class="cta-buttons">
       <a href="#projects" class="btn btn-primary">
@@ -788,11 +805,22 @@
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <ul class="about-list">
-      <li>CSE student at <strong>AUST (Ahsanullah University of Science and Technology)</strong></li>
-      <li>Building web  with modern <strong>MERN</strong> & <strong>Next.js</strong></li>
-      <li>Currently focusing on <strong>Next.js</strong>, <strong>AI Automation</strong> & <strong>Cyber Security</strong></li>
-      <li>Open to collaborating on <strong>e‑commerce</strong>, <strong>edtech</strong>, and other modern web projects</li>
-
+      <li>
+        CSE student at
+        <strong>AUST (Ahsanullah University of Science and Technology)</strong>
+      </li>
+      <li>
+        Building web with modern <strong>MERN</strong> &
+        <strong>Next.js</strong>
+      </li>
+      <li>
+        Currently focusing on <strong>Next.js</strong>,
+        <strong>AI Automation</strong> & <strong>Cyber Security</strong>
+      </li>
+      <li>
+        Open to collaborating on <strong>e‑commerce</strong>,
+        <strong>edtech</strong>, and other modern web projects
+      </li>
     </ul>
   </section>
 
@@ -829,10 +857,12 @@
   <section id="projects">
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
-
       <div class="project-card">
         <h3>Tensor Security Academy (TSA)</h3>
-        <p>A modern cybersecurity & AI-focused edtech landing page with rich animations and responsive design.</p>
+        <p>
+          A modern cybersecurity & AI-focused edtech landing page with rich
+          animations and responsive design.
+        </p>
         <div class="tech-tags">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">Tailwind CSS</span>
@@ -840,13 +870,35 @@
           <span class="tech-tag">MUI</span>
         </div>
         <div class="project-links">
-         
-          <a href="https://tsa-neon-iota.vercel.app/" target="_blank" class="project-btn btn-live">
-            <span class="material-icons" style="font-size: 18px;">visibility</span>
+          <a href="https://www.tensorsecurityacademy.com/" target="_blank" class="project-btn btn-live">
+            <span class="material-icons" style="font-size: 18px">visibility</span>
             View Live
           </a>
           <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" class="project-btn btn-github">
-            <span class="material-icons" style="font-size: 18px;">code</span>
+            <span class="material-icons" style="font-size: 18px">code</span>
+            GitHub
+          </a>
+        </div>
+      </div>
+ <div class="project-card">
+        <h3>Robomania 2.0</h3>
+        <p>
+          Event website for AUST Robotics Club's flagship robotics competition
+          with team collaboration.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Shadcn</span>
+          <span class="tech-tag">Aceternity UI</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.robomania.austrc.com/" target="_blank" class="project-btn btn-live">
+            <span class="material-icons" style="font-size: 18px">visibility</span>
+            View Live
+          </a>
+
+          <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" class="project-btn btn-github">
+            <span class="material-icons" style="font-size: 18px">code</span>
             GitHub
           </a>
         </div>
@@ -854,19 +906,22 @@
 
       <div class="project-card">
         <h3>QuoteVerse – Quote Generator</h3>
-        <p>A minimal, responsive React app that fetches and displays random quotes to keep you inspired.</p>
+        <p>
+          A minimal, responsive React app that fetches and displays random
+          quotes to keep you inspired.
+        </p>
         <div class="tech-tags">
           <span class="tech-tag">React.js</span>
-          <span class="tech-tag">Tailwind CSS</span>
-          <span class="tech-tag">Framer Motion</span>
+          <span class="tech-tag">Ant Design</span>
+          <span class="tech-tag">MUI</span>
         </div>
         <div class="project-links">
           <a href="https://quote-verse-psi.vercel.app/" target="_blank" class="project-btn btn-live">
-            <span class="material-icons" style="font-size: 18px;">visibility</span>
+            <span class="material-icons" style="font-size: 18px">visibility</span>
             View Live
           </a>
           <a href="https://github.com/Saobia3i/Quote-Verse" target="_blank" class="project-btn btn-github">
-            <span class="material-icons" style="font-size: 18px;">code</span>
+            <span class="material-icons" style="font-size: 18px">code</span>
             GitHub
           </a>
         </div>
@@ -874,7 +929,10 @@
 
       <div class="project-card">
         <h3>iCanteen – Canteen Management</h3>
-        <p>Full‑stack smart canteen system streamlining ordering, menu management, and staff operations.</p>
+        <p>
+          Full‑stack smart canteen system streamlining ordering, menu
+          management, and staff operations.
+        </p>
         <div class="tech-tags">
           <span class="tech-tag">React.js</span>
           <span class="tech-tag">Laravel</span>
@@ -883,35 +941,24 @@
         </div>
         <div class="project-links">
           <a href="https://i-canteen.vercel.app/" target="_blank" class="project-btn btn-live">
-            <span class="material-icons" style="font-size: 18px;">visibility</span>
+            <span class="material-icons" style="font-size: 18px">visibility</span>
             View Live
           </a>
           <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" class="project-btn btn-github">
-            <span class="material-icons" style="font-size: 18px;">code</span>
+            <span class="material-icons" style="font-size: 18px">code</span>
             GitHub
           </a>
         </div>
       </div>
 
-      <div class="project-card">
-        <h3>Robomania 2.0</h3>
-        <p>Event website for AUST Robotics Club's flagship robotics competition with team collaboration.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">MERN Stack</span>
-          <span class="tech-tag">React.js</span>
-          <span class="tech-tag">Node.js</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" class="project-btn btn-github">
-            <span class="material-icons" style="font-size: 18px;">code</span>
-            GitHub
-          </a>
-        </div>
-      </div>
+     
 
       <div class="project-card">
         <h3>Frontend Development Assignment</h3>
-        <p>Responsive frontend project demonstrating modern web design principles (CSE-3100).</p>
+        <p>
+          Responsive frontend project demonstrating modern web design
+          principles (CSE-3100).
+        </p>
         <div class="tech-tags">
           <span class="tech-tag">HTML</span>
           <span class="tech-tag">CSS</span>
@@ -919,7 +966,7 @@
         </div>
         <div class="project-links">
           <a href="https://github.com/Saobia3i/cse-3100" target="_blank" class="project-btn btn-github">
-            <span class="material-icons" style="font-size: 18px;">code</span>
+            <span class="material-icons" style="font-size: 18px">code</span>
             GitHub
           </a>
         </div>
@@ -927,7 +974,10 @@
 
       <div class="project-card">
         <h3>Green Gadgets – E-commerce</h3>
-        <p>Collaborative eco-friendly gadget marketplace with multiple features and team contributions.</p>
+        <p>
+          Collaborative eco-friendly gadget marketplace with multiple features
+          and team contributions.
+        </p>
         <div class="tech-tags">
           <span class="tech-tag">MERN Stack</span>
           <span class="tech-tag">MongoDB</span>
@@ -935,21 +985,21 @@
         </div>
         <div class="project-links">
           <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" class="project-btn btn-github">
-            <span class="material-icons" style="font-size: 18px;">code</span>
+            <span class="material-icons" style="font-size: 18px">code</span>
             GitHub
           </a>
         </div>
       </div>
-
     </div>
 
     <div class="wakatime-section">
       <h3>WakaTime Insights</h3>
       <a href="https://wakatime.com/@Saobia" target="_blank">
-        <img src="https://wakatime.com/badge/user/7f0860ba-774e-43d9-8390-34249079bba4.svg" alt="WakaTime">
+        <img src="https://wakatime.com/badge/user/7f0860ba-774e-43d9-8390-34249079bba4.svg" alt="WakaTime" />
       </a>
-      <p style="margin-top: 1rem; font-size: 0.95rem;">
-        View detailed graphs: <a href="https://wakatime.com/insights?tweet=true" target="_blank">WakaTime Insights</a>
+      <p style="margin-top: 1rem; font-size: 0.95rem">
+        View detailed graphs:
+        <a href="https://wakatime.com/insights?tweet=true" target="_blank">WakaTime Insights</a>
       </p>
     </div>
   </section>
@@ -958,24 +1008,52 @@
   <section id="experience">
     <h2 class="section-title">Experience</h2>
     <div class="experience-grid">
-      
+      <div class="experience-card">
+        <h3>Principal Web Developer</h3>
+        <p class="company"><strong>Tensor Security Academy (TSA)</strong> | Current</p>
+        <p>
+           Developing and maintaining the official TSA website with modern web technologies.
+    Building responsive interfaces, implementing real-time features, and ensuring
+    optimal user experience for TSA.
+        </p>
+        <p style="margin-top: 1rem"><strong>Key Projects:</strong></p>
+        <div class="project-links" style="margin-top: 0.8rem">
+          <a href="https://www.tensorsecurityacademy.com/" target="_blank" class="project-btn btn-live">TSA website</a>
+          <!-- <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" class="project-btn btn-github">TSA1.1 Repo</a> -->
+        </div>
+      </div>
+
+
       <div class="experience-card">
         <h3>Assistant Director - Web Development Team</h3>
         <p class="company"><strong>AUST Robotics Club</strong> | Current</p>
-        <p>Leading the web development team, managing full-stack website projects including the official club website and event platforms. Overseeing team coordination, project planning, and technical implementation.</p>
-        <p style="margin-top: 1rem;"><strong>Key Projects:</strong></p>
-        <div class="project-links" style="margin-top: 0.8rem;">
+        <p>
+          Leading the web development team, managing full-stack website
+          projects including the official club website and event platforms.
+          Overseeing team coordination, project planning, and technical
+          implementation.
+        </p>
+        <p style="margin-top: 1rem"><strong>Key Projects:</strong></p>
+        <div class="project-links" style="margin-top: 0.8rem">
           <a href="https://www.austrc.com/" target="_blank" class="project-btn btn-live">AUST RC Website</a>
-          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-btn btn-live">Rover Challenge 2.0</a>
+          <a href="https://www.robomania.austrc.com/" target="_blank" class="project-btn btn-live">Robomania 2.0</a>
+          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-btn btn-live">Rover
+            Challenge 2.0</a>
         </div>
       </div>
 
       <div class="experience-card">
         <h3>IT Specialist</h3>
-        <p class="company"><strong>Various Non-Profit Organizations</strong> | 2021 - Present</p>
-        <p>Providing IT support, graphic design, and digital solutions for multiple clubs and organizations. Expertise includes logo design, poster creation, Microsoft Office tools, team management, and remote collaboration on IT projects.</p>
+        <p class="company">
+          <strong>Various Non-Profit Organizations</strong> | 2021 - Present
+        </p>
+        <p>
+          Providing IT support, graphic design, and digital solutions for
+          multiple clubs and organizations. Expertise includes logo design,
+          poster creation, Microsoft Office tools, team management, and remote
+          collaboration on IT projects.
+        </p>
       </div>
-
     </div>
   </section>
 
@@ -983,50 +1061,66 @@
   <section id="certificates">
     <h2 class="section-title">Certificates & Achievements</h2>
     <div class="certificates-grid">
-
       <div class="certificate-card">
-        <img src="assets/best panel.jpg" alt="Best Panel member of Website Team Certificate">
+        <img src="assets/best panel.jpg" alt="Best Panel member of Website Team Certificate" />
         <div class="cert-content">
-          <p><strong>Best Panel Member</strong><br>Website Team, AUST Robotics Club</p>
-        </div>
-      </div>
-      
-      <div class="certificate-card">
-        <img src="assets/ssex.jpeg" alt="Senior Sub Executive Certificate">
-        <div class="cert-content">
-          <p><strong>Senior Sub Executive</strong><br>Website Team, AUST Robotics Club</p>
+          <p>
+            <strong>Best Panel Member</strong><br />Website Team, AUST
+            Robotics Club
+          </p>
         </div>
       </div>
 
       <div class="certificate-card">
-        <img src="assets/Video.png" alt="Video Editing Certificate">
+        <img src="assets/ssex.jpeg" alt="Senior Sub Executive Certificate" />
         <div class="cert-content">
-          <p><strong>Champion</strong><br>Video Editing Course  Certification</p>
+          <p>
+            <strong>Senior Sub Executive</strong><br />Website Team, AUST
+            Robotics Club
+          </p>
         </div>
       </div>
 
       <div class="certificate-card">
-        <img src="assets/bestin.jpg" alt="Best House In-charge">
+        <img src="assets/Video.png" alt="Video Editing Certificate" />
         <div class="cert-content">
-          <p><strong>Best House In-charge</strong><br>Leadership Recognition</p>
+          <p>
+            <strong>Champion</strong><br />Video Editing Course Certification
+          </p>
         </div>
       </div>
 
       <div class="certificate-card">
-        <img src="assets/partic.png" alt="Participation Certificate">
+        <img src="assets/bestin.jpg" alt="Best House In-charge" />
         <div class="cert-content">
-          <p><strong>Participation Certificate</strong><br>Technical Event</p>
+          <p>
+            <strong>Best House In-charge</strong><br />Leadership Recognition
+          </p>
         </div>
       </div>
 
+      <div class="certificate-card">
+        <img src="assets/partic.png" alt="Participation Certificate" />
+        <div class="cert-content">
+          <p>
+            <strong>Participation Certificate</strong><br />Technical Event
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2 class="section-title">Connect With Me</h2>
-    <p style="text-align: center; font-size: 1.05rem; margin-bottom: 1.5rem; color: #666;">
-      I'm always open to discussing new projects, opportunities, and collaborations.
+    <p style="
+          text-align: center;
+          font-size: 1.05rem;
+          margin-bottom: 1.5rem;
+          color: #666;
+        ">
+      I'm always open to discussing new projects, opportunities, and
+      collaborations.
     </p>
     <div class="contact-grid">
       <a href="mailto:islamsaobia@gmail.com" class="contact-link" aria-label="Email">
@@ -1036,9 +1130,10 @@
         <span class="material-icons">code</span>
       </a>
       <!-- <a href="https://portfolio-one-mu-x50381zq9b.vercel.app/" target="_blank" class="contact-link" aria-label="Portfolio"> -->
-        <!-- <span class="material-icons">link</span> -->
+      <!-- <span class="material-icons">link</span> -->
       <!-- </a> -->
-      <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/" target="_blank" class="contact-link" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/saobia-islam-1b173b284/" target="_blank" class="contact-link"
+        aria-label="LinkedIn">
         <span class="material-icons">business_center</span>
       </a>
     </div>
@@ -1047,42 +1142,46 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Saobia Islam. All rights reserved.</p>
-    <p style="margin-top: 0.5rem;">Built with passion and dedication to excellence</p>
+    <p style="margin-top: 0.5rem">
+      Built with passion and dedication to excellence
+    </p>
   </footer>
 
   <!-- Scripts -->
   <script>
     // Theme Toggle
-    const toggle = document.querySelector('.theme-toggle');
-    const icon = toggle.querySelector('.material-icons');
-    
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      icon.textContent = document.body.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+    const toggle = document.querySelector(".theme-toggle");
+    const icon = toggle.querySelector(".material-icons");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      icon.textContent = document.body.classList.contains("dark")
+        ? "light_mode"
+        : "dark_mode";
     });
 
     // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(this.getAttribute("href"));
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
     });
 
     // ===== HERO CANVAS - MOUSE GLOW =====
-    const canvas = document.getElementById('hero-canvas');
-    const ctx = canvas.getContext('2d');
-    const hero = document.querySelector('.hero');
-    
+    const canvas = document.getElementById("hero-canvas");
+    const ctx = canvas.getContext("2d");
+    const hero = document.querySelector(".hero");
+
     function resizeCanvas() {
       canvas.width = hero.offsetWidth;
       canvas.height = hero.offsetHeight;
     }
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     let mouseX = 0;
     let mouseY = 0;
@@ -1097,38 +1196,38 @@
         this.speedY = Math.random() * 2 - 1;
         this.life = 100;
       }
-      
+
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
         this.life -= 2;
         if (this.size > 0.2) this.size -= 0.05;
       }
-      
+
       draw() {
-        ctx.fillStyle = `rgba(115, 210, 222, ${this.life / 100})`;
+        ctx.fillStyle = `rgba(115, 210, 222, ${ this.life / 100 })`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
       }
     }
 
-    hero.addEventListener('mousemove', (e) => {
+    hero.addEventListener("mousemove", (e) => {
       const rect = hero.getBoundingClientRect();
       mouseX = e.clientX - rect.left;
       mouseY = e.clientY - rect.top;
-      
+
       for (let i = 0; i < 3; i++) {
         particles.push(new Particle(mouseX, mouseY));
       }
     });
 
-    hero.addEventListener('touchmove', (e) => {
+    hero.addEventListener("touchmove", (e) => {
       const rect = hero.getBoundingClientRect();
       const touch = e.touches[0];
       mouseX = touch.clientX - rect.left;
       mouseY = touch.clientY - rect.top;
-      
+
       for (let i = 0; i < 3; i++) {
         particles.push(new Particle(mouseX, mouseY));
       }
@@ -1136,41 +1235,48 @@
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      const gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 150);
-      gradient.addColorStop(0, 'rgba(115, 210, 222, 0.3)');
-      gradient.addColorStop(0.5, 'rgba(115, 210, 222, 0.1)');
-      gradient.addColorStop(1, 'rgba(115, 210, 222, 0)');
-      
+
+      const gradient = ctx.createRadialGradient(
+        mouseX,
+        mouseY,
+        0,
+        mouseX,
+        mouseY,
+        150
+      );
+      gradient.addColorStop(0, "rgba(115, 210, 222, 0.3)");
+      gradient.addColorStop(0.5, "rgba(115, 210, 222, 0.1)");
+      gradient.addColorStop(1, "rgba(115, 210, 222, 0)");
+
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      particles = particles.filter(p => p.life > 0);
-      particles.forEach(particle => {
+
+      particles = particles.filter((p) => p.life > 0);
+      particles.forEach((particle) => {
         particle.update();
         particle.draw();
       });
-      
+
       requestAnimationFrame(animate);
     }
     animate();
 
     // ===== FLOATING PARTICLES =====
-    const particlesContainer = document.getElementById('particles-container');
+    const particlesContainer = document.getElementById("particles-container");
     const particleCount = 15;
-    
+
     for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      particle.style.width = Math.random() * 6 + 3 + 'px';
+      const particle = document.createElement("div");
+      particle.className = "particle";
+      particle.style.width = Math.random() * 6 + 3 + "px";
       particle.style.height = particle.style.width;
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
-      particle.style.animationDelay = Math.random() * 15 + 's';
-      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particle.style.left = Math.random() * 100 + "%";
+      particle.style.top = Math.random() * 100 + "%";
+      particle.style.animationDelay = Math.random() * 15 + "s";
+      particle.style.animationDuration = Math.random() * 10 + 10 + "s";
       particlesContainer.appendChild(particle);
     }
   </script>
-
 </body>
+
 </html>
