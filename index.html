@@ -322,7 +322,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 6rem 2rem 3rem;
+      padding: 4rem 2rem 3rem;
       position: relative;
       background: linear-gradient(135deg,
           #020f1c 0%,
@@ -534,15 +534,41 @@
       }
     }
 
-    @keyframes revealRise {
-      from {
+    @keyframes revealUp {
+      0% {
         opacity: 0;
-        transform: translateY(22px) scale(0.98);
+        transform: translateY(40px) scale(0.96);
+        filter: blur(2px);
       }
-
-      to {
+      30% {
+        opacity: 0.5;
+      }
+      70% {
+        filter: blur(0px);
+      }
+      100% {
         opacity: 1;
         transform: translateY(0) scale(1);
+        filter: blur(0px);
+      }
+    }
+
+    @keyframes revealDepth {
+      0% {
+        opacity: 0;
+        transform: perspective(900px) scale(0.82) translateZ(-60px) rotateX(4deg);
+        filter: blur(6px);
+      }
+      40% {
+        opacity: 0.7;
+      }
+      75% {
+        filter: blur(0px);
+      }
+      100% {
+        opacity: 1;
+        transform: perspective(900px) scale(1) translateZ(0px) rotateX(0deg);
+        filter: blur(0px);
       }
     }
 
@@ -569,15 +595,15 @@
     }
 
     .btn {
-      padding: 0.75rem 1.8rem;
+      padding: 0.55rem 1.3rem;
       border-radius: 10px;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.28s ease;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
+      gap: 0.4rem;
+      font-size: 0.85rem;
       will-change: transform;
       min-width: 0;
     }
@@ -617,6 +643,7 @@
 
     /* ===== SECTIONS WRAP ===== */
     section:not(.hero) {
+      perspective: 800px;
       padding: 3rem 2rem;
       width: min(1100px, calc(100% - 2rem));
       max-width: 1100px;
@@ -1363,16 +1390,23 @@
 
     .motion-reveal {
       opacity: 0;
+      will-change: transform, opacity;
     }
 
-    .motion-reveal.in-view {
-      animation: revealRise 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    .motion-reveal.reveal-up.in-view {
+      animation: revealUp 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      animation-delay: var(--motion-delay, 0ms);
+    }
+
+    .motion-reveal.reveal-depth.in-view {
+      animation: revealDepth 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
       animation-delay: var(--motion-delay, 0ms);
     }
 
     @media (prefers-reduced-motion: reduce) {
       .motion-reveal,
-      .motion-reveal.in-view {
+      .motion-reveal.reveal-up.in-view,
+      .motion-reveal.reveal-depth.in-view {
         opacity: 1 !important;
         animation: none !important;
         transform: none !important;
@@ -1467,7 +1501,7 @@
       }
 
       .hero {
-        padding: 7.2rem 1.4rem 2.8rem;
+        padding: 5rem 1.4rem 2.8rem;
       }
 
       .cta-buttons {
@@ -1481,8 +1515,22 @@
       }
 
       .hero h1 {
-        font-size: clamp(1.55rem, 6.1vw, 1.95rem);
+        font-size: clamp(1.3rem, 5.5vw, 1.65rem);
         line-height: 1.25;
+      }
+
+      .hero .subtitle {
+        font-size: 0.9rem;
+      }
+
+      .hero .bio {
+        font-size: 0.88rem;
+        line-height: 1.65;
+      }
+
+      .btn {
+        padding: 0.6rem 1.3rem;
+        font-size: 0.85rem;
       }
 
       section:not(.hero) {
@@ -1527,7 +1575,20 @@
       }
 
       .hero h1 {
-        font-size: clamp(1.34rem, 5.6vw, 1.62rem);
+        font-size: clamp(1.15rem, 5vw, 1.35rem);
+      }
+
+      .hero .subtitle {
+        font-size: 0.82rem;
+      }
+
+      .hero .bio {
+        font-size: 0.82rem;
+      }
+
+      .btn {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.82rem;
       }
 
       .theme-toggle {
@@ -1537,7 +1598,7 @@
 
       .hero {
         min-height: 88vh;
-        padding: 8rem 0.95rem 2.2rem;
+        padding: 5.5rem 0.95rem 2.2rem;
       }
 
       .hero .bio {
@@ -1549,13 +1610,10 @@
         padding: 2.1rem 1rem;
       }
 
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .cta-buttons {
-        width: 100%;
+      .cta-buttons .btn {
+        width: auto;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.82rem;
       }
 
       .project-links {
@@ -2149,12 +2207,21 @@
     // Staggered reveal motion for content cards
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const motionCards = document.querySelectorAll(
-      ".tech-group, .project-card, .experience-card, .certificate-card"
+      ".tech-group, .project-card, .experience-card, .certificate-card, .about-list li"
     );
 
     motionCards.forEach((card, index) => {
       card.classList.add("motion-reveal");
-      card.style.setProperty("--motion-delay", `${(index % 6) * 90}ms`);
+      if (card.classList.contains("certificate-card")) {
+        card.classList.add("reveal-depth");
+        card.style.setProperty("--motion-delay", `${(index % 4) * 110}ms`);
+      } else if (card.classList.contains("about-list") || card.tagName === "LI") {
+        card.classList.add("reveal-up");
+        card.style.setProperty("--motion-delay", `${index * 80}ms`);
+      } else {
+        card.classList.add("reveal-up");
+        card.style.setProperty("--motion-delay", `${(index % 4) * 110}ms`);
+      }
       if (reduceMotion) card.classList.add("in-view");
     });
 
