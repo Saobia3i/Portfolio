@@ -81,21 +81,21 @@
   .sidebar {
     background: var(--white);
     border-right: 1.5px solid var(--rule);
-    padding: 32px 18px 32px 20px;
+    padding: 22px 14px 22px 16px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
 
   /* Avatar initials circle */
   .avatar-wrap { display: flex; justify-content: center; }
   .avatar {
-    width: 74px; height: 74px;
+    width: 68px; height: 68px;
     border-radius: 50%;
     background: var(--navy);
     display: flex; align-items: center; justify-content: center;
     font-family: 'DM Serif Display', serif;
-    font-size: 26px;
+    font-size: 24px;
     color: var(--white);
     letter-spacing: 1px;
     border: 3px solid var(--yellow);
@@ -105,13 +105,13 @@
   .s-name { text-align: center; }
   .s-name h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: 17px;
+    font-size: 16px;
     color: var(--navy);
     letter-spacing: .3px;
     line-height: 1.3;
   }
   .s-name .s-role {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 600;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -126,12 +126,12 @@
   }
 
   .s-section-title {
-    font-size: 8.5px;
+    font-size: 8px;
     font-weight: 700;
     letter-spacing: 1.8px;
     text-transform: uppercase;
     color: var(--navy);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -145,18 +145,18 @@
   }
 
   /* Contact */
-  .contact-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .contact-list li { display: flex; align-items: flex-start; gap: 8px; }
+  .contact-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .contact-list li { display: flex; align-items: flex-start; gap: 6px; }
   .c-icon {
-    width: 18px; height: 18px;
+    width: 16px; height: 16px;
     background: var(--navy-light);
     border-radius: 4px;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; margin-top: 1px;
   }
-  .c-icon svg { width: 10px; height: 10px; fill: var(--navy); }
+  .c-icon svg { width: 9px; height: 9px; fill: var(--navy); }
   .contact-list a, .contact-list span {
-    font-size: 9.5px;
+    font-size: 9px;
     color: var(--body);
     text-decoration: none;
     line-height: 1.45;
@@ -165,26 +165,26 @@
   .contact-list a:hover { color: var(--navy); text-decoration: underline; }
 
   /* Skill tags */
-  .skill-group { margin-bottom: 11px; }
+  .skill-group { margin-bottom: 8px; }
   .skill-group:last-child { margin-bottom: 0; }
   .skill-group-label {
-    font-size: 8.5px;
+    font-size: 8px;
     font-weight: 600;
     color: var(--navy-mid);
     letter-spacing: .7px;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 3px; }
   .skill-tag {
-    font-size: 9px;
+    font-size: 8.5px;
     font-weight: 500;
     color: var(--navy);
     background: var(--navy-light);
     border: 1px solid #C0CDE6;
     border-radius: 3px;
-    padding: 2px 7px;
-    line-height: 1.6;
+    padding: 1px 5px;
+    line-height: 1.5;
   }
   /* Highlight top skills with sky blue */
   .skill-tag.hl {
@@ -195,18 +195,18 @@
   }
 
   /* Achievements */
-  .cert-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .cert-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
   .cert-list li {
-    font-size: 9.5px;
+    font-size: 9px;
     color: var(--body);
-    padding-left: 13px;
+    padding-left: 11px;
     position: relative;
-    line-height: 1.5;
+    line-height: 1.4;
   }
   .cert-list li::before {
     content: '';
-    position: absolute; left: 0; top: 6px;
-    width: 6px; height: 6px;
+    position: absolute; left: 0; top: 5px;
+    width: 5px; height: 5px;
     background: var(--yellow);
     border-radius: 2px;
     border: 1.5px solid #C8A000;
@@ -218,49 +218,49 @@
   ════════════════════════════════ */
   .main {
     background: var(--white);
-    padding: 30px 28px 30px 26px;
+    padding: 22px 24px 20px 22px;
     display: flex;
     flex-direction: column;
   }
 
   /* Name block at top */
   .main-header {
-    margin-bottom: 20px;
-    padding-bottom: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
     border-bottom: 1.5px solid var(--rule);
   }
   .main-header .label {
-    font-size: 9px;
+    font-size: 8.5px;
     font-weight: 700;
     letter-spacing: 2.2px;
     text-transform: uppercase;
     color: var(--sky);
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
   .main-header h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: 30px;
+    font-size: 28px;
     color: var(--navy);
     line-height: 1.1;
     letter-spacing: -.3px;
   }
   .main-header .tagline {
-    font-size: 10.5px;
+    font-size: 10px;
     color: var(--muted);
-    margin-top: 5px;
+    margin-top: 4px;
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   /* Section */
-  .section { margin-bottom: 18px; }
+  .section { margin-bottom: 12px; }
   .section:last-child { margin-bottom: 0; }
 
   .section-head {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 11px;
+    margin-bottom: 8px;
   }
   .section-head .s-dot {
     width: 8px; height: 8px;
@@ -270,7 +270,7 @@
     flex-shrink: 0;
   }
   .section-head h3 {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -290,17 +290,17 @@
     background: var(--navy-light);
     border-left: 3px solid var(--navy);
     border-radius: 0 5px 5px 0;
-    padding: 11px 14px;
+    padding: 8px 12px;
   }
   .summary-box p {
-    font-size: 10.5px;
-    line-height: 1.78;
+    font-size: 9.8px;
+    line-height: 1.65;
     color: var(--ink);
   }
   .summary-box strong { color: var(--navy); font-weight: 700; }
 
   /* Experience */
-  .exp-item { margin-bottom: 14px; }
+  .exp-item { margin-bottom: 8px; }
   .exp-item:last-child { margin-bottom: 0; }
 
   .exp-top {
@@ -311,43 +311,43 @@
     margin-bottom: 1px;
   }
   .exp-title {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--black);
     line-height: 1.3;
   }
   .exp-date {
-    font-size: 9px;
+    font-size: 8.5px;
     color: var(--navy);
     background: var(--sky-light);
     border: 1px solid var(--sky);
     border-radius: 20px;
-    padding: 2px 9px;
+    padding: 1px 7px;
     white-space: nowrap;
     font-weight: 600;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 1px;
   }
   .exp-org {
-    font-size: 10px;
+    font-size: 9.5px;
     color: var(--navy-mid);
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
-  .exp-org span { color: var(--muted); font-weight: 400; font-size: 9.5px; }
+  .exp-org span { color: var(--muted); font-weight: 400; font-size: 9px; }
 
-  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 2.5px; }
   .exp-bullets li {
-    font-size: 10px;
+    font-size: 9.3px;
     color: var(--body);
-    padding-left: 13px;
+    padding-left: 11px;
     position: relative;
-    line-height: 1.65;
+    line-height: 1.45;
   }
   .exp-bullets li::before {
     content: '';
-    position: absolute; left: 0; top: 7px;
-    width: 5px; height: 5px;
+    position: absolute; left: 0; top: 6px;
+    width: 4px; height: 4px;
     background: var(--sky);
     border-radius: 50%;
     border: 1px solid #0284C7;
@@ -358,12 +358,12 @@
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 9px;
+    gap: 7px;
   }
   .project-card {
     border: 1.5px solid var(--rule);
     border-radius: 6px;
-    padding: 10px 12px;
+    padding: 6px 10px;
     position: relative;
     overflow: hidden;
     background: var(--white);
@@ -378,27 +378,27 @@
   .project-card.hl-sky::before { background: var(--sky); }
 
   .project-name {
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     margin-top: 2px;
   }
   .project-stack {
-    font-size: 8.5px;
+    font-size: 8px;
     color: #0369A1;
     font-weight: 600;
     letter-spacing: .2px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     background: var(--sky-light);
     display: inline-block;
-    padding: 1px 6px;
+    padding: 1px 5px;
     border-radius: 3px;
   }
   .project-desc {
-    font-size: 9.5px;
+    font-size: 8.8px;
     color: var(--body);
-    line-height: 1.55;
+    line-height: 1.4;
   }
 
   /* Education */
@@ -411,7 +411,7 @@
     border: 1.5px solid #F0D000;
     border-left: 4px solid var(--yellow);
     border-radius: 5px;
-    padding: 12px 15px;
+    padding: 8px 12px;
   }
   .edu-degree {
     font-size: 11.5px;
@@ -492,16 +492,18 @@
     <div>
       <p class="s-section-title">Tech Stack</p>
       <div class="skill-group">
-        <p class="skill-group-label">Frontend</p>
+        <p class="skill-group-label">Frontend & UI</p>
         <div class="skill-tags">
           <span class="skill-tag hl">React.js</span>
           <span class="skill-tag hl">Next.js</span>
           <span class="skill-tag hl">TypeScript</span>
           <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">Framer Motion</span>
+          <span class="skill-tag hl">Tailwind CSS</span>
           <span class="skill-tag">Shadcn</span>
           <span class="skill-tag">MUI</span>
+          <span class="skill-tag">Ant Design</span>
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">Framer Motion</span>
         </div>
       </div>
       <div class="skill-group">
@@ -510,7 +512,8 @@
           <span class="skill-tag hl">Node.js</span>
           <span class="skill-tag hl">Express.js</span>
           <span class="skill-tag">Laravel</span>
-          <span class="skill-tag">.NET</span>
+          <span class="skill-tag hl">.NET</span>
+          <span class="skill-tag hl">C#</span>
           <span class="skill-tag">REST API</span>
           <span class="skill-tag">Jinja2</span>
         </div>
@@ -519,21 +522,31 @@
         <p class="skill-group-label">Database & Cloud</p>
         <div class="skill-tags">
           <span class="skill-tag hl">PostgreSQL</span>
-          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag hl">MongoDB</span>
           <span class="skill-tag">MySQL</span>
           <span class="skill-tag">Firebase</span>
           <span class="skill-tag">Docker</span>
           <span class="skill-tag hl">Vercel</span>
           <span class="skill-tag">Railway</span>
+          <span class="skill-tag">Git / GitHub CI/CD</span>
         </div>
       </div>
       <div class="skill-group">
-        <p class="skill-group-label">Automation & Design</p>
+        <p class="skill-group-label">Automation & AI</p>
         <div class="skill-tags">
           <span class="skill-tag hl">n8n</span>
+          <span class="skill-tag hl">AI Integration</span>
+          <span class="skill-tag">Prompt Engineering</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Tools</p>
+        <div class="skill-tags">
           <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Git / GitHub</span>
           <span class="skill-tag">WordPress</span>
+          <span class="skill-tag">Google Sites</span>
+          <span class="skill-tag">Overleaf</span>
+          <span class="skill-tag">MS Office</span>
         </div>
       </div>
     </div>
@@ -544,11 +557,11 @@
     <div>
       <p class="s-section-title">Achievements</p>
       <ul class="cert-list">
-        <li>Best Panel Member — AUST Robotics Club Web Team</li>
-        <li>Senior Sub Executive — Web Team, AUST RC</li>
-        <li>Champion — Video Editing Certification</li>
-        <li>Best House In-charge Leadership Award</li>
-        <li>Active WakaTime contributor — wakatime.com/@Saobia</li>
+        <li>Best Panel Member Award — Website Team, AUST Robotics Club (recognition for technical leadership and output quality)</li>
+        <li>Senior Sub Executive — Website Team, AUST Robotics Club</li>
+        <li>Champion — Video Editing Course Certification</li>
+        <li>Best House In-charge — Leadership Recognition Award</li>
+        <li>Active open-source contributor tracked via WakaTime: wakatime.com/@Saobia</li>
       </ul>
     </div>
 
@@ -559,7 +572,7 @@
 
     <!-- Header -->
     <div class="main-header">
-      <p class="label">Full-Stack Developer · MERN · Next.js · Security</p>
+      <p class="label">Full-Stack Developer · MERN · Next.js · n8n · C#</p>
       <h2>Saobia Islam</h2>
       <p class="tagline">Building clean, scalable, and secure web applications — from architecture to production deployment.</p>
     </div>
@@ -568,7 +581,7 @@
     <div class="section">
       <div class="section-head"><div class="s-dot"></div><h3>Professional Summary</h3></div>
       <div class="summary-box">
-        <p>Results-driven Full-Stack Developer and CSE student at <strong>Ahsanullah University of Science and Technology (AUST)</strong>, with proven production-level experience across MERN, Next.js, Laravel, and .NET stacks. Independently architected and shipped the <strong>Tensor Security Academy</strong> platform — integrating n8n workflow automation and PostgreSQL for a live cybersecurity training business. Experienced in leading development teams, owning full project lifecycles, and delivering scalable, secure applications under real-world deadlines. Actively deepening expertise in Next.js, AI automation, and cybersecurity.</p>
+        <p>Results-driven Full-Stack Developer and Computer Science student at <strong>Ahsanullah University of Science and Technology (AUST)</strong>, with proven production-level experience across MERN, Next.js, Laravel, and .NET stacks. Independently architected and shipped the <strong>Tensor Security Academy</strong> platform; integrating n8n workflow automation and PostgreSQL for a live cybersecurity training business. Experienced in leading development teams, owning full project lifecycles, and shipping scalable, secure web applications under real-world deadlines. Actively deepening expertise in Next.js, AI-driven automation, and cybersecurity.</p>
       </div>
     </div>
 
@@ -578,38 +591,52 @@
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-title">Software Engineer</span>
-          <span class="exp-date">2024 – Present</span>
+          <span class="exp-title">Solo Software Engineer</span>
+          <span class="exp-date">2025 – Present</span>
         </div>
-        <div class="exp-org">Tensor Security Academy (TSA) <span>· Dhaka, Bangladesh</span></div>
+        <div class="exp-org">Tensor Security Academy (TSA) <span>· Remote</span></div>
         <ul class="exp-bullets">
-          <li>Sole developer — designed, built, and maintain the full TSA production platform in <strong>Next.js</strong> with security-hardened deployment on Vercel.</li>
-          <li>Engineered an <strong>n8n-powered booking automation pipeline</strong>, eliminating manual coordination for the cybersecurity training business.</li>
-          <li>Architected and managed all <strong>PostgreSQL</strong> data operations — schema design, query optimization, and production data integrity.</li>
+          <li>Sole developer — designed, built, and currently maintain the TSA production platform in <strong>Next.js</strong>, focusing on scalable architecture and security-hardened deployment.</li>
+          <li>Engineered an <strong>n8n-powered service booking automation pipeline</strong>, eliminating manual coordination and improving booking reliability.</li>
+          <li>Architected and managed all data operations on <strong>PostgreSQL</strong>, including schema design, query optimization, and data integrity.</li>
+          <li>Applied security best practices throughout the stack, directly aligned with the platform's cybersecurity mission.</li>
         </ul>
       </div>
 
       <div class="exp-item">
         <div class="exp-top">
           <span class="exp-title">Frontend Developer (Project-Based)</span>
-          <span class="exp-date">2024 – Present</span>
+          <span class="exp-date">2026 (Completed)</span>
         </div>
-        <div class="exp-org">SSRN Transfer <span>· Remote (US-based client)</span></div>
+        <div class="exp-org">SSRN Transfer — US-Based Car Rental Company <span>· Remote</span></div>
         <ul class="exp-bullets">
-          <li>Built and maintained UI templates using <strong>Jinja2</strong> for a US-based car rental company, ensuring fast and consistent user experiences.</li>
-          <li>Delivered iterative frontend updates remotely, adapting to client-driven requirements and feedback cycles on schedule.</li>
+          <li>Built and maintained UI templates using <strong>Jinja2</strong> for a US-based car rental client, ensuring fast, consistent user experiences.</li>
+          <li>Collaborated remotely to deliver frontend updates on schedule, adapting to client-driven requirements and feedback cycles.</li>
         </ul>
       </div>
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-title">Director — Website & App Development Team</span>
+          <span class="exp-title">Director — Web &amp; App Development Team</span>
           <span class="exp-date">2023 – Present</span>
         </div>
         <div class="exp-org">AUST Robotics Club <span>· Dhaka, Bangladesh</span></div>
         <ul class="exp-bullets">
-          <li>Led the web development team — sprint planning, code reviews, task delegation, and production deployments for all club web properties.</li>
-          <li>Delivered <strong>Robomania 2.0</strong> and Rover Challenge 2.0 under non-negotiable event deadlines. Awarded <strong>Best Panel Member</strong>.</li>
+          <li>Led the web development team: managed sprint planning, code reviews, task delegation, and production deployments for all club properties.</li>
+          <li>Delivered the <strong>AUST Robotics Club main website</strong> using React.js and Firebase backend.</li>
+          <li>Delivered the <strong>Robomania 2.0</strong> event site (React.js, Shadcn, Aceternity UI) and Rover Challenge 2.0 site on tight event deadlines.</li>
+          <li>Recognized with the <strong>Best Panel Member award</strong> for exceptional technical leadership within the website team.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-title">IT Specialist (Volunteer)</span>
+          <span class="exp-date">2021 – 2022</span>
+        </div>
+        <div class="exp-org">Multiple Non-Profit Organizations <span>· Bangladesh</span></div>
+        <ul class="exp-bullets">
+          <li>Delivered IT support, graphic design, and digital tooling solutions for student clubs and community organizations across multiple engagements.</li>
         </ul>
       </div>
 
@@ -621,23 +648,38 @@
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-name">Tensor Security Academy</div>
-          <div class="project-stack">Next.js · n8n · PostgreSQL · Vercel</div>
-          <div class="project-desc">Live cybersecurity training platform built solo. Automated booking workflows, production-deployed, security-hardened.</div>
+          <div class="project-stack">Next.js · n8n · PostgreSQL · Vercel · Hostinger</div>
+          <div class="project-desc">Full cybersecurity training platform covering service catalog, automated bookings, and database layers. Deployed to production.</div>
         </div>
         <div class="project-card hl-sky">
-          <div class="project-name">iCanteen — Smart Canteen System</div>
-          <div class="project-stack">React.js · Laravel · MySQL · Tailwind</div>
-          <div class="project-desc">Full-stack ordering and menu management system with REST API design and relational database modeling.</div>
+          <div class="project-name">AUST Robotics Club Website</div>
+          <div class="project-stack">React.js · Firebase · Aceternity UI</div>
+          <div class="project-desc">High-traffic club website for AUST Robotics Club. Delivered collaboratively and deployed on time for live visitor loads.</div>
         </div>
         <div class="project-card hl-sky">
-          <div class="project-name">Robomania 2.0 — Event Site</div>
+          <div class="project-name">Robomania 2.0 Event Site</div>
           <div class="project-stack">React.js · Shadcn · Aceternity UI</div>
-          <div class="project-desc">High-traffic flagship competition website, delivered on a hard deadline for a live event at AUST.</div>
+          <div class="project-desc">Flagship annual robotics competition site. High-traffic platform delivered collaboratively under tight, live deadlines.</div>
         </div>
         <div class="project-card">
+          <div class="project-name">Lead Generation Capture System</div>
+          <div class="project-stack">n8n · Groq API · Slack · SMTP · Sheets</div>
+          <div class="project-desc">Full-stack capture with AI-powered qualification (Groq lead scoring), Slack alerts, sheets logging, and automated emails.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-name">iCanteen — Smart Canteen</div>
+          <div class="project-stack">React.js · Laravel · MySQL · Tailwind</div>
+          <div class="project-desc">Online ordering, dynamic menu, and staff operations system. Demonstrates full CRUD, REST API, and DB modeling.</div>
+        </div>
+        <div class="project-card hl-sky">
+          <div class="project-name">Linear AI — Automation Store</div>
+          <div class="project-stack">React.js · C# · PostgreSQL · Tailwind</div>
+          <div class="project-desc">AI automation store with user and admin panels. Handles packages, offers, subscriptions, and vouchers (C# backend).</div>
+        </div>
+        <div class="project-card hl-sky">
           <div class="project-name">Green Gadgets — E-Commerce</div>
           <div class="project-stack">MERN Stack · MongoDB · Express.js</div>
-          <div class="project-desc">Eco-friendly gadget marketplace with cart/checkout flow and user authentication on a full MERN stack.</div>
+          <div class="project-desc">Collaborative eco-friendly marketplace with product catalogs, dynamic cart flows, and user authentication on MERN.</div>
         </div>
       </div>
     </div>

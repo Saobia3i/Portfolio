@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saobia Islam — Curriculum Vitae</title>
+  
+  <!-- Google Fonts: Inter for ultimate readability -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean contact and section markers -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Professional Executive Color Palette */
+      --bg-color: #f8fafc;
+      --paper-bg: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent: #1e3a8a;
+      --accent-light: #3b82f6;
+      --border-color: #e2e8f0;
+      --divider-color: #cbd5e1;
+    }
+
+    body {
+      background: var(--bg-color);
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text-primary);
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 16px;
+    }
+
+    /* Actions Bar */
+    .actions-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      width: min(900px, 100%);
+      justify-content: flex-end;
+    }
+
+    .btn-action {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--divider-color);
+      background: var(--paper-bg);
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      text-decoration: none;
+    }
+
+    .btn-action:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #f1f5f9;
+    }
+
+    /* CV Document Container */
+    .cv-container {
+      width: min(900px, 100%);
+      background: var(--paper-bg);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      padding: 50px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Header Block */
+    .cv-header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .header-top {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .header-top h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .header-top h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Contact Details Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 8px 24px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .contact-item i {
+      color: var(--accent-light);
+      width: 14px;
+      text-align: center;
+    }
+
+    .contact-item:hover {
+      color: var(--accent);
+    }
+
+    /* CV Section */
+    .cv-section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--border-color);
+      padding-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Summary Box */
+    .summary-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      text-align: justify;
+    }
+
+    .summary-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Experience & Projects Items */
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .item-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .item-meta {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .item-meta span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .item-date {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .item-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .item-bullets li {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .item-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-size: 1rem;
+      line-height: 1;
+      top: 1px;
+    }
+
+    /* Skills Grid */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 24px;
+    }
+
+    @media (max-width: 600px) {
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-category {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+    }
+
+    .skill-category strong {
+      color: var(--text-primary);
+      font-weight: 600;
+      display: inline-block;
+      width: 140px;
+    }
+
+    /* Achievements & Education */
+    .simple-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .simple-list li {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .simple-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-size: 1rem;
+      top: 1px;
+    }
+
+    .education-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .edu-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .edu-meta {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .actions-bar {
+        display: none !important;
+      }
+      .cv-container {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      .contact-item i {
+        color: #000000 !important;
+      }
+      .item-bullets li::before, .simple-list li::before {
+        color: #000000 !important;
+      }
+      @page {
+        size: A4;
+        margin: 20mm 20mm 20mm 20mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Actions Bar -->
+  <div class="actions-bar">
+    <a href="index.html" class="btn-action">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <button class="btn-action" onclick="window.print()">
+      <i class="fa-solid fa-print"></i> Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Curriculum Vitae (CV) Document -->
+  <div class="cv-container">
+    
+    <!-- HEADER -->
+    <header class="cv-header">
+      <div class="header-top">
+        <h1>Saobia Islam</h1>
+        <h2>Full-Stack Developer</h2>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:islamsaobia@gmail.com" class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          islamsaobia@gmail.com
+        </a>
+        <a href="https://islamsaobia.vercel.app" target="_blank" class="contact-item">
+          <i class="fa-solid fa-globe"></i>
+          islamsaobia.vercel.app
+        </a>
+        <a href="https://github.com/Saobia3i" target="_blank" class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          github.com/Saobia3i
+        </a>
+        <a href="https://linkedin.com/in/saobia-islam-1b173b284" target="_blank" class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn Profile
+        </a>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          Dhaka, Bangladesh
+        </div>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="cv-section">
+      <h3 class="section-title">Professional Summary</h3>
+      <p class="summary-text">
+        Results-driven <strong>Full-Stack Developer</strong> and Computer Science student at <strong>Ahsanullah University of Science and Technology (AUST)</strong>, with proven production-level experience across MERN, Next.js, Laravel, and .NET stacks. Independently architected and shipped the <strong>Tensor Security Academy</strong> platform; integrating n8n workflow automation and PostgreSQL for a live cybersecurity training business. Experienced in leading development teams, owning full project lifecycles, and shipping scalable, secure web applications under real-world deadlines. Actively deepening expertise in Next.js, AI-driven automation, and cybersecurity.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="cv-section">
+      <h3 class="section-title">Technical Skills</h3>
+      <div class="skills-container">
+        <div class="skill-category">
+          <strong>Languages:</strong> JavaScript, TypeScript, Python, C#, PHP, HTML5, CSS3
+        </div>
+        <div class="skill-category">
+          <strong>Frontend Frameworks:</strong> React.js, Next.js
+        </div>
+        <div class="skill-category">
+          <strong>Styling &amp; UI:</strong> Tailwind CSS, Shadcn UI, MUI, Ant Design, Bootstrap, Framer Motion
+        </div>
+        <div class="skill-category">
+          <strong>Backend &amp; APIs:</strong> Node.js, Express.js, Laravel, .NET Core, REST APIs, Jinja2
+        </div>
+        <div class="skill-category">
+          <strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Firebase
+        </div>
+        <div class="skill-category">
+          <strong>DevOps &amp; Cloud:</strong> Docker, Vercel, Railway, Git, GitHub CI/CD
+        </div>
+        <div class="skill-category">
+          <strong>AI &amp; Automation:</strong> n8n workflow automation, AI Integration, Prompt Engineering
+        </div>
+        <div class="skill-category">
+          <strong>Tools &amp; Platforms:</strong> Figma, WordPress, Google Sites, Overleaf
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="cv-section">
+      <h3 class="section-title">Work Experience</h3>
+      <div class="timeline-list">
+        
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Solo Software Engineer</span>
+              <span class="item-meta"> | <strong>Tensor Security Academy (TSA)</strong> <span>· Remote</span></span>
+            </div>
+            <span class="item-date">2025 – Present</span>
+          </div>
+          <ul class="item-bullets">
+            <li>Sole developer — designed, built, and currently maintain the TSA production platform in <strong>Next.js</strong>, focusing on scalable architecture and security-hardened deployment.</li>
+            <li>Engineered an <strong>n8n-powered service booking automation pipeline</strong>, eliminating manual coordination and improving booking reliability.</li>
+            <li>Architected and managed all data operations on <strong>PostgreSQL</strong>, including schema design, query optimization, and data integrity.</li>
+            <li>Applied security best practices throughout the stack, directly aligned with the platform's cybersecurity mission.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Frontend Developer (Project-Based)</span>
+              <span class="item-meta"> | <strong>SSRN Transfer</strong> <span>· Remote (US-Based client)</span></span>
+            </div>
+            <span class="item-date">Jan 2026 – Jun 2026</span>
+          </div>
+          <ul class="item-bullets">
+            <li>Built and maintained UI templates using <strong>Jinja2</strong> for a US-based car rental client, ensuring fast, consistent user experiences.</li>
+            <li>Collaborated remotely to deliver frontend updates on schedule, adapting to client-driven requirements and feedback cycles.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Director — Website &amp; App Development Team</span>
+              <span class="item-meta"> | <strong>AUST Robotics Club</strong> <span>· Dhaka, Bangladesh</span></span>
+            </div>
+            <span class="item-date">2023 – Present</span>
+          </div>
+          <ul class="item-bullets">
+            <li>Led the web development team: managed sprint planning, code reviews, task delegation, and production deployments for all club properties.</li>
+            <li>Delivered the <strong>AUST Robotics Club main website</strong> using React.js and Firebase backend.</li>
+            <li>Delivered the <strong>Robomania 2.0</strong> event site (React.js, Shadcn, Aceternity UI) and Rover Challenge 2.0 site on tight, non-negotiable event deadlines.</li>
+            <li>Recognized with the <strong>Best Panel Member award</strong> for exceptional technical leadership within the website team.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">IT Specialist (Volunteer)</span>
+              <span class="item-meta"> | <strong>Multiple Non-Profit Organizations</strong> <span>· Bangladesh</span></span>
+            </div>
+            <span class="item-date">2021 – 2022</span>
+          </div>
+          <ul class="item-bullets">
+            <li>Delivered IT support, graphic design, and digital tooling solutions for student clubs and community organizations across multiple engagements.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY PROJECTS -->
+    <section class="cv-section">
+      <h3 class="section-title">Key Projects</h3>
+      <div class="timeline-list">
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">The Event Management Portal (Universal Competition System)</span>
+              <span class="item-meta"> | <em>React.js, Node.js, Firebase, Tailwind CSS</em></span>
+            </div>
+            <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="contact-item item-date">Live Link <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+          <ul class="item-bullets">
+            <li>Developed a high-performance competition management engine powering national robotics championships.</li>
+            <li>Implemented real-time match leaderboards, live analytics dashboards, and automated digital certificate generation.</li>
+            <li>Built a full admin command center to orchestrate registrations, users, teams, and active contest segments.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">AI Sales Lead Research &amp; Outreach Agent</span>
+              <span class="item-meta"> | <em>LangGraph, Groq LLaMA 3.3, FastAPI, Next.js</em></span>
+            </div>
+            <a href="https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent" target="_blank" class="contact-item item-date">GitHub <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+          <ul class="item-bullets">
+            <li>Architected a multi-agent AI system designed to automate B2B sales intelligence and personalized outreach.</li>
+            <li>Integrated web research agents to autonomously compile target company profiles and qualify leads.</li>
+            <li>Built an LLM verification node to cross-check drafted emails against researched facts, preventing hallucinations.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">ResearchMind — Multi-Agent AI System</span>
+              <span class="item-meta"> | <em>LangGraph, Pinecone, Gemini, Groq, OpenRouter</em></span>
+            </div>
+            <a href="https://github.com/Saobia3i/researchMind" target="_blank" class="contact-item item-date">GitHub <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+          <ul class="item-bullets">
+            <li>Built a full-stack research automation platform supporting Quick, ReAct Loop, Team, and Deep Consensus modes.</li>
+            <li>Implemented claim-level factual verification tags and vector database integrations using Pinecone.</li>
+            <li>Designed a dashboard to monitor API consumption costs, token usage, and pipeline latency.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">WattWatch — IoT Digital Twin &amp; Smart Office</span>
+              <span class="item-meta"> | <em>Next.js, Python, Server-Sent Events, SQLite, ESP32</em></span>
+            </div>
+            <a href="https://wattwatch-f099.onrender.com" target="_blank" class="contact-item item-date">Live Link <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+          <ul class="item-bullets">
+            <li>Designed an event-driven digital twin to monitor electrical consumption in real-time.</li>
+            <li>Created an interactive 2D floorplan showing live power telemetry updated instantly via Server-Sent Events (SSE).</li>
+            <li>Integrated hardware sensors with a Discord bot to query energy analytics using natural language commands.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Lead Capture &amp; AI-Qualification System</span>
+              <span class="item-meta"> | <em>n8n, Groq API, Slack, Google Sheets, Gmail SMTP</em></span>
+            </div>
+            <a href="https://lead-generation1.vercel.app" target="_blank" class="contact-item item-date">Live Link <i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+          <ul class="item-bullets">
+            <li>Built a webhook-triggered lead generation workflow qualifying prospects programmatically.</li>
+            <li>Utilized Groq LLaMA 3.3 to qualify leads based on intent, scoring them and triggering Slack alerts.</li>
+            <li>Automated CRM logging on Google Sheets and drafted personalized follow-up emails via SMTP in under one minute.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="cv-section">
+      <h3 class="section-title">Education</h3>
+      <div class="education-block">
+        <div>
+          <span class="edu-title">B.Sc. in Computer Science &amp; Engineering (CSE)</span>
+          <div class="edu-meta">Ahsanullah University of Science and Technology (AUST) <span>· Dhaka, Bangladesh</span></div>
+          <div class="edu-meta" style="font-style: italic;">Focus: Web Engineering · Cybersecurity · Database Systems · Software Architecture</div>
+        </div>
+        <span class="item-date">Currently Enrolled</span>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & LEADERSHIP -->
+    <section class="cv-section">
+      <h3 class="section-title">Achievements &amp; Leadership</h3>
+      <ul class="simple-list">
+        <li><strong>Best Panel Member Award</strong> — Website Team, AUST Robotics Club (recognition for technical leadership and output quality).</li>
+        <li><strong>Senior Sub Executive</strong> — Website Team, AUST Robotics Club.</li>
+        <li><strong>Champion</strong> — Video Editing Course Certification.</li>
+        <li><strong>Best House In-charge</strong> — Leadership Recognition Award.</li>
+        <li><strong>Active Open-Source Contributor</strong> — tracked via WakaTime: wakatime.com/@Saobia</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
