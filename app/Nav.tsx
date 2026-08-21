@@ -30,7 +30,7 @@ interface NavProps {
 
 /** Floating pill navigation shared by the home and projects pages. */
 export default function Nav({ links, logoHref = "#hero-top" }: NavProps) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
@@ -39,7 +39,7 @@ export default function Nav({ links, logoHref = "#hero-top" }: NavProps) {
   useEffect(() => {
     // Reads localStorage, which only exists client-side, so the saved theme can't be
     // known during the server render — this effect is the hydration-safe sync point.
-    const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+    const savedTheme = localStorage.getItem("portfolio-theme") || "light";
     // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from localStorage, not derived render state
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);

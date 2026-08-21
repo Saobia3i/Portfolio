@@ -798,33 +798,6 @@ const styles = `
       }
     }
 
-    @keyframes beamSlide {
-      0% {
-        transform: translate3d(-120%, 0, 0);
-      }
-
-      50% {
-        transform: translate3d(70%, 0, 0);
-      }
-
-      100% {
-        transform: translate3d(220%, 0, 0);
-      }
-    }
-
-    @keyframes haloPulse {
-      0%,
-      100% {
-        opacity: 0.12;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.26;
-        transform: scale(1.08);
-      }
-    }
-
     @keyframes revealUp {
       0% {
         opacity: 0;
@@ -850,17 +823,6 @@ const styles = `
       100% {
         opacity: 1;
         transform: perspective(900px) scale(1) translateZ(0px) rotateX(0deg);
-      }
-    }
-
-    @keyframes certShimmer {
-      0% {
-        transform: translate3d(-140%, 0, 0) skewX(-18deg);
-      }
-
-      60%,
-      100% {
-        transform: translate3d(240%, 0, 0) skewX(-18deg);
       }
     }
 
@@ -951,30 +913,8 @@ const styles = `
       z-index: 50;
     }
 
-    /* Boxed sections — projects, experience, certificates */
-    body:not(.dark) section:not(.hero):not(#about):not(#contact):not(#tech) {
-      background: var(--card-light);
-      border: 2px solid var(--border-color);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    body.dark section:not(.hero):not(#about):not(#contact):not(#tech) {
-      background: var(--card-dark);
-      border: 1px solid var(--border-dark);
-      box-shadow: var(--shadow-dark);
-    }
-
-    body:not(.dark) section:not(.hero):not(#about):not(#contact):not(#tech):hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover-light);
-      border-color: var(--primary-color);
-    }
-
-    body.dark section:not(.hero):not(#about):not(#contact):not(#tech):hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover-dark);
-      border-color: var(--secondary);
-    }
+    /* Content sections (projects, experience, certificates) are plain containers —
+       only the individual cards inside them carry border/shadow. */
 
     /* Tech section — open, no outer box */
     #tech {
@@ -1080,38 +1020,34 @@ const styles = `
 
     .tech-group,
     .project-card,
-    .experience-card,
-    .certificate-card {
+    .experience-card {
       min-width: 0;
     }
 
     .tech-group {
       padding: 1.3rem;
-      background: rgba(var(--primary-rgb), 0.03);
-      border-radius: 12px;
-      border: 2px solid rgba(var(--primary-rgb), 0.28);
-      box-shadow: 0 2px 12px rgba(var(--primary-rgb), 0.06);
-      transition: transform 0.24s cubic-bezier(0.22, 0.61, 0.36, 1),
-                  box-shadow 0.24s ease,
-                  border-color 0.24s ease;
+      background: var(--card-bg-light);
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-light);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       position: relative;
-      overflow: hidden;
     }
 
     body.dark .tech-group {
       background: rgba(255, 255, 255, 0.02);
-      border-color: rgba(var(--secondary-rgb), 0.4);
+      border-color: rgba(var(--secondary-rgb), 0.18);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
 
     .tech-group:hover {
-      transform: translateY(-4px);
-      border-color: rgba(var(--primary-rgb), 0.55);
-      box-shadow: 0 12px 32px rgba(var(--primary-rgb), 0.1);
+      transform: translateY(-3px);
+      border-color: rgba(var(--primary-rgb), 0.25);
+      box-shadow: var(--shadow-hover-light);
     }
 
     body.dark .tech-group:hover {
-      border-color: rgba(var(--secondary-rgb), 0.65);
+      border-color: rgba(var(--secondary-rgb), 0.35);
       box-shadow: 0 12px 32px rgba(var(--secondary-rgb), 0.08);
     }
 
@@ -1163,25 +1099,21 @@ const styles = `
     .tech-pill {
       display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
-      padding: 0.55rem 0.82rem;
-      border-radius: 999px;
-      border: 2px solid rgba(var(--primary-rgb), 0.28);
-      background: rgba(255, 255, 255, 0.7);
+      gap: 0.5rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      background: rgba(var(--primary-rgb), 0.05);
       color: var(--primary-color);
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.86rem;
-      box-shadow: 0 8px 22px rgba(var(--primary-rgb), 0.08);
-      transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      transition: background 0.18s ease, color 0.18s ease;
       white-space: nowrap;
       max-width: 100%;
     }
 
     body.dark .tech-pill {
-      background: rgba(0, 0, 0, 0.25);
-      border-color: rgba(var(--secondary-rgb), 0.35);
+      background: rgba(255, 255, 255, 0.04);
       color: var(--text-main);
-      box-shadow: 0 8px 22px rgba(var(--secondary-rgb), 0.08);
     }
 
     .tech-pill i {
@@ -1189,10 +1121,12 @@ const styles = `
     }
 
     .tech-pill:hover {
-      transform: translateY(-3px);
-      border-color: rgba(var(--secondary-rgb), 0.35);
-      background: rgba(var(--secondary-rgb), 0.10);
-      box-shadow: 0 12px 28px var(--border-color);
+      background: rgba(var(--secondary-rgb), 0.12);
+      color: var(--secondary);
+    }
+
+    body.dark .tech-pill:hover {
+      color: var(--secondary);
     }
 
     /* ===== PROJECTS (bordered premium cards) ===== */
@@ -1207,63 +1141,28 @@ const styles = `
     .project-card {
       padding: 1.5rem;
       background: #fff;
-      border-radius: 12px;
-      border: 2px solid var(--border-color);
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
       box-shadow: var(--shadow-light);
-      transition: transform 0.26s cubic-bezier(0.2, 0.7, 0.2, 1),
-                  box-shadow 0.26s ease,
-                  border-color 0.26s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
       position: relative;
-      overflow: hidden;
     }
 
     body.dark .project-card {
       background: var(--card-dark);
-      border-color: rgba(var(--secondary-rgb), 0.45);
+      border-color: rgba(var(--secondary-rgb), 0.22);
       box-shadow: var(--shadow-dark);
     }
 
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: -80px;
-      background: radial-gradient(circle at 20% 10%, var(--border-color), transparent 45%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .project-card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 70%;
-      height: 7px;
-      background: linear-gradient(90deg, var(--text-muted), rgba(var(--secondary-rgb), 0.95), var(--text-muted));
-      opacity: 0.9;
-      transform: translate3d(-120%, 0, 0);
-      transition: opacity 0.3s ease;
-      animation: beamSlide 4.8s ease-in-out infinite;
-      z-index: 2;
-      pointer-events: none;
-      will-change: transform, opacity;
-    }
-
     .project-card:hover {
-      transform: translateY(-7px) scale(1.012);
-      border-color: var(--primary-color);
+      transform: translateY(-4px);
+      border-color: rgba(var(--primary-rgb), 0.3);
       box-shadow: var(--shadow-hover-light);
     }
 
     body.dark .project-card:hover {
-      border-color: rgba(var(--secondary-rgb), 0.75);
+      border-color: rgba(var(--secondary-rgb), 0.4);
       box-shadow: var(--shadow-hover-dark);
-    }
-
-    .project-card:hover::after {
-      opacity: 1;
-      animation-duration: 1.2s;
     }
 
     .project-card h3 {
@@ -1304,17 +1203,15 @@ const styles = `
     .tech-tag {
       background: rgba(var(--primary-rgb), 0.08);
       color: var(--primary-color);
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      border: 2px solid rgba(var(--primary-rgb), 0.28);
-      font-weight: 700;
+      padding: 0.28rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
     }
 
     body.dark .tech-tag {
       background: rgba(var(--secondary-rgb), 0.12);
       color: var(--secondary);
-      border-color: var(--border-color);
     }
 
     .project-links {
@@ -1330,12 +1227,12 @@ const styles = `
       padding: 0.6rem 1.2rem;
       border-radius: 10px;
       text-decoration: none;
-      font-weight: 800;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       border: 1px solid transparent;
       min-width: 0;
       text-align: center;
@@ -1399,33 +1296,30 @@ const styles = `
     .experience-card {
       padding: 1.5rem;
       background: #fff;
-      border-radius: 12px;
-      border: 2px solid var(--border-color);
-      border-left: 4px solid var(--primary-color);
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--primary-color);
       box-shadow: var(--shadow-light);
-      transition: transform 0.23s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.23s ease,
-                  border-color 0.23s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       position: relative;
-      overflow: hidden;
     }
 
     body.dark .experience-card {
       background: var(--card-dark);
-      border-color: rgba(var(--secondary-rgb), 0.45);
+      border-color: rgba(var(--secondary-rgb), 0.22);
       border-left-color: var(--secondary);
       box-shadow: var(--shadow-dark);
     }
 
     .experience-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary-color);
+      transform: translateY(-3px);
+      border-color: rgba(var(--primary-rgb), 0.3);
       border-left-color: var(--primary-color);
       box-shadow: var(--shadow-hover-light);
     }
 
     body.dark .experience-card:hover {
-      border-color: rgba(var(--secondary-rgb), 0.75);
+      border-color: rgba(var(--secondary-rgb), 0.4);
       border-left-color: var(--secondary);
       box-shadow: var(--shadow-hover-dark);
     }
@@ -1462,75 +1356,116 @@ const styles = `
       color: #ccc;
     }
 
-    .certificates-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
+    /* ===== CERTIFICATE CAROUSEL (home teaser) ===== */
+    .cert-carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
     }
 
-    .certificate-card {
+    .cert-carousel-fade {
+      display: none;
+    }
+
+    .cert-carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      animation: certScroll 48s linear infinite;
+    }
+
+    .cert-carousel:hover .cert-carousel-track,
+    .cert-carousel:focus-within .cert-carousel-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes certScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .cert-carousel-slide {
+      flex: 0 0 auto;
+      width: 260px;
       border-radius: var(--radius);
       overflow: hidden;
-      border: 2px solid var(--border-color);
+      border: 1px solid var(--border-color);
       background: #fff;
       box-shadow: var(--shadow-light);
-      transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
       position: relative;
+      cursor: zoom-in;
+      font: inherit;
+      text-align: left;
+      padding: 0;
+      color: inherit;
     }
 
-    .certificate-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 65%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent 0%, rgba(var(--secondary-rgb), 0.3) 48%, transparent 100%);
-      transform: translate3d(-140%, 0, 0) skewX(-18deg);
-      pointer-events: none;
-      z-index: 2;
-      animation: certShimmer 3.2s ease-in-out infinite;
-      will-change: transform;
-    }
-
-    body.dark .certificate-card {
+    body.dark .cert-carousel-slide {
       background: var(--card-dark);
-      border-color: rgba(var(--secondary-rgb), 0.52);
+      border-color: rgba(var(--secondary-rgb), 0.22);
       box-shadow: var(--shadow-dark);
     }
 
-    .certificate-card:hover {
-      transform: translateY(-6px) scale(1.015);
+    .cert-carousel-slide:hover,
+    .cert-carousel-slide:focus-visible {
+      transform: translateY(-4px);
       box-shadow: var(--shadow-hover-light);
-      border-color: var(--primary-color);
+      border-color: rgba(var(--primary-rgb), 0.3);
+      outline: none;
     }
 
-    .certificate-card:hover::before {
-      animation-duration: 1.2s;
-    }
-
-    body.dark .certificate-card:hover {
+    body.dark .cert-carousel-slide:hover,
+    body.dark .cert-carousel-slide:focus-visible {
       border-color: var(--secondary);
       box-shadow: var(--shadow-hover-dark);
     }
 
-    .certificate-card img {
+    .cert-carousel-slide img {
+      display: block;
       width: 100%;
-      height: 180px;
+      height: 150px;
       object-fit: cover;
       border-bottom: 2px solid var(--primary-color);
-      position: relative;
-      z-index: 1;
-      cursor: zoom-in;
     }
 
-    body.dark .certificate-card img {
+    body.dark .cert-carousel-slide img {
       border-bottom-color: var(--secondary);
     }
 
-    .certificate-card:focus-within {
-      outline: 3px solid rgba(var(--secondary-rgb), 0.7);
-      outline-offset: 4px;
+    .cert-carousel-caption {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding: 0.8rem 0.9rem;
+    }
+
+    .cert-carousel-caption strong {
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    body.dark .cert-carousel-caption strong {
+      color: var(--text-main);
+    }
+
+    .cert-carousel-caption span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .certificates-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cert-carousel-track {
+        animation: none;
+      }
     }
 
     .certificate-preview {
@@ -1585,22 +1520,6 @@ const styles = `
       transform: scale(1.06);
       background: var(--secondary);
       outline: none;
-    }
-
-    .certificate-card .cert-content {
-      padding: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .certificate-card p {
-      color: #333;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    body.dark .certificate-card p {
-      color: var(--text-main);
     }
 
     .wakatime-section {
@@ -1804,8 +1723,8 @@ const styles = `
         grid-template-columns: 1fr;
       }
 
-      .certificates-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .cert-carousel-slide {
+        width: 220px;
       }
 
       body:not(.dark) section:not(.hero):hover,
@@ -1813,8 +1732,7 @@ const styles = `
       .about-list li:hover,
       .project-card:hover,
       .tech-group:hover,
-      .experience-card:hover,
-      .certificate-card:hover {
+      .experience-card:hover {
         transform: none;
       }
     }
@@ -1962,8 +1880,8 @@ const styles = `
         width: 100%;
       }
 
-      .certificates-grid {
-        grid-template-columns: 1fr;
+      .cert-carousel-slide {
+        width: 190px;
       }
 
       .project-btn {
@@ -1995,7 +1913,6 @@ const styles = `
       .section-title,
       .project-card h3,
       .experience-card h3,
-      .certificate-card p,
       .about-list li,
       .project-card p,
       .experience-card p,
@@ -2007,8 +1924,7 @@ const styles = `
     @media (hover: none) {
       .project-card:hover,
       .tech-group:hover,
-      .experience-card:hover,
-      .certificate-card:hover {
+      .experience-card:hover {
         transform: none;
       }
     }

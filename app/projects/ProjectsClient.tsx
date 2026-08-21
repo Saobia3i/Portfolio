@@ -34,7 +34,7 @@ const NAV_LINKS = [
   { href: "/#tech", label: "Tech" },
   { href: "/#projects", label: "All Projects" },
   { href: "/#experience", label: "Experience" },
-  { href: "/#certificates", label: "Certificates" },
+  { href: "/certificates", label: "Certificates" },
   { href: "/#contact", label: "Contact" },
 ];
 
