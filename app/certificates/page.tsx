@@ -469,6 +469,38 @@ const styles = `
       position: relative;
     }
 
+    @keyframes certShimmer {
+      0% {
+        transform: translate3d(-140%, 0, 0) skewX(-18deg);
+      }
+
+      60%,
+      100% {
+        transform: translate3d(240%, 0, 0) skewX(-18deg);
+      }
+    }
+
+    .certificate-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(var(--secondary-rgb), 0.3) 48%, transparent 100%);
+      transform: translate3d(-140%, 0, 0) skewX(-18deg);
+      pointer-events: none;
+      z-index: 2;
+      animation: certShimmer 3.2s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .certificate-card::before {
+        animation: none;
+      }
+    }
+
     .certificate-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-hover-light);

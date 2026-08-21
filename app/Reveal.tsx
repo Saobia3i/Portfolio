@@ -5,6 +5,7 @@ import { useReveal } from "./useReveal";
 
 interface RevealProps {
   as?: ElementType;
+  id?: string;
   className?: string;
   variant?: "reveal-up" | "reveal-depth";
   delayMs?: number;
@@ -15,6 +16,7 @@ interface RevealProps {
 /** Drop-in wrapper that applies the site's staggered scroll-reveal animation. */
 export default function Reveal({
   as: Tag = "div",
+  id,
   className = "",
   variant = "reveal-up",
   delayMs = 0,
@@ -28,6 +30,7 @@ export default function Reveal({
   return (
     <Tag
       ref={ref}
+      id={id}
       className={`motion-reveal ${variant} ${inView ? "in-view" : ""} ${className}`.trim()}
       style={style}
       {...rest}

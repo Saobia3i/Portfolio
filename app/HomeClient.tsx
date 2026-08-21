@@ -18,7 +18,7 @@ const PROJECT_LINK_ICONS = {
 const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#tech", label: "Tech" },
-  { href: "#projects", label: "Projects" },
+  { href: "/projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#certificates", label: "Certificates" },
   { href: "#contact", label: "Contact" },
@@ -127,7 +127,7 @@ const PROJECTS: ProjectCardData[] = [
       "Full-stack AI agency and software engineering platform built with Next.js App Router, Prisma ORM, PostgreSQL, Groq AI SDK integration, NextAuth authentication, and server-side automation.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Groq AI", "NextAuth"],
     links: [
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#arelix-labs", label: "Details", icon: "open_in_new", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/Arelix-Labs", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
@@ -145,7 +145,7 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["React", "TypeScript", "Vite", "Firebase Firestore", "Firebase Auth", "ImageKit CDN"],
     links: [
       { href: "https://www.austrc.com/", label: "View Live", icon: "visibility", variant: "btn-live" },
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#aust-robotics-club", label: "Details", icon: "open_in_new", variant: "btn-live" },
     ],
   },
   {
@@ -155,7 +155,7 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["React", "TypeScript", "Node.js", "Firebase", "Real-time DB", "Admin Panel"],
     links: [
       { href: "https://arc.austrc.com/aust-rover-challenge-2-0/", label: "View Live", icon: "visibility", variant: "btn-live" },
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#arc-portal", label: "Details", icon: "open_in_new", variant: "btn-live" },
     ],
   },
   {
@@ -165,7 +165,7 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["Deployment", "Debugging", "Hosting", "Web Engineering"],
     links: [
       { href: "https://austcaic.com/", label: "View Live", icon: "visibility", variant: "btn-live" },
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#austcaic-website", label: "Details", icon: "open_in_new", variant: "btn-live" },
     ],
   },
   {
@@ -173,7 +173,7 @@ const PROJECTS: ProjectCardData[] = [
     description:
       "Internal graphics web app for the AUSTCAIC Graphics Team. Generates 300 DPI print-ready PNG posters with fixed brand guidelines, Satori rendering engine, and Groq LLaMA 3.3 + Pinecone AI notes assistant.",
     tags: ["Next.js 15", "React 19", "Satori", "Groq LLaMA 3.3", "Pinecone", "Tailwind CSS v4"],
-    links: [{ href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" }],
+    links: [{ href: "/projects#austcaic-poster-generator", label: "Details", icon: "open_in_new", variant: "btn-live" }],
   },
   {
     title: "Lead Capture & AI-Qualification System",
@@ -182,7 +182,7 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["n8n", "Groq API", "Slack", "SMTP", "Sheets"],
     links: [
       { href: "https://lead-generation1.vercel.app", label: "View Live", icon: "visibility", variant: "btn-live" },
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#lead-capture-ai", label: "Details", icon: "open_in_new", variant: "btn-live" },
     ],
   },
   {
@@ -242,7 +242,7 @@ const PROJECTS: ProjectCardData[] = [
       "Advanced multi-agent AI system for B2B sales intelligence. Takes a company name or URL, performs real-time web research, synthesizes a company intelligence profile, drafts a personalized cold email, and runs a strict fact-verification pass to ensure zero hallucinations.",
     tags: ["LangGraph", "Python", "FastAPI", "Next.js", "Groq LLaMA 3.3", "Docker"],
     links: [
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#ai-sales-agent", label: "Details", icon: "open_in_new", variant: "btn-live" },
       {
         href: "https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent",
         label: "GitHub",
@@ -257,7 +257,7 @@ const PROJECTS: ProjectCardData[] = [
       "Portfolio-grade computer vision app that turns hand gestures into lag-free virtual mouse controls. Features a 2D Kalman Filter, transparent AR desktop overlay with neon cursor trails, click-physics particle explosions, real-time HUD, and a Gradio browser sandbox.",
     tags: ["Python", "OpenCV", "MediaPipe", "Kalman Filter", "Gradio", "Windows"],
     links: [
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#smartair-mouse", label: "Details", icon: "open_in_new", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/SmartAir-Mouse-Pro", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
@@ -267,7 +267,7 @@ const PROJECTS: ProjectCardData[] = [
       "A charming real-time mood detection application that uses your webcam to recognize facial expressions and reflect your emotional state as a fun, animated visual mirror — mapping detected emotions to cute animated characters with dynamic color-coded feedback.",
     tags: ["Python", "Computer Vision", "Emotion Detection", "Real-time"],
     links: [
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#mood-mirror", label: "Details", icon: "open_in_new", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/my-cutie-mood-mirror", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
@@ -277,7 +277,7 @@ const PROJECTS: ProjectCardData[] = [
       "Full-stack AI research system featuring 4 modes: Quick Research, ReAct Agent, Team Research (LangGraph pipeline), and Deep Consensus — a cost-aware multi-model workflow with claim-level verification, model disagreement mapping, and live token/cost tracking.",
     tags: ["LangGraph", "Gemini", "Groq", "Pinecone", "FastAPI", "Python"],
     links: [
-      { href: "/projects", label: "Details", icon: "open_in_new", variant: "btn-live" },
+      { href: "/projects#researchmind", label: "Details", icon: "open_in_new", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/researchMind", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
@@ -326,7 +326,7 @@ const EXPERIENCE: ExperienceEntry[] = [
       "Founding panel member and current Joint Secretary. Co-built the club from scratch, structuring operational workflows, leading cross-functional teams, and directing technical strategy. Architected and managed the full web infrastructure for the official club portal (austcaic.com), handling deployment pipelines, server hosting, live debugging, and internal digital tooling.",
     projects: [
       { href: "https://austcaic.com/", label: "austcaic.com" },
-      { href: "/projects", label: "Poster Generator" },
+      { href: "/projects#austcaic-poster-generator", label: "Poster Generator" },
     ],
   },
   {
@@ -367,10 +367,10 @@ export default function HomeClient() {
           <img src="/assets/profile.png" alt="Saobia Islam" className="profile-img" />
         </div>
 
+        <p className="hero-eyebrow">Full Stack Developer &amp; AI Engineer</p>
         <h1>
           Hi there, I&apos;m <span className="name-highlight">Saobia Islam Tinni</span>
         </h1>
-        <p className="subtitle">Full Stack Developer · AI &amp; Automation</p>
         <p className="bio">
           I build clean, responsive, and user-focused web apps that are secure and scalable. I care about both
           design and functionality, and I&apos;m committed to continuous learning, steady growth, and meaningful
@@ -571,8 +571,42 @@ export default function HomeClient() {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2025 Saobia Islam Tinni. All rights reserved.</p>
-        <p style={{ marginTop: "0.5rem" }}>Built with passion and dedication to excellence</p>
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <span className="footer-logo">Saobia Islam Tinni</span>
+            <p>Full Stack Developer building secure, AI-integrated web platforms.</p>
+          </div>
+          <nav className="footer-links" aria-label="Footer navigation">
+            {NAV_LINKS.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <div className="footer-contact">
+            <span className="footer-contact-label">Contact</span>
+            <div className="footer-socials">
+              <a href="mailto:islamsaobia@gmail.com" aria-label="Email">
+                <Mail size={20} />
+              </a>
+              <a href="https://github.com/Saobia3i" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Code size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/saobia-islam-1b173b284/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Briefcase size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Saobia Islam Tinni. All rights reserved.</p>
+          <p>Built with passion and dedication to excellence</p>
+        </div>
       </footer>
     </>
   );

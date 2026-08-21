@@ -6,6 +6,7 @@ import {
   ArrowLeft,
   Bot,
   Brain,
+  Briefcase,
   Car,
   CircleCheck,
   Code,
@@ -97,7 +98,7 @@ export default function ProjectsClient() {
         </p>
         <div className="projects-grid-full" id="projects-grid">
           {/* ====== PROJECT 1: AI Sales Lead Agent ====== */}
-          <Reveal as="article" className={cardClassName("ai", activeFilter)} data-category="ai" delayMs={0}>
+          <Reveal as="article" id="ai-sales-agent" className={cardClassName("ai", activeFilter)} data-category="ai" delayMs={0}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-ai">
@@ -196,7 +197,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 2: SmartAir Mouse Pro ====== */}
-          <Reveal as="article" className={cardClassName("cv", activeFilter)} data-category="cv" delayMs={80}>
+          <Reveal as="article" id="smartair-mouse" className={cardClassName("cv", activeFilter)} data-category="cv" delayMs={80}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-cv">
@@ -278,7 +279,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 3: My Cutie Mood Mirror ====== */}
-          <Reveal as="article" className={cardClassName("fun", activeFilter)} data-category="fun" delayMs={160}>
+          <Reveal as="article" id="mood-mirror" className={cardClassName("fun", activeFilter)} data-category="fun" delayMs={160}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-fun">
@@ -340,7 +341,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 4: ResearchMind ====== */}
-          <Reveal as="article" className={cardClassName("ai", activeFilter)} data-category="ai" delayMs={0}>
+          <Reveal as="article" id="researchmind" className={cardClassName("ai", activeFilter)} data-category="ai" delayMs={0}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-ai">
@@ -435,7 +436,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 5: WattWatch ====== */}
-          <Reveal as="article" className={cardClassName("iot", activeFilter)} data-category="iot" delayMs={80}>
+          <Reveal as="article" id="wattwatch" className={cardClassName("iot", activeFilter)} data-category="iot" delayMs={80}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-iot">
@@ -590,7 +591,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 6: Tensor Security Academy (TSA) ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={0}>
+          <Reveal as="article" id="tsa" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={0}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -667,7 +668,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 7: Arelix Labs ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={80}>
+          <Reveal as="article" id="arelix-labs" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={80}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -755,7 +756,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT: SSRN Transfer ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={100}>
+          <Reveal as="article" id="ssrn-transfer" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={100}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -832,7 +833,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 8: Linear AI ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={120}>
+          <Reveal as="article" id="linear-ai" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={120}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -902,7 +903,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 8: AUST RC Website ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={160}>
+          <Reveal as="article" id="aust-robotics-club" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={160}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -998,7 +999,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== NEW PROJECT: AUST Rover Challenge (ARC) Portal (powered by UCS) ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={200}>
+          <Reveal as="article" id="arc-portal" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={200}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1125,7 +1126,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT: AUSTCAIC Official Website ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={240}>
+          <Reveal as="article" id="austcaic-website" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={240}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1210,7 +1211,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT: AUSTCAIC Poster Generator ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={280}>
+          <Reveal as="article" id="austcaic-poster-generator" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={280}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1316,7 +1317,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== NEW PROJECT: Lead Capture & AI-Qualification System ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={80}>
+          <Reveal as="article" id="lead-capture-ai" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={80}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1410,7 +1411,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 9: Robomania 2.0 ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={0}>
+          <Reveal as="article" id="robomania" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={0}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1480,7 +1481,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 10: QuoteVerse ====== */}
-          <Reveal as="article" className={cardClassName("fun", activeFilter)} data-category="fun" delayMs={80}>
+          <Reveal as="article" id="quoteverse" className={cardClassName("fun", activeFilter)} data-category="fun" delayMs={80}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-fun">
@@ -1543,7 +1544,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 11: iCanteen ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={160}>
+          <Reveal as="article" id="icanteen" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={160}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1609,7 +1610,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 12: CSE-3100 Assignment ====== */}
-          <Reveal as="article" className={cardClassName("fun", activeFilter)} data-category="fun" delayMs={0}>
+          <Reveal as="article" id="frontend-assignment" className={cardClassName("fun", activeFilter)} data-category="fun" delayMs={0}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-fun">
@@ -1664,7 +1665,7 @@ export default function ProjectsClient() {
             </div>
           </Reveal>
           {/* ====== PROJECT 13: Green Gadgets ====== */}
-          <Reveal as="article" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={80}>
+          <Reveal as="article" id="green-gadgets" className={cardClassName("fullstack", activeFilter)} data-category="fullstack" delayMs={80}>
             <div className="card-header-band"></div>
             <div className="card-body">
               <span className="project-badge badge-full">
@@ -1728,12 +1729,42 @@ export default function ProjectsClient() {
         {/* /projects-grid-full */}
       </main>
       <footer>
-        <p>
-          &copy; 2025 Saobia Islam Tinni. All rights reserved.
-        </p>
-        <p style={{ marginTop: "0.4rem", opacity: "0.6", fontSize: "0.82rem" }}>
-          Built with passion and dedication to excellence.
-        </p>
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <span className="footer-logo">Saobia Islam Tinni</span>
+            <p>Full Stack Developer building secure, AI-integrated web platforms.</p>
+          </div>
+          <nav className="footer-links" aria-label="Footer navigation">
+            {NAV_LINKS.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <div className="footer-contact">
+            <span className="footer-contact-label">Contact</span>
+            <div className="footer-socials">
+              <a href="mailto:islamsaobia@gmail.com" aria-label="Email">
+                <Mail size={20} />
+              </a>
+              <a href="https://github.com/Saobia3i" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Code size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/saobia-islam-1b173b284/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Briefcase size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Saobia Islam Tinni. All rights reserved.</p>
+          <p>Built with passion and dedication to excellence.</p>
+        </div>
       </footer>
     </>
   );
