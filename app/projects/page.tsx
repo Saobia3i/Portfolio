@@ -721,6 +721,16 @@ const styles = `
       margin-top: auto;
     }
 
+    /* Cards with no live/GitHub links (e.g. internal-only tools) still get the
+       closing border + reserved height so they read as intentionally "done"
+       rather than truncated next to cards that do have action buttons. */
+    .card-actions-empty {
+      margin-top: auto;
+      padding: 1rem 1.6rem 1.4rem;
+      border-top: 1px solid var(--border-color);
+      min-height: 3.05rem;
+    }
+
     .project-btn {
       padding: 0.55rem 1.1rem;
       border-radius: 10px;
