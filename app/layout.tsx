@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://islamsaobia.vercel.app"),
+  metadataBase: new URL("https://saobiaislam.me"),
   title: {
     default: "Saobia Islam Tinni | Developer",
     template: "%s | Saobia Islam Tinni",

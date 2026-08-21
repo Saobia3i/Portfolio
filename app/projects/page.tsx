@@ -495,6 +495,7 @@ const styles = `
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 1.8rem;
+      align-items: start;
     }
 
     /* ===== PROJECT DETAIL CARD ===== */
@@ -544,6 +545,65 @@ const styles = `
       flex: 1;
       display: flex;
       flex-direction: column;
+    }
+
+    /* ===== EXPANDABLE CARD BODY ===== */
+    .card-expandable {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-expandable-content {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: max-height 0.35s ease;
+    }
+
+    .card-expandable-content.is-expanded {
+      max-height: none !important;
+    }
+
+    .card-expandable-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 64px;
+      background: linear-gradient(180deg, transparent, var(--card-bg) 85%);
+      pointer-events: none;
+    }
+
+    .card-expandable-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      align-self: flex-start;
+      margin-top: 0.9rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+      background: rgba(var(--secondary-rgb), 0.08);
+      color: var(--secondary);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .card-expandable-toggle:hover,
+    .card-expandable-toggle:focus-visible {
+      background: rgba(var(--secondary-rgb), 0.16);
+      border-color: var(--secondary);
+      outline: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card-expandable-content {
+        transition: none;
+      }
     }
 
     /* Project badges */

@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import Nav from "../Nav";
 import Reveal from "../Reveal";
+import ExpandableCardBody from "./ExpandableCardBody";
 
 const NAV_LINKS = [
   { href: "/#about", label: "About" },
@@ -50,7 +51,7 @@ const FILTERS = [
 
 function cardClassName(category: string, activeFilter: string) {
   const hidden = activeFilter !== "all" && activeFilter !== category;
-  return hidden ? "is-hidden" : "";
+  return `project-detail-card ${hidden ? "is-hidden" : ""}`.trim();
 }
 
 export default function ProjectsClient() {
@@ -112,6 +113,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Multi-Agent · LangGraph · FastAPI · Next.js
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 An advanced multi-agent AI system designed for B2B sales intelligence. Give it a company name or website URL, and it autonomously researches that company, synthesizes an intelligence profile, writes a highly personalized cold email — then runs a
                 {" "}
@@ -187,6 +189,7 @@ export default function ProjectsClient() {
                   Vercel
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
@@ -211,6 +214,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 OpenCV · MediaPipe · Python · Windows Overlay
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A portfolio-grade computer vision application that turns bare hand gestures into a lag-free virtual mouse using classical computer vision — no wearables required. Features a stunning transparent desktop overlay with glowing neon cursor trails, click-physics particle explosions, a real-time HUD, and an integrated Gradio browser sandbox for live prototyping.
               </p>
@@ -269,6 +273,7 @@ export default function ProjectsClient() {
                   Windows
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/Saobia3i/SmartAir-Mouse-Pro" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
@@ -293,6 +298,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Emotion Detection · Real-Time Camera · Interactive UI
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A charming real-time mood detection application that uses your webcam to recognize facial expressions and instantly reflects your emotional state as a fun, animated visual &quot;mirror.&quot; Built as a delightful blend of computer vision and interactive UI design, it maps detected emotions to cute characters and dynamic visual feedback — making sentiment analysis feel playful and personal.
               </p>
@@ -331,6 +337,7 @@ export default function ProjectsClient() {
                   Interactive UI
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/Saobia3i/my-cutie-mood-mirror" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
@@ -355,6 +362,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Multi-Model · LangGraph · Pinecone · Deep Consensus
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A full-stack AI research system that goes beyond &quot;showing sources.&quot; ResearchMind makes the research process fully inspectable: what evidence was retrieved, which model produced which opinion, which claims were verified, where confidence is weak, and exactly how much each run costs. It combats AI hallucination at the architectural level.
               </p>
@@ -426,6 +434,7 @@ export default function ProjectsClient() {
                   Full Stack
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/Saobia3i/researchMind" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
@@ -450,6 +459,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Real-Time IoT Digital Twin &amp; AI-Powered Smart Office Console
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A production-ready, event-driven digital twin for monitoring, analyzing, and optimizing office electrical consumption. Any team member can view live device states, track energy draw in Watts &amp; kWh, receive anomaly alerts, and query office telemetry directly from
                 {" "}
@@ -576,6 +586,7 @@ export default function ProjectsClient() {
                   Vercel
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -605,6 +616,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Next.js · n8n Automation · PostgreSQL · Security Architecture
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Official production web platform built for Tensor Security Academy, focusing on high-performance scalability, strong security practices, and reliable data management.
               </p>
@@ -653,6 +665,7 @@ export default function ProjectsClient() {
                   Vercel
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://www.tensorsecurityacademy.com/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -682,6 +695,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Next.js 16 · Prisma ORM · PostgreSQL · Groq AI SDK · NextAuth · Tailwind CSS
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Full-stack AI agency and software development platform. Engineered with Next.js App Router, Prisma ORM, PostgreSQL database layers, Groq AI SDK integrations, NextAuth authentication, and automated client service pipelines.
               </p>
@@ -746,6 +760,7 @@ export default function ProjectsClient() {
                   NextAuth
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/Saobia3i/Arelix-Labs" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
@@ -770,6 +785,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Jinja2 · HTML5 · CSS3 · JavaScript · Netlify
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Project-based frontend development for SSRN Transfer, a US-based car rental platform. Built and maintained fast, responsive interface templates using Jinja2 to ensure consistent user experiences and seamless booking navigation.
               </p>
@@ -823,6 +839,7 @@ export default function ProjectsClient() {
                   Netlify
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://ssrn-app.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -847,6 +864,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 React.js · ASP.NET Core Web API · n8n · Render
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A full-stack automation commerce platform that facilitates product catalog browsing, admin-controlled discount offers, vouchers, order fulfillment, automated template delivery, product requests, and moderated user feedback.
               </p>
@@ -888,6 +906,7 @@ export default function ProjectsClient() {
                   Render
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://linearai.onrender.com" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -917,6 +936,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 React · TypeScript · Vite · Firebase Suite
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 As the Director of the Web Team, I led and coordinated the development team while actively coding and engineering the official web portal for the AUST Robotics Club (AUSTRC). I personally designed and implemented the core interactive features, security rules, and real-time content updates.
               </p>
@@ -989,6 +1009,7 @@ export default function ProjectsClient() {
                   ImageKit CDN
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://www.austrc.com/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1013,6 +1034,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 React · TypeScript · Node.js · Firebase · Tailwind CSS
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 The official national event management platform built for the prestigious AUST Rover Challenge (ARC) — a national championship encompassing LFR, Soccer Bot, Rover Run, and Hackathons. I served as Director of the Web Team and Lead Developer, managing the project lifecycle, directing the team, and personally coding critical systems driven by our custom Universal Competition System (UCS) engine.
               </p>
@@ -1116,6 +1138,7 @@ export default function ProjectsClient() {
                   Admin Panel
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1140,6 +1163,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Deployment · Debugging · Hosting · Web Infrastructure
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Official website for the AUST Cybersecurity and AI Club (AUSTCAIC). As Joint Secretary, I spearheaded technical operations, managing end-to-end web deployment, server setup, live debugging, and cloud hosting infrastructure for austcaic.com.
               </p>
@@ -1201,6 +1225,7 @@ export default function ProjectsClient() {
                   Cybersecurity &amp; AI
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://austcaic.com/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1225,6 +1250,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 Next.js 15 · React 19 · Satori + @resvg/resvg-js · Groq LLaMA 3.3 · Pinecone · Tailwind CSS v4
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Internal graphics web app engineered for the AUSTCAIC Graphics Team. Enables instant generation of 300 DPI print-ready PNG posters and social media banners adhering strictly to fixed brand guidelines — eliminating the need for design software. Powered by Satori &amp; resvg-js rendering engines and augmented with AI content assistance via Groq SDK and Pinecone.
               </p>
@@ -1314,6 +1340,7 @@ export default function ProjectsClient() {
                   Lucide React
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
           </Reveal>
           {/* ====== NEW PROJECT: Lead Capture & AI-Qualification System ====== */}
@@ -1331,6 +1358,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 n8n · Groq LLaMA 3.3 · HTML/CSS · Slack · Google Sheets · Gmail SMTP
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Full-stack lead capture system with AI-powered qualification. Built responsive landing page integrated with n8n automation workflow featuring: webhook-triggered pipeline, Groq LLaMA 3.3 lead scoring (0-100, HOT/WARM/COLD classification), automated personalized email generation for qualified leads, Google Sheets CRM logging, and Slack real-time alerts. Deployed on Vercel.
               </p>
@@ -1401,6 +1429,7 @@ export default function ProjectsClient() {
                   Vercel
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://lead-generation1.vercel.app" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1425,6 +1454,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 React.js · Shadcn UI · Aceternity UI · Tailwind CSS
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Sleek event website for the AUST Robotics Club flagship national robotics competition, showcasing event paths, registration dashboards, schedules, and team collaborations.
               </p>
@@ -1466,6 +1496,7 @@ export default function ProjectsClient() {
                   Framer Motion
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://www.robomania.austrc.com/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1495,6 +1526,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 React.js · Ant Design · Material UI (MUI)
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A minimal, responsive quote generation application that fetches and delivers inspiring quotes, styled with sleek layout structures.
               </p>
@@ -1529,6 +1561,7 @@ export default function ProjectsClient() {
                   Vercel
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://quote-verse-psi.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1558,6 +1591,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 React.js · Laravel · MySQL · Tailwind CSS
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Full-stack canteen management system streamlining food ordering, real-time queueing, digital menu management, and operations for students and canteen staff.
               </p>
@@ -1595,6 +1629,7 @@ export default function ProjectsClient() {
                   Ant Design
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://i-canteen.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-btn btn-live">
@@ -1624,6 +1659,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 HTML5 · CSS3 · Vanilla JavaScript
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 A clean frontend development project illustrating custom responsive layout architectures, animations, and interactivity using only pure HTML, CSS, and Vanilla JS.
               </p>
@@ -1655,6 +1691,7 @@ export default function ProjectsClient() {
                   Responsive UI
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/Saobia3i/cse-3100" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
@@ -1679,6 +1716,7 @@ export default function ProjectsClient() {
               <p className="card-subtitle">
                 MERN Stack (MongoDB, Express, React, Node.js)
               </p>
+              <ExpandableCardBody>
               <p className="card-desc">
                 Collaborative e-commerce portal showcasing eco-friendly gadgets, with shopping carts, search capabilities, and team coordination.
               </p>
@@ -1716,6 +1754,7 @@ export default function ProjectsClient() {
                   Bootstrap
                 </span>
               </div>
+              </ExpandableCardBody>
             </div>
             <div className="card-actions">
               <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" rel="noopener noreferrer" className="project-btn btn-github">
