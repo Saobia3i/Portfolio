@@ -656,11 +656,11 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: Vantage Robotics ======
   {
     id: "vantage-robotics",
-    category: "ai",
+    category: "iot",
     delayMs: 0,
-    badgeVariant: "badge-ai",
-    badgeIcon: "bot",
-    badgeLabel: "Robotics & AI Digital Twin",
+    badgeVariant: "badge-iot",
+    badgeIcon: "zap",
+    badgeLabel: "Robotics & IoT Digital Twin",
     title: "Vantage Robotics — Digital Twin & Control Suite",
     subtitle: "Next.js 15 · Three.js · urdf-loader · Hand-Rolled DLS IK · Groq LLM · Web Speech API",
     desc: (
@@ -975,12 +975,8 @@ export const PROJECTS: ProjectData[] = [
         content: (
           <>
             <strong>Live:</strong>{" "}
-            <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer">
-              wattwatch-f099.onrender.com
-            </a>{" "}
-            |{" "}
             <a href="https://watt-watch-chi.vercel.app" target="_blank" rel="noopener noreferrer">
-              Vercel Mirror
+              watt-watch-chi.vercel.app
             </a>{" "}
             | Discord Bot: <em>Smart Circuit Bot</em> (24/7 active)
           </>
@@ -1011,12 +1007,11 @@ export const PROJECTS: ProjectData[] = [
       "Groq",
       "ESP32",
       "ACS712",
-      "Render",
       "Vercel",
     ],
     actions: [
       {
-        href: "https://wattwatch-f099.onrender.com",
+        href: "https://watt-watch-chi.vercel.app",
         label: "View Live",
         variant: "btn-live",
         icon: "live",

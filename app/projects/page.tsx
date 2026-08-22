@@ -446,6 +446,129 @@ const styles = `
       max-width: 550px;
     }
 
+    /* ===== SEARCH BAR ===== */
+    .search-bar-container {
+      width: min(650px, calc(100% - 2rem));
+      margin: 1.2rem auto 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: 999px;
+      padding: 0.6rem 1.2rem;
+      box-shadow: var(--shadow-light);
+      transition: all 0.25s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .search-input-wrapper:focus-within {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 4px rgba(var(--secondary-rgb), 0.15), var(--shadow-hover-light);
+      transform: translateY(-2px);
+    }
+
+    .search-icon {
+      color: var(--secondary);
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+      transition: color 0.2s ease;
+    }
+
+    .search-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .search-input::placeholder {
+      color: var(--text-muted);
+      opacity: 0.65;
+    }
+
+    .search-clear-btn {
+      background: rgba(var(--primary-rgb), 0.1);
+      border: none;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      cursor: pointer;
+      margin-left: 0.5rem;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .search-clear-btn:hover {
+      background: rgba(var(--secondary-rgb), 0.2);
+      color: var(--secondary);
+    }
+
+    .search-meta-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      padding: 0 0.8rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .no-projects-found {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--card-bg);
+      border: 1px dashed var(--border-color);
+      border-radius: 16px;
+      margin: 1rem 0;
+    }
+
+    .no-projects-found h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    .no-projects-found p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .reset-search-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      background: var(--secondary);
+      color: #001f3f;
+      font-weight: 700;
+      font-size: 0.82rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .reset-search-btn:hover {
+      transform: translateY(-2px);
+    }
+
     /* ===== FILTER TABS ===== */
     .filter-bar {
       display: flex;
@@ -495,7 +618,7 @@ const styles = `
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 1.8rem;
-      align-items: start;
+      align-items: stretch;
     }
 
     /* ===== PROJECT DETAIL CARD ===== */
@@ -509,6 +632,7 @@ const styles = `
       position: relative;
       display: flex;
       flex-direction: column;
+      height: 100%;
       scroll-margin-top: 130px;
     }
 
@@ -541,7 +665,7 @@ const styles = `
     }
 
     .card-body {
-      padding: 1.6rem 1.6rem 1rem;
+      padding: 1.6rem 1.6rem 0.8rem;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -551,6 +675,7 @@ const styles = `
     .card-expandable {
       display: flex;
       flex-direction: column;
+      flex: 1;
     }
 
     .card-expandable-content {
@@ -575,12 +700,19 @@ const styles = `
       pointer-events: none;
     }
 
+    .card-expandable-toggle-wrapper {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      margin-top: 0.4rem;
+      flex-shrink: 0;
+    }
+
     .card-expandable-toggle {
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
       align-self: flex-start;
-      margin-top: 0.9rem;
       padding: 0.4rem 0.85rem;
       border-radius: 999px;
       border: 1px solid var(--border-color);
@@ -617,8 +749,9 @@ const styles = `
       text-transform: uppercase;
       padding: 0.28rem 0.75rem;
       border-radius: 999px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       width: fit-content;
+      flex-shrink: 0;
     }
 
     .badge-ai     { background: rgba(99,102,241,0.12);  color: #6366f1; }
@@ -637,8 +770,13 @@ const styles = `
       font-size: 1.25rem;
       font-weight: 800;
       color: var(--text-heading);
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.4rem;
       line-height: 1.3;
+      min-height: 3.25rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .card-subtitle {
@@ -647,6 +785,11 @@ const styles = `
       color: var(--secondary);
       margin-bottom: 0.8rem;
       opacity: 0.85;
+      min-height: 2.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .card-desc {
@@ -654,7 +797,6 @@ const styles = `
       color: var(--text-bio);
       line-height: 1.7;
       margin-bottom: 1rem;
-      flex: 1;
     }
 
     /* Feature list */
@@ -715,10 +857,12 @@ const styles = `
     .card-actions {
       display: flex;
       gap: 0.6rem;
-      flex-wrap: wrap;
+      align-items: center;
       padding: 1rem 1.6rem 1.4rem;
       border-top: 1px solid var(--border-color);
       margin-top: auto;
+      min-height: 4.4rem;
+      flex-shrink: 0;
     }
 
     /* Cards with no live/GitHub links (e.g. internal-only tools) still get the
@@ -728,7 +872,8 @@ const styles = `
       margin-top: auto;
       padding: 1rem 1.6rem 1.4rem;
       border-top: 1px solid var(--border-color);
-      min-height: 3.05rem;
+      min-height: 4.4rem;
+      flex-shrink: 0;
     }
 
     .project-btn {

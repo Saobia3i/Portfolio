@@ -279,7 +279,7 @@ const PROJECTS: ProjectCardData[] = [
       "Production-ready, event-driven digital twin for monitoring & optimizing office electrical consumption. Features a 2D interactive floorplan, real-time SSE device updates, 15 controllable devices, a Gemini-powered Discord AI bot, and ESP32 hardware integration.",
     tags: ["Next.js", "Python", "SQLite + SSE", "Discord.py", "Gemini Flash", "ESP32"],
     links: [
-      { href: "https://wattwatch-f099.onrender.com", label: "View Live", icon: "visibility", variant: "btn-live" },
+      { href: "https://watt-watch-chi.vercel.app", label: "View Live", icon: "visibility", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/WattWatch", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
