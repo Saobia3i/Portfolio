@@ -95,10 +95,10 @@
       max-width: calc(100vw - 2.5rem);
       opacity: 1;
       transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-                  opacity 0.35s ease;
+        opacity 0.35s ease;
     }
 
-.nav-wrapper.nav-hidden {
+    .nav-wrapper.nav-hidden {
       transform: translateX(-50%) translateY(-140%) scale(0.88);
       opacity: 0;
       pointer-events: none;
@@ -536,6 +536,7 @@
     }
 
     @keyframes haloPulse {
+
       0%,
       100% {
         opacity: 0.12;
@@ -554,12 +555,15 @@
         transform: translateY(40px) scale(0.96);
         filter: blur(2px);
       }
+
       30% {
         opacity: 0.5;
       }
+
       70% {
         filter: blur(0px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -573,12 +577,15 @@
         transform: perspective(900px) scale(0.82) translateZ(-60px) rotateX(4deg);
         filter: blur(6px);
       }
+
       40% {
         opacity: 0.7;
       }
+
       75% {
         filter: blur(0px);
       }
+
       100% {
         opacity: 1;
         transform: perspective(900px) scale(1) translateZ(0px) rotateX(0deg);
@@ -816,8 +823,8 @@
       border: 2px solid rgba(0, 31, 63, 0.28);
       box-shadow: 0 2px 12px rgba(0, 31, 63, 0.06);
       transition: transform 0.24s cubic-bezier(0.22, 0.61, 0.36, 1),
-                  box-shadow 0.24s ease,
-                  border-color 0.24s ease;
+        box-shadow 0.24s ease,
+        border-color 0.24s ease;
       position: relative;
       overflow: hidden;
     }
@@ -935,8 +942,8 @@
       border: 2px solid rgba(0, 31, 63, 0.38);
       box-shadow: var(--shadow-light);
       transition: transform 0.26s cubic-bezier(0.2, 0.7, 0.2, 1),
-                  box-shadow 0.26s ease,
-                  border-color 0.26s ease;
+        box-shadow 0.26s ease,
+        border-color 0.26s ease;
       position: relative;
       overflow: hidden;
     }
@@ -1118,8 +1125,8 @@
       border-left: 4px solid #001f3f;
       box-shadow: var(--shadow-light);
       transition: transform 0.23s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.23s ease,
-                  border-color 0.23s ease;
+        box-shadow 0.23s ease,
+        border-color 0.23s ease;
       position: relative;
       overflow: hidden;
     }
@@ -1423,6 +1430,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       .motion-reveal,
       .motion-reveal.reveal-up.in-view,
       .motion-reveal.reveal-depth.in-view {
@@ -1438,6 +1446,7 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
+
       html,
       body {
         width: 100%;
@@ -1445,7 +1454,7 @@
         overflow-x: clip;
       }
 
-      body > * {
+      body>* {
         max-width: 100vw;
       }
 
@@ -1680,6 +1689,7 @@
     }
 
     @media (hover: none) {
+
       .project-card:hover,
       .tech-group:hover,
       .experience-card:hover,
@@ -1706,7 +1716,8 @@
       <button class="theme-toggle" aria-label="Toggle theme">
         <span class="material-icons">light_mode</span>
       </button>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+        aria-controls="primary-navigation">
         <span class="material-icons" aria-hidden="true">menu</span>
       </button>
     </nav>
@@ -1761,10 +1772,12 @@
         Building full stack web apps with <strong>MERN</strong> and <strong>Next.js</strong>
       </li>
       <li>
-        Focused on <strong>AI-integrated full stack websites</strong> with modern UI and <strong>AI automation</strong> services
+        Focused on <strong>AI-integrated full stack websites</strong> with modern UI and <strong>AI automation</strong>
+        services
       </li>
       <li>
-        Learning <strong> AI Automation</strong> and <strong>Machine Learning</strong> to build more intelligent products
+        Learning <strong> AI Automation</strong> and <strong>Machine Learning</strong> to build more intelligent
+        products
       </li>
       <li>
         Open to collaborating on <strong>e-commerce</strong>, <strong>edtech</strong>, and other modern web projects
@@ -1877,7 +1890,9 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>Tensor Security Academy (TSA)</h3>
-        <p>I independently built and maintain the TSA platform using Next.js, focusing on scalable architecture, strong security practices, and production-ready performance. I also integrated n8n-powered service booking automation with PostgreSQL for reliable data management.</p>
+        <p>I independently built and maintain the TSA platform using Next.js, focusing on scalable architecture, strong
+          security practices, and production-ready performance. I also integrated n8n-powered service booking automation
+          with PostgreSQL for reliable data management.</p>
         <div class="tech-tags">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">n8n</span>
@@ -1896,7 +1911,9 @@
 
       <div class="project-card">
         <h3>Linear AI - AI Automation Store</h3>
-        <p>I designed and built Linear AI as a full-stack automation commerce platform, with a React frontend and ASP.NET Core Web API backend powering product catalogs, admin-controlled offers, vouchers, discounts, order fulfillment, delivery of n8n templates/setup guides, product requests, and moderated user feedback.</p>
+        <p>I designed and built Linear AI as a full-stack automation commerce platform, with a React frontend and
+          ASP.NET Core Web API backend powering product catalogs, admin-controlled offers, vouchers, discounts, order
+          fulfillment, delivery of n8n templates/setup guides, product requests, and moderated user feedback.</p>
         <div class="tech-tags">
           <span class="tech-tag">React.js</span>
           <span class="tech-tag">ASP.NET Core Web API</span>
@@ -1960,7 +1977,8 @@
           <span class="tech-tag">Tailwind css</span>
         </div>
         <div class="project-links">
-          <a href="https://drive.google.com/file/d/1ehZ9Yw-eteUAkHE7Nq5wTgvWQPeQ9WLb/view?usp=sharing" target="_blank" class="project-btn btn-live">
+          <a href="https://drive.google.com/file/d/1ehZ9Yw-eteUAkHE7Nq5wTgvWQPeQ9WLb/view?usp=sharing" target="_blank"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size: 18px">visibility</span> View Demo
           </a>
           <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" class="project-btn btn-github">
@@ -2010,7 +2028,8 @@
         <h3>Lead Software Engineer</h3>
         <p class="company"><strong>Tensor Security Academy (TSA)</strong> | Current</p>
         <p>
-          Independently built and currently maintain the official TSA website in Next.js with a focus on scalability and security.
+          Independently built and currently maintain the official TSA website in Next.js with a focus on scalability and
+          security.
           Integrated n8n automation for service booking workflows and managed data operations with PostgreSQL.
         </p>
         <p style="margin-top: 1rem"><strong>Key Projects:</strong></p>
@@ -2028,7 +2047,7 @@
         </p>
         <p style="margin-top: 1rem"><strong>Key Projects:</strong></p>
         <div class="project-links" style="margin-top: 0.8rem">
-          
+
         </div>
       </div>
 
@@ -2042,7 +2061,8 @@
         <div class="project-links" style="margin-top: 0.8rem">
           <a href="https://www.austrc.com/" target="_blank" class="project-btn btn-live">AUST RC Website</a>
           <a href="https://www.robomania.austrc.com/" target="_blank" class="project-btn btn-live">Robomania 2.0</a>
-          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-btn btn-live">Rover Challenge 2.0</a>
+          <a href="https://https://arc-event-website.vercel.app//aust-rover-challenge-2-0/" target="_blank"
+            class="project-btn btn-live">Rover Challenge 2.0</a>
         </div>
       </div>
 
@@ -2073,14 +2093,14 @@
     <div class="certificates-grid">
 
 
-<div class="certificate-card">
+      <div class="certificate-card">
         <img src="assets/Assistant Director cert.jpg" alt="Assistant Director Certificate" />
         <div class="cert-content">
           <p><strong>Assistant Director</strong><br />Website & App Development Team, AUST Robotics Club</p>
         </div>
       </div>
 
-    
+
 
       <div class="certificate-card">
         <img src="assets/best panel.jpg" alt="Best Panel member of Website Team Certificate" />
@@ -2089,7 +2109,7 @@
         </div>
       </div>
 
-       <div class="certificate-card">
+      <div class="certificate-card">
         <img src="assets/Video.png" alt="Video Editing Certificate" />
         <div class="cert-content">
           <p><strong>Champion</strong><br />Video Editing Course Certification</p>
@@ -2097,13 +2117,14 @@
       </div>
 
       <div class="certificate-card">
-        <img src="assets/certificate Machine Learning Basics with Python.jpg" alt="Machine Learning Basics with Python Certificate" />
+        <img src="assets/certificate Machine Learning Basics with Python.jpg"
+          alt="Machine Learning Basics with Python Certificate" />
         <div class="cert-content">
           <p><strong>Machine Learning Basics with Python</strong><br />Course Completion Certificate</p>
         </div>
       </div>
 
-     
+
 
       <div class="certificate-card">
         <img src="assets/ssex.jpeg" alt="Senior Sub Executive Certificate" />
@@ -2112,7 +2133,7 @@
         </div>
       </div>
 
-      
+
 
       <div class="certificate-card">
         <img src="assets/bestin.jpg" alt="Best House In-charge" />
@@ -2156,7 +2177,8 @@
     <p style="margin-top: 0.5rem">Built with passion and dedication to excellence</p>
   </footer>
 
-  <div class="certificate-preview" id="certificate-preview" aria-hidden="true" role="dialog" aria-label="Certificate preview">
+  <div class="certificate-preview" id="certificate-preview" aria-hidden="true" role="dialog"
+    aria-label="Certificate preview">
     <button class="certificate-preview-close" type="button" aria-label="Close certificate preview">
       <span class="material-icons" aria-hidden="true">close</span>
     </button>
@@ -2413,15 +2435,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

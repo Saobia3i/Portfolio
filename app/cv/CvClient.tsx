@@ -500,7 +500,7 @@ export default function CvClient() {
                     </em>
                   </span>
                 </div>
-                <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" rel="noopener noreferrer" className="contact-item item-date">
+                <a href="https://https://arc-event-website.vercel.app//aust-rover-challenge-2-0/" target="_blank" rel="noopener noreferrer" className="contact-item item-date">
                   Live Link
                   {" "}
                   <i className="fa-solid fa-up-right-from-square"></i>

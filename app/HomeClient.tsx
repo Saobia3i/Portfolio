@@ -156,7 +156,7 @@ const PROJECTS: ProjectCardData[] = [
       "I served as Director and Lead Developer for the official national event portal powering the AUST Rover Challenge (which hosts LFR, Soccer Bot, Rover Run, and Hackathons). Personally coded and engineered the portal's core systems driven by our custom Universal Competition System (UCS) engine (live analytics, real-time leaderboards, automated certificate generators, and a secure admin command center).",
     tags: ["React", "TypeScript", "Node.js", "Firebase", "Real-time DB", "Admin Panel"],
     links: [
-      { href: "https://arc.austrc.com/aust-rover-challenge-2-0/", label: "View Live", icon: "visibility", variant: "btn-live" },
+      { href: "https://https://arc-event-website.vercel.app//aust-rover-challenge-2-0/", label: "View Live", icon: "visibility", variant: "btn-live" },
       { href: "/projects#arc-portal", label: "Details", icon: "open_in_new", variant: "btn-live" },
     ],
   },
@@ -328,7 +328,7 @@ const EXPERIENCE: ExperienceEntry[] = [
     projects: [
       { href: "https://www.austrc.com/", label: "AUST RC Website" },
       { href: "https://www.robomania.austrc.com/", label: "Robomania 2.0" },
-      { href: "https://arc.austrc.com/aust-rover-challenge-2-0/", label: "Rover Challenge 2.0" },
+      { href: "https://https://arc-event-website.vercel.app//aust-rover-challenge-2-0/", label: "Rover Challenge 2.0" },
     ],
   },
   {

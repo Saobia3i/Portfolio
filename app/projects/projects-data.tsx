@@ -305,7 +305,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     actions: [
       {
-        href: "https://arc.austrc.com/aust-rover-challenge-2-0/",
+        href: "https://https://arc-event-website.vercel.app//aust-rover-challenge-2-0/",
         label: "View Live",
         variant: "btn-live",
         icon: "live",
