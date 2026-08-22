@@ -186,29 +186,36 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 3: My Cutie Mood Mirror ======
   {
     id: "mood-mirror",
-    category: "fun",
+    category: "cv",
     delayMs: 160,
-    badgeVariant: "badge-fun",
-    badgeIcon: "heart",
-    badgeLabel: "Fun / Creative",
+    badgeVariant: "badge-cv",
+    badgeIcon: "hand",
+    badgeLabel: "Computer Vision · Full Stack",
     title: "My Cutie Mood Mirror",
-    subtitle: "Emotion Detection · Real-Time Camera · Interactive UI",
+    subtitle: "Computer Vision · Emotion Detection · Real-Time Camera · Full Stack",
     desc: (
       <>
-        A charming real-time mood detection application that uses your webcam to recognize facial
-        expressions and instantly reflects your emotional state as a fun, animated visual
-        &quot;mirror.&quot; Built as a delightful blend of computer vision and interactive UI
-        design, it maps detected emotions to cute characters and dynamic visual feedback — making
-        sentiment analysis feel playful and personal.
+        A real-time mood detection application built with computer vision that uses your webcam to
+        recognize facial expressions — then instantly reflects your detected emotion as an{" "}
+        <strong>animated cat character</strong>, acting as a playful visual mirror. Maps every
+        detected emotion to a unique cat reaction with dynamic visual feedback, making sentiment
+        analysis feel personal and fun.
       </>
     ),
     features: [
-      "Real-time webcam facial expression recognition",
-      "Maps detected emotions to animated visual representations",
-      "Smooth, responsive UI with dynamic color-coded mood feedback",
-      "Interactive and engaging — designed to feel personal and fun",
+      <>
+        <strong>Computer Vision Core:</strong> Real-time webcam facial expression recognition using
+        CV pipelines.
+      </>,
+      <>
+        <strong>Cat Visual Mirror:</strong> Each detected emotion is reflected as a unique animated
+        cat character reaction.
+      </>,
+      "Smooth, responsive full-stack UI with dynamic color-coded mood feedback",
+      "Real-time emotion state updates — zero lag between face and cat reflection",
+      "Interactive and engaging — designed to feel personal, fun, and expressive",
     ],
-    tags: ["Python", "Computer Vision", "Emotion Detection", "Real-time", "Interactive UI"],
+    tags: ["Python", "Computer Vision", "Emotion Detection", "Full Stack", "Real-time", "Interactive UI"],
     actions: [
       {
         href: "https://github.com/Saobia3i/my-cutie-mood-mirror",

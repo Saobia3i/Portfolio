@@ -263,8 +263,8 @@ const PROJECTS: ProjectCardData[] = [
   {
     title: "My Cutie Mood Mirror",
     description:
-      "A charming real-time mood detection application that uses your webcam to recognize facial expressions and reflect your emotional state as a fun, animated visual mirror — mapping detected emotions to cute animated characters with dynamic color-coded feedback.",
-    tags: ["Python", "Computer Vision", "Emotion Detection", "Real-time"],
+      "A real-time mood detection application built with computer vision. Uses your webcam to detect facial expressions and instantly reflects your emotion as an animated cat character — acting as a playful visual mirror. A full-stack CV project that maps every detected mood to a unique cat reaction with dynamic color-coded feedback.",
+    tags: ["Python", "Computer Vision", "Emotion Detection", "Full Stack", "Real-time"],
     links: [
       { href: "/projects#mood-mirror", label: "Details", icon: "open_in_new", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/my-cutie-mood-mirror", label: "GitHub", icon: "code", variant: "btn-github" },
