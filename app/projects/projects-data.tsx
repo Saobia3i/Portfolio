@@ -59,9 +59,11 @@ export interface ProjectAction {
   icon: "live" | "github";
 }
 
+export type ProjectCategory = "ai" | "cv" | "iot" | "fullstack" | "fun";
+
 export interface ProjectData {
   id: string;
-  category: "ai" | "cv" | "iot" | "fullstack" | "fun";
+  category: ProjectCategory | ProjectCategory[];
   delayMs: number;
   badgeVariant: BadgeVariant;
   badgeIcon: ProjectBadgeIconKey;
@@ -123,7 +125,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 2: Arelix Labs ======
   {
     id: "arelix-labs",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 80,
     badgeVariant: "badge-full",
     badgeIcon: "network",
@@ -401,7 +403,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: AUSTCAIC Poster Generator ======
   {
     id: "austcaic-poster-generator",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 280,
     badgeVariant: "badge-full",
     badgeIcon: "palette",
@@ -471,7 +473,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== NEW PROJECT: Lead Capture & AI-Qualification System ======
   {
     id: "lead-capture-ai",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 80,
     badgeVariant: "badge-full",
     badgeIcon: "mail",
@@ -656,7 +658,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: Vantage Robotics ======
   {
     id: "vantage-robotics",
-    category: "iot",
+    category: ["iot", "fullstack"],
     delayMs: 0,
     badgeVariant: "badge-iot",
     badgeIcon: "zap",
@@ -755,7 +757,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: AI Sales Lead Research & Outreach Agent ======
   {
     id: "ai-sales-agent",
-    category: "ai",
+    category: ["ai", "fullstack"],
     delayMs: 0,
     badgeVariant: "badge-ai",
     badgeIcon: "bot",
@@ -859,7 +861,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: My Cutie Mood Mirror ======
   {
     id: "mood-mirror",
-    category: "cv",
+    category: ["cv", "fullstack"],
     delayMs: 160,
     badgeVariant: "badge-cv",
     badgeIcon: "heart",
@@ -898,7 +900,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: ResearchMind ======
   {
     id: "researchmind",
-    category: "ai",
+    category: ["ai", "fullstack"],
     delayMs: 0,
     badgeVariant: "badge-ai",
     badgeIcon: "brain",
@@ -955,7 +957,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: WattWatch ======
   {
     id: "wattwatch",
-    category: "iot",
+    category: ["iot", "fullstack"],
     delayMs: 80,
     badgeVariant: "badge-iot",
     badgeIcon: "zap",
