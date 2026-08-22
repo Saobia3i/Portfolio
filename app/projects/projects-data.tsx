@@ -623,7 +623,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["React.js", "Laravel", "PHP", "MySQL", "Tailwind CSS", "Ant Design"],
     actions: [
-      { href: "https://i-canteen.vercel.app/", label: "View Live", variant: "btn-live", icon: "live" },
+      { href: "https://drive.google.com/file/d/1ehZ9Yw-eteUAkHE7Nq5wTgvWQPeQ9WLb/view?usp=sharing", label: "View Demo", variant: "btn-live", icon: "live" },
       { href: "https://github.com/Saobia3i/iCanteen1", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },

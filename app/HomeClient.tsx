@@ -200,7 +200,7 @@ const PROJECTS: ProjectCardData[] = [
     description: "Full-stack smart canteen system streamlining ordering, menu management, and staff operations.",
     tags: ["React.js", "Laravel", "MySQL", "Ant Design", "Tailwind css"],
     links: [
-      { href: "https://i-canteen.vercel.app/", label: "View Live", icon: "visibility", variant: "btn-live" },
+      { href: "https://drive.google.com/file/d/1ehZ9Yw-eteUAkHE7Nq5wTgvWQPeQ9WLb/view?usp=sharing", label: "View Demo", icon: "visibility", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/iCanteen1", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
