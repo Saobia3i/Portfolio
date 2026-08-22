@@ -291,7 +291,7 @@ export const PROJECTS: ProjectData[] = [
         A production-ready, event-driven digital twin for monitoring, analyzing, and optimizing
         office electrical consumption. Any team member can view live device states, track energy
         draw in Watts &amp; kWh, receive anomaly alerts, and query office telemetry directly from{" "}
-        <strong>Discord</strong> in natural language — all without a page refresh. Live demo
+        <strong>Discord</strong> in natural language — all without a page refresh. View Live
         available.
       </>
     ),
@@ -355,7 +355,7 @@ export const PROJECTS: ProjectData[] = [
     actions: [
       {
         href: "https://wattwatch-f099.onrender.com",
-        label: "Live Demo",
+        label: "View Live",
         variant: "btn-live",
         icon: "live",
       },
@@ -399,11 +399,10 @@ export const PROJECTS: ProjectData[] = [
     actions: [
       {
         href: "https://www.tensorsecurityacademy.com/",
-        label: "Live Demo",
+        label: "View Live",
         variant: "btn-live",
         icon: "live",
       },
-      { href: "https://github.com/Saobia3i/TSA1.1", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },
   // ====== PROJECT 7: Arelix Labs ======
@@ -454,7 +453,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Groq AI", "NextAuth"],
     actions: [
-      { href: "https://github.com/Saobia3i/Arelix-Labs", label: "GitHub", variant: "btn-github", icon: "github" },
+      { href: "https://arelixlabs.com", label: "Live", variant: "btn-live", icon: "live" },
     ],
   },
   // ====== PROJECT: SSRN Transfer ======
@@ -522,7 +521,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["React.js", "ASP.NET Core", "Web API", "n8n", "SQL Server", "Render"],
     actions: [
-      { href: "https://linearai.onrender.com", label: "Live Demo", variant: "btn-live", icon: "live" },
+      { href: "https://linearai.onrender.com", label: "View Live", variant: "btn-live", icon: "live" },
       { href: "https://github.com/Saobia3i/LinearAi_v1", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },
@@ -580,7 +579,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["React", "TypeScript", "Vite", "Firebase Firestore", "Firebase Auth", "ImageKit CDN"],
     actions: [
-      { href: "https://www.austrc.com/", label: "Live Demo", variant: "btn-live", icon: "live" },
+      { href: "https://www.austrc.com/", label: "View Live", variant: "btn-live", icon: "live" },
     ],
   },
   // ====== NEW PROJECT: AUST Rover Challenge (ARC) Portal (powered by UCS) ======
@@ -661,7 +660,7 @@ export const PROJECTS: ProjectData[] = [
     actions: [
       {
         href: "https://arc.austrc.com/aust-rover-challenge-2-0/",
-        label: "Live Demo",
+        label: "View Live",
         variant: "btn-live",
         icon: "live",
       },
@@ -721,7 +720,7 @@ export const PROJECTS: ProjectData[] = [
       "Cybersecurity & AI",
     ],
     actions: [
-      { href: "https://austcaic.com/", label: "Live Demo", variant: "btn-live", icon: "live" },
+      { href: "https://austcaic.com/", label: "View Live", variant: "btn-live", icon: "live" },
     ],
   },
   // ====== PROJECT: AUSTCAIC Poster Generator ======
@@ -853,7 +852,7 @@ export const PROJECTS: ProjectData[] = [
       "Vercel",
     ],
     actions: [
-      { href: "https://lead-generation1.vercel.app", label: "Live Demo", variant: "btn-live", icon: "live" },
+      { href: "https://lead-generation1.vercel.app", label: "View Live", variant: "btn-live", icon: "live" },
     ],
   },
   // ====== PROJECT 9: Robomania 2.0 ======
@@ -892,7 +891,7 @@ export const PROJECTS: ProjectData[] = [
     actions: [
       {
         href: "https://www.robomania.austrc.com/",
-        label: "Live Demo",
+        label: "View Live",
         variant: "btn-live",
         icon: "live",
       },
@@ -922,7 +921,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["React.js", "Ant Design", "MUI", "REST API", "Vercel"],
     actions: [
-      { href: "https://quote-verse-psi.vercel.app/", label: "Live Demo", variant: "btn-live", icon: "live" },
+      { href: "https://quote-verse-psi.vercel.app/", label: "View Live", variant: "btn-live", icon: "live" },
       { href: "https://github.com/Saobia3i/Quote-Verse", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },
@@ -949,7 +948,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["React.js", "Laravel", "PHP", "MySQL", "Tailwind CSS", "Ant Design"],
     actions: [
-      { href: "https://i-canteen.vercel.app/", label: "Live Demo", variant: "btn-live", icon: "live" },
+      { href: "https://i-canteen.vercel.app/", label: "View Live", variant: "btn-live", icon: "live" },
       { href: "https://github.com/Saobia3i/iCanteen1", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },

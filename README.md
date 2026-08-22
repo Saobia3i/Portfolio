@@ -29,7 +29,7 @@ This repository contains my personal portfolio website built with:
 
 ---
 
-## 🔗 Live Demo
+## 🔗 View Live
 👉 [**View My Portfolio**](https://Saobia3i.github.io/Portfolio/)  
 
 ---

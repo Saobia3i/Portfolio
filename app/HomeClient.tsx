@@ -118,7 +118,6 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["Next.js", "n8n", "PostgreSQL", "Security"],
     links: [
       { href: "https://www.tensorsecurityacademy.com/", label: "View Live", icon: "visibility", variant: "btn-live" },
-      { href: "https://github.com/Saobia3i/TSA1.1", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
   },
   {
@@ -128,7 +127,7 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Groq AI", "NextAuth"],
     links: [
       { href: "/projects#arelix-labs", label: "Details", icon: "open_in_new", variant: "btn-live" },
-      { href: "https://github.com/Saobia3i/Arelix-Labs", label: "GitHub", icon: "code", variant: "btn-github" },
+      { href: "https://arelixlabs.com", label: "Live", icon: "visibility", variant: "btn-live" },
     ],
   },
   {
