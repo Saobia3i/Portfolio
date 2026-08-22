@@ -131,13 +131,6 @@ const PROJECTS: ProjectCardData[] = [
     ],
   },
   {
-    title: "SSRN Transfer — US Car Rental Platform",
-    description:
-      "Project-based frontend development for SSRN Transfer, a US-based car rental platform. Engineered fast, clean, and responsive user interface templates using Jinja2, HTML5, CSS3, and JavaScript.",
-    tags: ["Jinja2", "HTML5", "CSS3", "JavaScript", "Car Rental UI"],
-    links: [],
-  },
-  {
     title: "AUST Robotics Club Website",
     description:
       "As Director of the Web Team, I led and coordinated the development team while actively coding and implementing the core features of this official club website (dynamic Notice Boards, educational course trackers, searchable events, project showroom, and secure admin panel).",
@@ -168,31 +161,21 @@ const PROJECTS: ProjectCardData[] = [
     ],
   },
   {
-    title: "AUSTCAIC Poster Generator",
-    description:
-      "Internal graphics web app for the AUSTCAIC Graphics Team. Generates 300 DPI print-ready PNG posters with fixed brand guidelines, Satori rendering engine, and Groq LLaMA 3.3 + Pinecone AI notes assistant.",
-    tags: ["Next.js 15", "React 19", "Satori", "Groq LLaMA 3.3", "Pinecone", "Tailwind CSS v4"],
-    links: [{ href: "/projects#austcaic-poster-generator", label: "Details", icon: "open_in_new", variant: "btn-live" }],
-  },
-  {
-    title: "Lead Capture & AI-Qualification System",
-    description:
-      "Full-stack lead capture system with AI-powered qualification (Groq lead scoring), n8n workflow webhook automation, Slack alerts, Sheets CRM logging, and automated personalized email generation.",
-    tags: ["n8n", "Groq API", "Slack", "SMTP", "Sheets"],
-    links: [
-      { href: "https://lead-generation1.vercel.app", label: "View Live", icon: "visibility", variant: "btn-live" },
-      { href: "/projects#lead-capture-ai", label: "Details", icon: "open_in_new", variant: "btn-live" },
-    ],
-  },
-  {
     title: "Linear AI - AI Automation Store",
     description:
       "I designed and built Linear AI as a full-stack automation commerce platform, with a React frontend and ASP.NET Core Web API backend powering product catalogs, admin-controlled offers, vouchers, discounts, order fulfillment, delivery of n8n templates/setup guides, product requests, and moderated user feedback.",
     tags: ["React.js", "ASP.NET Core Web API", "n8n", "Render"],
     links: [
-      { href: "https://linearai.onrender.com", label: "View Live", icon: "visibility", variant: "btn-live" },
+      { href: "https://linearai-v1.onrender.com", label: "View Live", icon: "visibility", variant: "btn-live" },
       { href: "https://github.com/Saobia3i/LinearAi_v1", label: "GitHub", icon: "code", variant: "btn-github" },
     ],
+  },
+  {
+    title: "SSRN Transfer — US Car Rental Platform",
+    description:
+      "Project-based frontend development for SSRN Transfer, a US-based car rental platform. Engineered fast, clean, and responsive user interface templates using Jinja2, HTML5, CSS3, and JavaScript.",
+    tags: ["Jinja2", "HTML5", "CSS3", "JavaScript", "Car Rental UI"],
+    links: [],
   },
   {
     title: "Robomania 2.0",

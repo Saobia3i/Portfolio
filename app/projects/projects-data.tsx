@@ -77,299 +77,7 @@ export interface ProjectData {
 }
 
 export const PROJECTS: ProjectData[] = [
-  // ====== PROJECT 1: AI Sales Lead Agent ======
-  {
-    id: "ai-sales-agent",
-    category: "ai",
-    delayMs: 0,
-    badgeVariant: "badge-ai",
-    badgeIcon: "bot",
-    badgeLabel: "AI Agent",
-    title: "AI Sales Lead Research & Outreach Agent",
-    subtitle: "Multi-Agent · LangGraph · FastAPI · Next.js",
-    desc: (
-      <>
-        An advanced multi-agent AI system designed for B2B sales intelligence. Give it a company
-        name or website URL, and it autonomously researches that company, synthesizes an
-        intelligence profile, writes a highly personalized cold email — then runs a{" "}
-        <strong>strict fact-verification pass</strong> to guarantee zero hallucinations before
-        delivering the final output.
-      </>
-    ),
-    highlightPanels: [
-      {
-        content: (
-          <>
-            <strong>The Problem Solved:</strong> Standard AI tools hallucinate freely — a false
-            funding round or wrong HQ city in a cold email instantly destroys credibility. This
-            agent enforces <em>verification-before-synthesis</em>: every factual claim must be
-            traceable to retrieved evidence, or it gets stripped automatically.
-          </>
-        ),
-      },
-    ],
-    features: [
-      "Company Discovery Agent → Parallel Web Research (Overview, News, Tech/Pain-points)",
-      "Evidence Relevance Filter removes off-topic chunks before synthesis",
-      "LLM-powered Outreach Writer crafts personalized cold emails",
-      "Verification Agent checks every claim — flags or strips unverifiable ones",
-      "FastAPI + Pydantic strict schema validation; Docker-ready for Render",
-    ],
-    tags: [
-      "LangGraph",
-      "Python",
-      "Groq LLaMA 3.3",
-      "DuckDuckGo Search",
-      "FastAPI",
-      "Next.js",
-      "TypeScript",
-      "TailwindCSS",
-      "Docker",
-      "Vercel",
-    ],
-    actions: [
-      {
-        href: "https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent",
-        label: "GitHub",
-        variant: "btn-github",
-        icon: "github",
-      },
-    ],
-  },
-  // ====== PROJECT 2: SmartAir Mouse Pro ======
-  {
-    id: "smartair-mouse",
-    category: "cv",
-    delayMs: 80,
-    badgeVariant: "badge-cv",
-    badgeIcon: "hand",
-    badgeLabel: "Computer Vision",
-    title: "SmartAir Mouse Pro",
-    subtitle: "OpenCV · MediaPipe · Python · Windows Overlay",
-    desc: (
-      <>
-        A portfolio-grade computer vision application that turns bare hand gestures into a
-        lag-free virtual mouse using classical computer vision — no wearables required. Features a
-        stunning transparent desktop overlay with glowing neon cursor trails, click-physics
-        particle explosions, a real-time HUD, and an integrated Gradio browser sandbox for live
-        prototyping.
-      </>
-    ),
-    features: [
-      "Custom 2D Kalman Filter + EMA smoothing + velocity-scaling acceleration",
-      <>AR transparent overlay: neon halo rings, fading trails, click ripples &amp; particles</>,
-      <>Hysteresis &amp; stabilized gesture recognition — prevents stutter clicking</>,
-      <>Guided calibration wizard for user-specific finger ratios &amp; arm reach</>,
-      "Live session stats dashboard: clicks, distance, FPS, tracking confidence",
-      "Programmatic WAV sound synthesis for async click audio feedback",
-    ],
-    tags: [
-      "Python 3.11+",
-      "OpenCV",
-      "MediaPipe",
-      "Kalman Filter",
-      "CustomTkinter",
-      "Gradio",
-      "pynput",
-      "pyautogui",
-      "Windows",
-    ],
-    actions: [
-      {
-        href: "https://github.com/Saobia3i/SmartAir-Mouse-Pro",
-        label: "GitHub",
-        variant: "btn-github",
-        icon: "github",
-      },
-    ],
-  },
-  // ====== PROJECT 3: My Cutie Mood Mirror ======
-  {
-    id: "mood-mirror",
-    category: "cv",
-    delayMs: 160,
-    badgeVariant: "badge-cv",
-    badgeIcon: "hand",
-    badgeLabel: "Computer Vision · Full Stack",
-    title: "My Cutie Mood Mirror",
-    subtitle: "Computer Vision · Emotion Detection · Real-Time Camera · Full Stack",
-    desc: (
-      <>
-        A real-time mood detection application built with computer vision that uses your webcam to
-        recognize facial expressions — then instantly reflects your detected emotion as an{" "}
-        <strong>animated cat character</strong>, acting as a playful visual mirror. Maps every
-        detected emotion to a unique cat reaction with dynamic visual feedback, making sentiment
-        analysis feel personal and fun.
-      </>
-    ),
-    features: [
-      <>
-        <strong>Computer Vision Core:</strong> Real-time webcam facial expression recognition using
-        CV pipelines.
-      </>,
-      <>
-        <strong>Cat Visual Mirror:</strong> Each detected emotion is reflected as a unique animated
-        cat character reaction.
-      </>,
-      "Smooth, responsive full-stack UI with dynamic color-coded mood feedback",
-      "Real-time emotion state updates — zero lag between face and cat reflection",
-      "Interactive and engaging — designed to feel personal, fun, and expressive",
-    ],
-    tags: ["Python", "Computer Vision", "Emotion Detection", "Full Stack", "Real-time", "Interactive UI"],
-    actions: [
-      {
-        href: "https://github.com/Saobia3i/my-cutie-mood-mirror",
-        label: "GitHub",
-        variant: "btn-github",
-        icon: "github",
-      },
-    ],
-  },
-  // ====== PROJECT 4: ResearchMind ======
-  {
-    id: "researchmind",
-    category: "ai",
-    delayMs: 0,
-    badgeVariant: "badge-ai",
-    badgeIcon: "brain",
-    badgeLabel: "AI Research",
-    title: "ResearchMind",
-    subtitle: "Multi-Model · LangGraph · Pinecone · Deep Consensus",
-    desc: (
-      <>
-        A full-stack AI research system that goes beyond &quot;showing sources.&quot; ResearchMind
-        makes the research process fully inspectable: what evidence was retrieved, which model
-        produced which opinion, which claims were verified, where confidence is weak, and exactly
-        how much each run costs. It combats AI hallucination at the architectural level.
-      </>
-    ),
-    highlightPanels: [
-      {
-        content: (
-          <>
-            <strong>4 Research Modes:</strong> Quick Research (fast structured output) · ReAct
-            Agent (Thought→Action→Observation tool-using loop) · Team Research (LangGraph
-            Planner→Researcher→Grader→Writer) · <strong>Deep Consensus</strong> (cost-aware
-            multi-model cross-verification with disagreement mapping).
-          </>
-        ),
-      },
-    ],
-    features: [
-      "Claim-level verification: strong / partial / weak / unsupported labels per claim",
-      "Multi-model consensus: Gemini, Groq, OpenRouter compared side-by-side",
-      "Model disagreement map — flags where providers conflict",
-      <>Live token &amp; cost tracking with stage-level prompt budgets</>,
-      "Pinecone vector KB + DuckDuckGo web search tools for grounded retrieval",
-      "Evidence deduplication, prompt compaction, early-stop provider routing",
-    ],
-    tags: [
-      "LangGraph",
-      "Python",
-      "Groq",
-      "Gemini",
-      "OpenRouter",
-      "Pinecone",
-      "DuckDuckGo Search",
-      "FastAPI",
-      "Full Stack",
-    ],
-    actions: [
-      {
-        href: "https://github.com/Saobia3i/researchMind",
-        label: "GitHub",
-        variant: "btn-github",
-        icon: "github",
-      },
-    ],
-  },
-  // ====== PROJECT 5: WattWatch ======
-  {
-    id: "wattwatch",
-    category: "iot",
-    delayMs: 80,
-    badgeVariant: "badge-iot",
-    badgeIcon: "zap",
-    badgeLabel: "IoT · Digital Twin",
-    title: "WattWatch",
-    subtitle: "Real-Time IoT Digital Twin & AI-Powered Smart Office Console",
-    desc: (
-      <>
-        A production-ready, event-driven digital twin for monitoring, analyzing, and optimizing
-        office electrical consumption. Any team member can view live device states, track energy
-        draw in Watts &amp; kWh, receive anomaly alerts, and query office telemetry directly from{" "}
-        <strong>Discord</strong> in natural language — all without a page refresh. View Live
-        available.
-      </>
-    ),
-    highlightPanels: [
-      {
-        content: (
-          <>
-            <strong>Live:</strong>
-            <a
-              href="https://wattwatch-f099.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--secondary)" }}
-            >
-              wattwatch-f099.onrender.com
-            </a>{" "}
-            &nbsp;|&nbsp;{" "}
-            <a
-              href="https://watt-watch-chi.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--secondary)" }}
-            >
-              Vercel Mirror
-            </a>{" "}
-            &nbsp;|&nbsp; Discord Bot: <em>Smart Circuit Bot</em> (24/7 active)
-          </>
-        ),
-      },
-    ],
-    features: [
-      "2D interactive office floorplan — active lights glow, fans animate with CSS keyframes",
-      "Live device control for 15 devices across 3 rooms, writing instantly to SQLite",
-      <>
-        HTTP SSE (Server-Sent Events) stream pushes updates to web dashboard &amp; Discord bot
-        instantly
-      </>,
-      "Gemini 2.5 Flash / Groq LLM translates raw telemetry into conversational office reports",
-      "Discord commands: !status, !usage, !room, !occupants — all AI-powered",
-      "ESP32 hardware path: ACS712 current sensors + 5-channel relay modules for physical deployment",
-    ],
-    archSteps: [
-      { num: 1, text: "Python simulator / ESP32 chips push telemetry to Next.js API endpoints" },
-      { num: 2, text: "API writes state updates to SQLite, triggering SSE broadcast" },
-      { num: 3, text: "React dashboard + Discord bot receive real-time events simultaneously" },
-      { num: 4, text: "LLM converts raw data → friendly conversational reports on demand" },
-    ],
-    tags: [
-      "Next.js",
-      "Python",
-      "SQLite",
-      "SSE",
-      "Discord.py",
-      "Gemini 2.5 Flash",
-      "Groq",
-      "ESP32",
-      "ACS712",
-      "Render",
-      "Vercel",
-    ],
-    actions: [
-      {
-        href: "https://wattwatch-f099.onrender.com",
-        label: "View Live",
-        variant: "btn-live",
-        icon: "live",
-      },
-      { href: "https://github.com/Saobia3i/WattWatch", label: "GitHub", variant: "btn-github", icon: "github" },
-    ],
-  },
-  // ====== PROJECT 6: Tensor Security Academy (TSA) ======
+  // ====== PROJECT 1: Tensor Security Academy (TSA) ======
   {
     id: "tsa",
     category: "fullstack",
@@ -412,7 +120,7 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
-  // ====== PROJECT 7: Arelix Labs ======
+  // ====== PROJECT 2: Arelix Labs ======
   {
     id: "arelix-labs",
     category: "fullstack",
@@ -463,76 +171,7 @@ export const PROJECTS: ProjectData[] = [
       { href: "https://arelixlabs.com", label: "Live", variant: "btn-live", icon: "live" },
     ],
   },
-  // ====== PROJECT: SSRN Transfer ======
-  {
-    id: "ssrn-transfer",
-    category: "fullstack",
-    delayMs: 100,
-    badgeVariant: "badge-full",
-    badgeIcon: "car",
-    badgeLabel: <>Frontend &amp; UI</>,
-    title: "SSRN Transfer — US Car Rental Platform",
-    subtitle: "Jinja2 · HTML5 · CSS3 · JavaScript · Netlify",
-    desc: (
-      <>
-        Project-based frontend development for SSRN Transfer, a US-based car rental platform.
-        Built and maintained fast, responsive interface templates using Jinja2 to ensure
-        consistent user experiences and seamless booking navigation.
-      </>
-    ),
-    highlightPanels: [
-      {
-        content: (
-          <>
-            <strong>Client Work:</strong> Delivered custom frontend templates and layout
-            components for a US-based client, optimized for mobile responsiveness and performance.
-          </>
-        ),
-      },
-    ],
-    features: [
-      <>
-        <strong>Jinja2 Templating:</strong> Dynamic server-rendered UI layout structures.
-      </>,
-      <>
-        <strong>Responsive Design:</strong> Mobile-first UI layouts built for rental browsing.
-      </>,
-      <>
-        <strong>Performance Optimized:</strong> Lightweight markup ensuring fast load times.
-      </>,
-    ],
-    tags: ["Jinja2", "HTML5", "CSS3", "JavaScript", "Netlify"],
-  },
-  // ====== PROJECT 8: Linear AI ======
-  {
-    id: "linear-ai",
-    category: "fullstack",
-    delayMs: 120,
-    badgeVariant: "badge-full",
-    badgeIcon: "shopping-bag",
-    badgeLabel: "Full Stack",
-    title: "Linear AI — AI Automation Store",
-    subtitle: "React.js · ASP.NET Core Web API · n8n · Render",
-    desc: (
-      <>
-        A full-stack automation commerce platform that facilitates product catalog browsing,
-        admin-controlled discount offers, vouchers, order fulfillment, automated template
-        delivery, product requests, and moderated user feedback.
-      </>
-    ),
-    features: [
-      "ASP.NET Core Web API backend orchestrating business operations, cart handling, and vouchers",
-      "React frontend with clean, interactive state-driven interface elements",
-      "n8n integration to automate the delivery of custom workflow templates to users",
-      "Admin console allowing total control over products, user feedback approval, and orders",
-    ],
-    tags: ["React.js", "ASP.NET Core", "Web API", "n8n", "SQL Server", "Render"],
-    actions: [
-      { href: "https://linearai.onrender.com", label: "View Live", variant: "btn-live", icon: "live" },
-      { href: "https://github.com/Saobia3i/LinearAi_v1", label: "GitHub", variant: "btn-github", icon: "github" },
-    ],
-  },
-  // ====== PROJECT 8: AUST RC Website ======
+  // ====== PROJECT 3: AUST RC Website ======
   {
     id: "aust-robotics-club",
     category: "fullstack",
@@ -589,11 +228,11 @@ export const PROJECTS: ProjectData[] = [
       { href: "https://www.austrc.com/", label: "View Live", variant: "btn-live", icon: "live" },
     ],
   },
-  // ====== NEW PROJECT: AUST Rover Challenge (ARC) Portal (powered by UCS) ======
+  // ====== PROJECT 4: AUST Rover Challenge (ARC) Portal ======
   {
     id: "arc-portal",
     category: "fullstack",
-    delayMs: 200,
+    delayMs: 240,
     badgeVariant: "badge-full",
     badgeIcon: "rocket",
     badgeLabel: "Event Portal",
@@ -673,11 +312,11 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
-  // ====== PROJECT: AUSTCAIC Official Website ======
+  // ====== PROJECT 5: AUSTCAIC Official Website ======
   {
     id: "austcaic-website",
     category: "fullstack",
-    delayMs: 240,
+    delayMs: 0,
     badgeVariant: "badge-full",
     badgeIcon: "shield",
     badgeLabel: <>Full Stack &amp; DevOps</>,
@@ -728,6 +367,35 @@ export const PROJECTS: ProjectData[] = [
     ],
     actions: [
       { href: "https://austcaic.com/", label: "View Live", variant: "btn-live", icon: "live" },
+    ],
+  },
+  // ====== PROJECT 6: Linear AI ======
+  {
+    id: "linear-ai",
+    category: "fullstack",
+    delayMs: 80,
+    badgeVariant: "badge-full",
+    badgeIcon: "shopping-bag",
+    badgeLabel: "Full Stack",
+    title: "Linear AI — AI Automation Store",
+    subtitle: "React.js · ASP.NET Core Web API · n8n · Render",
+    desc: (
+      <>
+        A full-stack automation commerce platform that facilitates product catalog browsing,
+        admin-controlled discount offers, vouchers, order fulfillment, automated template
+        delivery, product requests, and moderated user feedback.
+      </>
+    ),
+    features: [
+      "ASP.NET Core Web API backend orchestrating business operations, cart handling, and vouchers",
+      "React frontend with clean, interactive state-driven interface elements",
+      "n8n integration to automate the delivery of custom workflow templates to users",
+      "Admin console allowing total control over products, user feedback approval, and orders",
+    ],
+    tags: ["React.js", "ASP.NET Core", "Web API", "n8n", "SQL Server", "Render"],
+    actions: [
+      { href: "https://linearai-v1.onrender.com", label: "View Live", variant: "btn-live", icon: "live" },
+      { href: "https://github.com/Saobia3i/LinearAi_v1", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },
   // ====== PROJECT: AUSTCAIC Poster Generator ======
