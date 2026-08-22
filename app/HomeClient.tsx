@@ -25,7 +25,7 @@ const NAV_LINKS = [
 ];
 
 const RESUME_URL =
-  "https://drive.google.com/drive/u/0/my-drive?usp=drive_link";
+  "https://drive.google.com/drive/u/0/folders/1pUXYqlXrMSkovDi-eJP7JqvNVr8qF5wJ?usp=drive_link";
 
 const TECH_GROUPS = [
   {
