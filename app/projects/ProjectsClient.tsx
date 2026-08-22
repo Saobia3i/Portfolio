@@ -70,7 +70,11 @@ export default function ProjectsClient() {
         </p>
         <div className="projects-grid-full" id="projects-grid">
           {PROJECTS.map((project) => {
-            const hidden = activeFilter !== "all" && activeFilter !== project.category;
+            const categories = Array.isArray(project.category)
+              ? project.category
+              : [project.category];
+            const hidden =
+              activeFilter !== "all" && !categories.includes(activeFilter as any);
             return <ProjectCard key={project.id} project={project} hidden={hidden} />;
           })}
         </div>

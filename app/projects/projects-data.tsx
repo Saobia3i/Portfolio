@@ -59,9 +59,11 @@ export interface ProjectAction {
   icon: "live" | "github";
 }
 
+export type ProjectCategory = "ai" | "cv" | "iot" | "fullstack" | "fun";
+
 export interface ProjectData {
   id: string;
-  category: "ai" | "cv" | "iot" | "fullstack" | "fun";
+  category: ProjectCategory | ProjectCategory[];
   delayMs: number;
   badgeVariant: BadgeVariant;
   badgeIcon: ProjectBadgeIconKey;
@@ -123,9 +125,9 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 2: Arelix Labs ======
   {
     id: "arelix-labs",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 80,
-    badgeVariant: "badge-full",
+    badgeVariant: "badge-ai",
     badgeIcon: "network",
     badgeLabel: <>Full Stack &amp; AI</>,
     title: <>Arelix Labs — AI &amp; Software Platform</>,
@@ -315,7 +317,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 5: AUSTCAIC Official Website ======
   {
     id: "austcaic-website",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 0,
     badgeVariant: "badge-full",
     badgeIcon: "shield",
@@ -372,7 +374,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 6: Linear AI ======
   {
     id: "linear-ai",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 80,
     badgeVariant: "badge-full",
     badgeIcon: "shopping-bag",
@@ -401,9 +403,9 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: AUSTCAIC Poster Generator ======
   {
     id: "austcaic-poster-generator",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 280,
-    badgeVariant: "badge-full",
+    badgeVariant: "badge-ai",
     badgeIcon: "palette",
     badgeLabel: <>Internal Graphics &amp; AI Tool</>,
     title: "AUSTCAIC Poster Generator 🎨⚡",
@@ -471,9 +473,9 @@ export const PROJECTS: ProjectData[] = [
   // ====== NEW PROJECT: Lead Capture & AI-Qualification System ======
   {
     id: "lead-capture-ai",
-    category: "fullstack",
+    category: ["fullstack", "ai"],
     delayMs: 80,
-    badgeVariant: "badge-full",
+    badgeVariant: "badge-ai",
     badgeIcon: "mail",
     badgeLabel: <>Automation &amp; AI</>,
     title: <>Lead Capture &amp; AI-Qualification System</>,
@@ -678,6 +680,283 @@ export const PROJECTS: ProjectData[] = [
     actions: [
       {
         href: "https://github.com/tahmidkhanshuvo/Green-Gadgets",
+        label: "GitHub",
+        variant: "btn-github",
+        icon: "github",
+      },
+    ],
+  },
+  // ====== PROJECT: AI Sales Lead Research & Outreach Agent ======
+  {
+    id: "ai-sales-agent",
+    category: ["ai", "fullstack"],
+    delayMs: 0,
+    badgeVariant: "badge-ai",
+    badgeIcon: "bot",
+    badgeLabel: "AI Agent",
+    title: "AI Sales Lead Research & Outreach Agent",
+    subtitle: "Multi-Agent · LangGraph · FastAPI · Next.js",
+    desc: (
+      <>
+        An advanced multi-agent AI system designed for B2B sales intelligence. Give it a company name or
+        website URL, and it autonomously researches that company, synthesizes an intelligence profile, writes a
+        highly personalized cold email — then runs a <strong>strict fact-verification pass</strong> to guarantee
+        zero hallucinations before delivering the final output.
+      </>
+    ),
+    highlightPanels: [
+      {
+        content: (
+          <>
+            <strong>The Problem Solved:</strong> Standard AI tools hallucinate freely — a false funding round or
+            wrong HQ city in a cold email instantly destroys credibility. This agent enforces{" "}
+            <em>verification-before-synthesis</em>: every factual claim must be traceable to retrieved evidence,
+            or it gets stripped automatically.
+          </>
+        ),
+      },
+    ],
+    features: [
+      "Company Discovery Agent → Parallel Web Research (Overview, News, Tech/Pain-points)",
+      "Evidence Relevance Filter removes off-topic chunks before synthesis",
+      "LLM-powered Outreach Writer crafts personalized cold emails",
+      "Verification Agent checks every claim — flags or strips unverifiable ones",
+      "FastAPI + Pydantic strict schema validation; Docker-ready for Render",
+    ],
+    tags: [
+      "LangGraph",
+      "Python",
+      "Groq LLaMA 3.3",
+      "DuckDuckGo Search",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Docker",
+      "Vercel",
+    ],
+    actions: [
+      {
+        href: "https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent",
+        label: "GitHub",
+        variant: "btn-github",
+        icon: "github",
+      },
+    ],
+  },
+  // ====== PROJECT: SmartAir Mouse Pro ======
+  {
+    id: "smartair-mouse",
+    category: "cv",
+    delayMs: 80,
+    badgeVariant: "badge-cv",
+    badgeIcon: "hand",
+    badgeLabel: "Computer Vision",
+    title: "SmartAir Mouse Pro",
+    subtitle: "OpenCV · MediaPipe · Python · Windows Overlay",
+    desc: (
+      <>
+        A portfolio-grade computer vision application that turns bare hand gestures into a lag-free virtual
+        mouse using classical computer vision — no wearables required. Features a stunning transparent desktop
+        overlay with glowing neon cursor trails, click-physics particle explosions, a real-time HUD, and
+        an integrated Gradio browser sandbox for live prototyping.
+      </>
+    ),
+    features: [
+      "Custom 2D Kalman Filter + EMA smoothing + velocity-scaling acceleration",
+      "AR transparent overlay: neon halo rings, fading trails, click ripples & particles",
+      "Hysteresis & stabilized gesture recognition — prevents stutter clicking",
+      "Guided calibration wizard for user-specific finger ratios & arm reach",
+      "Live session stats dashboard: clicks, distance, FPS, tracking confidence",
+      "Programmatic WAV sound synthesis for async click audio feedback",
+    ],
+    tags: [
+      "Python 3.11+",
+      "OpenCV",
+      "MediaPipe",
+      "Kalman Filter",
+      "CustomTkinter",
+      "Gradio",
+      "pynput",
+      "pyautogui",
+      "Windows",
+    ],
+    actions: [
+      {
+        href: "https://github.com/Saobia3i/SmartAir-Mouse-Pro",
+        label: "GitHub",
+        variant: "btn-github",
+        icon: "github",
+      },
+    ],
+  },
+  // ====== PROJECT: My Cutie Mood Mirror ======
+  {
+    id: "mood-mirror",
+    category: ["cv", "fullstack"],
+    delayMs: 160,
+    badgeVariant: "badge-cv",
+    badgeIcon: "heart",
+    badgeLabel: <>Computer Vision &amp; Full Stack</>,
+    title: "My Cutie Mood Mirror",
+    subtitle: "Computer Vision · Emotion Detection · Real-Time Camera · Full Stack",
+    desc: (
+      <>
+        A real-time mood detection application built with computer vision that uses your webcam to recognize
+        facial expressions — then instantly reflects your detected emotion as an <strong>animated cat character</strong>
+        , acting as a playful visual mirror. Maps every detected emotion to a unique cat reaction with dynamic visual
+        feedback, making sentiment analysis feel personal and fun.
+      </>
+    ),
+    features: [
+      <>
+        <strong>Computer Vision Core:</strong> Real-time webcam facial expression recognition using CV pipelines.
+      </>,
+      <>
+        <strong>Cat Visual Mirror:</strong> Each detected emotion is reflected as a unique animated cat character reaction.
+      </>,
+      "Smooth, responsive full-stack UI with dynamic color-coded mood feedback",
+      "Real-time emotion state updates — zero lag between face and cat reflection",
+      "Interactive and engaging — designed to feel personal, fun, and expressive",
+    ],
+    tags: ["Python", "Computer Vision", "Emotion Detection", "Full Stack", "Real-time", "Interactive UI"],
+    actions: [
+      {
+        href: "https://github.com/Saobia3i/my-cutie-mood-mirror",
+        label: "GitHub",
+        variant: "btn-github",
+        icon: "github",
+      },
+    ],
+  },
+  // ====== PROJECT: ResearchMind ======
+  {
+    id: "researchmind",
+    category: ["ai", "fullstack"],
+    delayMs: 0,
+    badgeVariant: "badge-ai",
+    badgeIcon: "brain",
+    badgeLabel: "AI Research",
+    title: "ResearchMind",
+    subtitle: "Multi-Model · LangGraph · Pinecone · Deep Consensus",
+    desc: (
+      <>
+        A full-stack AI research system that goes beyond &quot;showing sources.&quot; ResearchMind makes the research
+        process fully inspectable: what evidence was retrieved, which model produced which opinion, which
+        claims were verified, where confidence is weak, and exactly how much each run costs. It combats
+        AI hallucination at the architectural level.
+      </>
+    ),
+    highlightPanels: [
+      {
+        content: (
+          <>
+            <strong>4 Research Modes:</strong> Quick Research (fast structured output) · ReAct Agent
+            (Thought→Action→Observation tool-using loop) · Team Research (LangGraph Planner→Researcher→Grader→Writer) ·{" "}
+            <strong>Deep Consensus</strong> (cost-aware multi-model cross-verification with disagreement mapping).
+          </>
+        ),
+      },
+    ],
+    features: [
+      "Claim-level verification: strong / partial / weak / unsupported labels per claim",
+      "Multi-model consensus: Gemini, Groq, OpenRouter compared side-by-side",
+      "Model disagreement map — flags where providers conflict",
+      "Live token & cost tracking with stage-level prompt budgets",
+      "Pinecone vector KB + DuckDuckGo web search tools for grounded retrieval",
+      "Evidence deduplication, prompt compaction, early-stop provider routing",
+    ],
+    tags: [
+      "LangGraph",
+      "Python",
+      "Groq",
+      "Gemini",
+      "OpenRouter",
+      "Pinecone",
+      "DuckDuckGo Search",
+      "FastAPI",
+      "Full Stack",
+    ],
+    actions: [
+      {
+        href: "https://github.com/Saobia3i/researchMind",
+        label: "GitHub",
+        variant: "btn-github",
+        icon: "github",
+      },
+    ],
+  },
+  // ====== PROJECT: WattWatch ======
+  {
+    id: "wattwatch",
+    category: ["iot", "ai", "fullstack"],
+    delayMs: 80,
+    badgeVariant: "badge-iot",
+    badgeIcon: "zap",
+    badgeLabel: "IoT · Digital Twin",
+    title: "WattWatch",
+    subtitle: "Real-Time IoT Digital Twin & AI-Powered Smart Office Console",
+    desc: (
+      <>
+        A production-ready, event-driven digital twin for monitoring, analyzing, and optimizing office electrical
+        consumption. Any team member can view live device states, track energy draw in Watts &amp; kWh, receive
+        anomaly alerts, and query office telemetry directly from <strong>Discord</strong> in natural language — all
+        without a page refresh.
+      </>
+    ),
+    highlightPanels: [
+      {
+        content: (
+          <>
+            <strong>Live:</strong>{" "}
+            <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer">
+              wattwatch-f099.onrender.com
+            </a>{" "}
+            |{" "}
+            <a href="https://watt-watch-chi.vercel.app" target="_blank" rel="noopener noreferrer">
+              Vercel Mirror
+            </a>{" "}
+            | Discord Bot: <em>Smart Circuit Bot</em> (24/7 active)
+          </>
+        ),
+      },
+    ],
+    features: [
+      "2D interactive office floorplan — active lights glow, fans animate with CSS keyframes",
+      "Live device control for 15 devices across 3 rooms, writing instantly to SQLite",
+      "HTTP SSE (Server-Sent Events) stream pushes updates to web dashboard & Discord bot instantly",
+      "Gemini 2.5 Flash / Groq LLM translates raw telemetry into conversational office reports",
+      "Discord commands: !status, !usage, !room, !occupants — all AI-powered",
+      "ESP32 hardware path: ACS712 current sensors + 5-channel relay modules for physical deployment",
+    ],
+    archSteps: [
+      { num: 1, text: "Python simulator / ESP32 chips push telemetry to Next.js API endpoints" },
+      { num: 2, text: "API writes state updates to SQLite, triggering SSE broadcast" },
+      { num: 3, text: "React dashboard + Discord bot receive real-time events simultaneously" },
+      { num: 4, text: "LLM converts raw data → friendly conversational reports on demand" },
+    ],
+    tags: [
+      "Next.js",
+      "Python",
+      "SQLite",
+      "SSE",
+      "Discord.py",
+      "Gemini 2.5 Flash",
+      "Groq",
+      "ESP32",
+      "ACS712",
+      "Render",
+      "Vercel",
+    ],
+    actions: [
+      {
+        href: "https://wattwatch-f099.onrender.com",
+        label: "View Live",
+        variant: "btn-live",
+        icon: "live",
+      },
+      {
+        href: "https://github.com/Saobia3i/WattWatch",
         label: "GitHub",
         variant: "btn-github",
         icon: "github",
