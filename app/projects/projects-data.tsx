@@ -59,11 +59,9 @@ export interface ProjectAction {
   icon: "live" | "github";
 }
 
-export type ProjectCategory = "ai" | "cv" | "iot" | "fullstack" | "fun";
-
 export interface ProjectData {
   id: string;
-  category: ProjectCategory | ProjectCategory[];
+  category: "ai" | "cv" | "iot" | "fullstack" | "fun";
   delayMs: number;
   badgeVariant: BadgeVariant;
   badgeIcon: ProjectBadgeIconKey;
@@ -125,9 +123,9 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 2: Arelix Labs ======
   {
     id: "arelix-labs",
-    category: ["fullstack", "ai"],
+    category: "fullstack",
     delayMs: 80,
-    badgeVariant: "badge-ai",
+    badgeVariant: "badge-full",
     badgeIcon: "network",
     badgeLabel: <>Full Stack &amp; AI</>,
     title: <>Arelix Labs — AI &amp; Software Platform</>,
@@ -170,7 +168,7 @@ export const PROJECTS: ProjectData[] = [
     ],
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Groq AI", "NextAuth"],
     actions: [
-      { href: "https://arelixlabs.com", label: "Live", variant: "btn-live", icon: "live" },
+      { href: "https://arelixlabs.com", label: "View Live", variant: "btn-live", icon: "live" },
     ],
   },
   // ====== PROJECT 3: AUST RC Website ======
@@ -317,7 +315,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 5: AUSTCAIC Official Website ======
   {
     id: "austcaic-website",
-    category: ["fullstack", "ai"],
+    category: "fullstack",
     delayMs: 0,
     badgeVariant: "badge-full",
     badgeIcon: "shield",
@@ -374,7 +372,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT 6: Linear AI ======
   {
     id: "linear-ai",
-    category: ["fullstack", "ai"],
+    category: "fullstack",
     delayMs: 80,
     badgeVariant: "badge-full",
     badgeIcon: "shopping-bag",
@@ -403,9 +401,9 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: AUSTCAIC Poster Generator ======
   {
     id: "austcaic-poster-generator",
-    category: ["fullstack", "ai"],
+    category: "fullstack",
     delayMs: 280,
-    badgeVariant: "badge-ai",
+    badgeVariant: "badge-full",
     badgeIcon: "palette",
     badgeLabel: <>Internal Graphics &amp; AI Tool</>,
     title: "AUSTCAIC Poster Generator 🎨⚡",
@@ -473,9 +471,9 @@ export const PROJECTS: ProjectData[] = [
   // ====== NEW PROJECT: Lead Capture & AI-Qualification System ======
   {
     id: "lead-capture-ai",
-    category: ["fullstack", "ai"],
+    category: "fullstack",
     delayMs: 80,
-    badgeVariant: "badge-ai",
+    badgeVariant: "badge-full",
     badgeIcon: "mail",
     badgeLabel: <>Automation &amp; AI</>,
     title: <>Lead Capture &amp; AI-Qualification System</>,
@@ -655,6 +653,74 @@ export const PROJECTS: ProjectData[] = [
       { href: "https://github.com/Saobia3i/cse-3100", label: "GitHub", variant: "btn-github", icon: "github" },
     ],
   },
+  // ====== PROJECT: Vantage Robotics ======
+  {
+    id: "vantage-robotics",
+    category: "ai",
+    delayMs: 0,
+    badgeVariant: "badge-ai",
+    badgeIcon: "bot",
+    badgeLabel: "Robotics & AI Digital Twin",
+    title: "Vantage Robotics — Digital Twin & Control Suite",
+    subtitle: "Next.js 15 · Three.js · urdf-loader · Hand-Rolled DLS IK · Groq LLM · Web Speech API",
+    desc: (
+      <>
+        Web-based 3D digital twin and control suite engineered for Vantage Robotics&apos; 6-axis industrial arm.
+        Enables browser-based validation of robot motion control software prior to hardware execution. Features
+        a hand-rolled Damped Least Squares (DLS) Jacobian IK solver, 3-tier safety validator (workspace bounds, convergence, joint limits),
+        on-screen joystick &amp; keyboard manual controls, deterministic voice recognition, autonomous 6-digit PIN entry sequencer,
+        and an agentic voice control layer powered by Groq LLM tool-calling.
+      </>
+    ),
+    highlightPanels: [
+      {
+        content: (
+          <>
+            <strong>Core Architectural Rule:</strong> Enforces a single unified <code>moveTo(x, y, z)</code> safety gate across all input streams
+            (Joystick, Keyboard, Web Speech Voice, Autonomous PIN Sequencer, and Agentic LLM Tool Calls) — validating workspace bounds, IK convergence,
+            and joint limits before updating rendered robot state.
+          </>
+        ),
+      },
+    ],
+    features: [
+      <>
+        <strong>3D Robot Renderer &amp; Live Dashboard:</strong> Real-time Three.js + urdf-loader 6-DOF visualization with live joint angle telemetry and 6-key test panel rendering.
+      </>,
+      <>
+        <strong>Hand-Rolled DLS IK &amp; Safety Validator:</strong> Custom Damped Least Squares Jacobian inverse kinematics solver with joint limit clamping and workspace envelope validation.
+      </>,
+      <>
+        <strong>Autonomous PIN Entry Sequencer:</strong> Given a 6-digit PIN, autonomously sequences end-effector trajectory through key target coordinates within ±5mm tolerance.
+      </>,
+      <>
+        <strong>Multi-Modal Controls:</strong> On-screen joystick, keyboard bindings, deterministic keyword Web Speech API recognition, and Groq LLM agentic tool-calling reasoning layer.
+      </>,
+      <>
+        <strong>Electrical Schematic:</strong> ESP32 + PCA9685 + 6-servo Wokwi hardware schematic diagram.
+      </>,
+    ],
+    tags: [
+      "Next.js 15",
+      "TypeScript",
+      "Three.js",
+      "urdf-loader",
+      "DLS IK Solver",
+      "Groq LLM",
+      "Web Speech API",
+      "Zustand",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    actions: [
+      {
+        href: "https://techathon-vantage-simulation.vercel.app/",
+        label: "View Live",
+        variant: "btn-live",
+        icon: "live",
+      },
+    ],
+  },
   // ====== PROJECT 13: Green Gadgets ======
   {
     id: "green-gadgets",
@@ -689,7 +755,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: AI Sales Lead Research & Outreach Agent ======
   {
     id: "ai-sales-agent",
-    category: ["ai", "fullstack"],
+    category: "ai",
     delayMs: 0,
     badgeVariant: "badge-ai",
     badgeIcon: "bot",
@@ -793,7 +859,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: My Cutie Mood Mirror ======
   {
     id: "mood-mirror",
-    category: ["cv", "fullstack"],
+    category: "cv",
     delayMs: 160,
     badgeVariant: "badge-cv",
     badgeIcon: "heart",
@@ -832,7 +898,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: ResearchMind ======
   {
     id: "researchmind",
-    category: ["ai", "fullstack"],
+    category: "ai",
     delayMs: 0,
     badgeVariant: "badge-ai",
     badgeIcon: "brain",
@@ -889,7 +955,7 @@ export const PROJECTS: ProjectData[] = [
   // ====== PROJECT: WattWatch ======
   {
     id: "wattwatch",
-    category: ["iot", "ai", "fullstack"],
+    category: "iot",
     delayMs: 80,
     badgeVariant: "badge-iot",
     badgeIcon: "zap",

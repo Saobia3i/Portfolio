@@ -12,16 +12,13 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, hidden }: ProjectCardProps) {
   const BadgeIcon = PROJECT_BADGE_ICONS[project.badgeIcon];
   const hasActions = !!project.actions && project.actions.length > 0;
-  const categoryAttr = Array.isArray(project.category)
-    ? project.category.join(" ")
-    : project.category;
 
   return (
     <Reveal
       as="article"
       id={project.id}
       className={`project-detail-card ${hidden ? "is-hidden" : ""}`.trim()}
-      data-category={categoryAttr}
+      data-category={project.category}
       delayMs={project.delayMs}
     >
       <div className="card-header-band"></div>

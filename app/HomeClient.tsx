@@ -112,6 +112,16 @@ interface ProjectCardData {
 
 const PROJECTS: ProjectCardData[] = [
   {
+    title: "Vantage Robotics — Digital Twin & Control Suite",
+    description:
+      "Web-based 3D digital twin & control suite for a 6-axis industrial arm. Built with Three.js, urdf-loader, hand-rolled Damped Least Squares IK solver, safety validator, joystick & keyboard manual controls, Web Speech voice control, autonomous 6-digit PIN entry sequencer, and Groq LLM agentic tool-calling.",
+    tags: ["Next.js 15", "Three.js", "urdf-loader", "DLS IK Solver", "Groq LLM", "Web Speech API"],
+    links: [
+      { href: "https://techathon-vantage-simulation.vercel.app/", label: "View Live", icon: "visibility", variant: "btn-live" },
+      { href: "/projects#vantage-robotics", label: "Details", icon: "open_in_new", variant: "btn-live" },
+    ],
+  },
+  {
     title: "Tensor Security Academy (TSA)",
     description:
       "I independently built and maintain the TSA platform using Next.js, focusing on scalable architecture, strong security practices, and production-ready performance. I also integrated n8n-powered service booking automation with PostgreSQL for reliable data management.",
@@ -127,7 +137,7 @@ const PROJECTS: ProjectCardData[] = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Groq AI", "NextAuth"],
     links: [
       { href: "/projects#arelix-labs", label: "Details", icon: "open_in_new", variant: "btn-live" },
-      { href: "https://arelixlabs.com", label: "Live", icon: "visibility", variant: "btn-live" },
+      { href: "https://arelixlabs.com", label: "View Live", icon: "visibility", variant: "btn-live" },
     ],
   },
   {
