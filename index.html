@@ -39,215 +39,216 @@
       height: auto;
     }
 
-:root, [data-theme="light"] {
-  --body-bg: radial-gradient(ellipse at 20% 10%, rgba(0, 31, 63, 0.06) 0%, transparent 55%), radial-gradient(ellipse at 80% 50%, rgba(115, 210, 222, 0.07) 0%, transparent 50%), radial-gradient(ellipse at 40% 90%, rgba(0, 31, 63, 0.04) 0%, transparent 45%), linear-gradient(175deg, #ffffff 0%, #f4f6f8 30%, #edf1f5 60%, #f0f4f7 100%);
-  --hero-bg: linear-gradient(160deg, #ffffff 0%, #f5f7f9 35%, #edf1f5 70%, #f0f4f7 100%);
-  --nav-bg: rgba(255, 255, 255, 0.82);
-  --nav-dropdown-bg: rgba(255, 255, 255, 0.96);
-  --bg-main: #ffffff;
-  --card-bg: #ffffff;
-  --card-bg-light: #ffffff;
-  --text-main: #001f3f;
-  --text-heading: #001f3f;
-  --text-muted: rgba(0, 31, 63, 0.75);
-  --text-bio: rgba(13, 27, 42, 0.75);
-  --text-white: #ffffff;
-  --primary: #ffffff;
-  --primary-color: #001f3f;
-  --primary-rgb: 0, 31, 63;
-  --secondary: #001f3f;
-  --secondary-rgb: 0, 31, 63;
-  --border-color: rgba(0, 31, 63, 0.16);
-  --shadow-dropdown: 0 12px 36px rgba(0, 31, 63, 0.14);
-  --shadow-nav: 0 8px 32px rgba(0, 31, 63, 0.12), 0 2px 8px rgba(0, 31, 63, 0.06);
-}
+    :root,
+    [data-theme="light"] {
+      --body-bg: radial-gradient(ellipse at 20% 10%, rgba(0, 31, 63, 0.06) 0%, transparent 55%), radial-gradient(ellipse at 80% 50%, rgba(115, 210, 222, 0.07) 0%, transparent 50%), radial-gradient(ellipse at 40% 90%, rgba(0, 31, 63, 0.04) 0%, transparent 45%), linear-gradient(175deg, #ffffff 0%, #f4f6f8 30%, #edf1f5 60%, #f0f4f7 100%);
+      --hero-bg: linear-gradient(160deg, #ffffff 0%, #f5f7f9 35%, #edf1f5 70%, #f0f4f7 100%);
+      --nav-bg: rgba(255, 255, 255, 0.82);
+      --nav-dropdown-bg: rgba(255, 255, 255, 0.96);
+      --bg-main: #ffffff;
+      --card-bg: #ffffff;
+      --card-bg-light: #ffffff;
+      --text-main: #001f3f;
+      --text-heading: #001f3f;
+      --text-muted: rgba(0, 31, 63, 0.75);
+      --text-bio: rgba(13, 27, 42, 0.75);
+      --text-white: #ffffff;
+      --primary: #ffffff;
+      --primary-color: #001f3f;
+      --primary-rgb: 0, 31, 63;
+      --secondary: #001f3f;
+      --secondary-rgb: 0, 31, 63;
+      --border-color: rgba(0, 31, 63, 0.16);
+      --shadow-dropdown: 0 12px 36px rgba(0, 31, 63, 0.14);
+      --shadow-nav: 0 8px 32px rgba(0, 31, 63, 0.12), 0 2px 8px rgba(0, 31, 63, 0.06);
+    }
 
-[data-theme="dark"] {
-  --body-bg: #000000;
-  --hero-bg: linear-gradient(135deg, #020f1c 0%, #021120 25%, #04192e 50%, #051c33 75%, #06294c 100%);
-  --nav-bg: rgba(0, 0, 0, 0.8);
-  --nav-dropdown-bg: rgba(0, 0, 0, 0.9);
-  --bg-main: #000000;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-bg-light: #080c10;
-  --text-main: #e8e8e8;
-  --text-heading: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.85);
-  --text-bio: rgba(255, 255, 255, 0.9);
-  --text-white: #000000;
-  --primary: #000000;
-  --primary-color: #ffffff;
-  --primary-rgb: 255, 255, 255;
-  --secondary: #00e5ff;
-  --secondary-rgb: 0, 229, 255;
-  --border-color: rgba(0, 229, 255, 0.2);
-  --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.5);
-  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
+    [data-theme="dark"] {
+      --body-bg: #000000;
+      --hero-bg: linear-gradient(135deg, #020f1c 0%, #021120 25%, #04192e 50%, #051c33 75%, #06294c 100%);
+      --nav-bg: rgba(0, 0, 0, 0.8);
+      --nav-dropdown-bg: rgba(0, 0, 0, 0.9);
+      --bg-main: #000000;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-bg-light: #080c10;
+      --text-main: #e8e8e8;
+      --text-heading: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.85);
+      --text-bio: rgba(255, 255, 255, 0.9);
+      --text-white: #000000;
+      --primary: #000000;
+      --primary-color: #ffffff;
+      --primary-rgb: 255, 255, 255;
+      --secondary: #00e5ff;
+      --secondary-rgb: 0, 229, 255;
+      --border-color: rgba(0, 229, 255, 0.2);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.5);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
 
-[data-theme="cupcake"] {
-  --body-bg: #faf7f5;
-  --hero-bg: linear-gradient(135deg, #faf7f5 0%, #efeae6 100%);
-  --nav-bg: rgba(250, 247, 245, 0.9);
-  --nav-dropdown-bg: #faf7f5;
-  --bg-main: #faf7f5;
-  --card-bg: #ffffff;
-  --card-bg-light: #ffffff;
-  --text-main: #291334;
-  --text-heading: #291334;
-  --text-muted: rgba(41, 19, 52, 0.7);
-  --text-bio: rgba(41, 19, 52, 0.8);
-  --text-white: #ffffff;
-  --primary: #65c3c8;
-  --primary-color: #65c3c8;
-  --primary-rgb: 101, 195, 200;
-  --secondary: #ef9fbc;
-  --secondary-rgb: 239, 159, 188;
-  --border-color: rgba(41, 19, 52, 0.1);
-  --shadow-dropdown: 0 12px 36px rgba(41, 19, 52, 0.1);
-  --shadow-nav: 0 4px 20px rgba(41, 19, 52, 0.05);
-}
+    [data-theme="cupcake"] {
+      --body-bg: #faf7f5;
+      --hero-bg: linear-gradient(135deg, #faf7f5 0%, #efeae6 100%);
+      --nav-bg: rgba(250, 247, 245, 0.9);
+      --nav-dropdown-bg: #faf7f5;
+      --bg-main: #faf7f5;
+      --card-bg: #ffffff;
+      --card-bg-light: #ffffff;
+      --text-main: #291334;
+      --text-heading: #291334;
+      --text-muted: rgba(41, 19, 52, 0.7);
+      --text-bio: rgba(41, 19, 52, 0.8);
+      --text-white: #ffffff;
+      --primary: #65c3c8;
+      --primary-color: #65c3c8;
+      --primary-rgb: 101, 195, 200;
+      --secondary: #ef9fbc;
+      --secondary-rgb: 239, 159, 188;
+      --border-color: rgba(41, 19, 52, 0.1);
+      --shadow-dropdown: 0 12px 36px rgba(41, 19, 52, 0.1);
+      --shadow-nav: 0 4px 20px rgba(41, 19, 52, 0.05);
+    }
 
-[data-theme="synthwave"] {
-  --body-bg: #1a1025;
-  --hero-bg: linear-gradient(135deg, #2d1b4e 0%, #1a1025 100%);
-  --nav-bg: rgba(26, 16, 37, 0.9);
-  --nav-dropdown-bg: #1a1025;
-  --bg-main: #1a1025;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-bg-light: #2d1b4e;
-  --text-main: #f9f8fa;
-  --text-heading: #f9f8fa;
-  --text-muted: rgba(249, 248, 250, 0.7);
-  --text-bio: rgba(249, 248, 250, 0.8);
-  --text-white: #ffffff;
-  --primary: #e779c1;
-  --primary-color: #e779c1;
-  --primary-rgb: 231, 121, 193;
-  --secondary: #58c7f3;
-  --secondary-rgb: 88, 199, 243;
-  --border-color: rgba(231, 121, 193, 0.3);
-  --shadow-dropdown: 0 12px 36px rgba(231, 121, 193, 0.2);
-  --shadow-nav: 0 4px 20px rgba(231, 121, 193, 0.1);
-}
+    [data-theme="synthwave"] {
+      --body-bg: #1a1025;
+      --hero-bg: linear-gradient(135deg, #2d1b4e 0%, #1a1025 100%);
+      --nav-bg: rgba(26, 16, 37, 0.9);
+      --nav-dropdown-bg: #1a1025;
+      --bg-main: #1a1025;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-bg-light: #2d1b4e;
+      --text-main: #f9f8fa;
+      --text-heading: #f9f8fa;
+      --text-muted: rgba(249, 248, 250, 0.7);
+      --text-bio: rgba(249, 248, 250, 0.8);
+      --text-white: #ffffff;
+      --primary: #e779c1;
+      --primary-color: #e779c1;
+      --primary-rgb: 231, 121, 193;
+      --secondary: #58c7f3;
+      --secondary-rgb: 88, 199, 243;
+      --border-color: rgba(231, 121, 193, 0.3);
+      --shadow-dropdown: 0 12px 36px rgba(231, 121, 193, 0.2);
+      --shadow-nav: 0 4px 20px rgba(231, 121, 193, 0.1);
+    }
 
-[data-theme="valentine"] {
-  --body-bg: #f0e6e6;
-  --hero-bg: linear-gradient(135deg, #f0e6e6 0%, #e6d8d8 100%);
-  --nav-bg: rgba(240, 230, 230, 0.9);
-  --nav-dropdown-bg: #f0e6e6;
-  --bg-main: #f0e6e6;
-  --card-bg: #ffffff;
-  --card-bg-light: #ffffff;
-  --text-main: #632c3b;
-  --text-heading: #632c3b;
-  --text-muted: rgba(99, 44, 59, 0.7);
-  --text-bio: rgba(99, 44, 59, 0.8);
-  --text-white: #ffffff;
-  --primary: #e96d7b;
-  --primary-color: #e96d7b;
-  --primary-rgb: 233, 109, 123;
-  --secondary: #a990a9;
-  --secondary-rgb: 169, 144, 169;
-  --border-color: rgba(233, 109, 123, 0.2);
-  --shadow-dropdown: 0 12px 36px rgba(233, 109, 123, 0.15);
-  --shadow-nav: 0 4px 20px rgba(233, 109, 123, 0.1);
-}
+    [data-theme="valentine"] {
+      --body-bg: #f0e6e6;
+      --hero-bg: linear-gradient(135deg, #f0e6e6 0%, #e6d8d8 100%);
+      --nav-bg: rgba(240, 230, 230, 0.9);
+      --nav-dropdown-bg: #f0e6e6;
+      --bg-main: #f0e6e6;
+      --card-bg: #ffffff;
+      --card-bg-light: #ffffff;
+      --text-main: #632c3b;
+      --text-heading: #632c3b;
+      --text-muted: rgba(99, 44, 59, 0.7);
+      --text-bio: rgba(99, 44, 59, 0.8);
+      --text-white: #ffffff;
+      --primary: #e96d7b;
+      --primary-color: #e96d7b;
+      --primary-rgb: 233, 109, 123;
+      --secondary: #a990a9;
+      --secondary-rgb: 169, 144, 169;
+      --border-color: rgba(233, 109, 123, 0.2);
+      --shadow-dropdown: 0 12px 36px rgba(233, 109, 123, 0.15);
+      --shadow-nav: 0 4px 20px rgba(233, 109, 123, 0.1);
+    }
 
-[data-theme="cyberpunk"] {
-  --body-bg: #ffee00;
-  --hero-bg: linear-gradient(135deg, #ffee00 0%, #e5d500 100%);
-  --nav-bg: rgba(255, 238, 0, 0.9);
-  --nav-dropdown-bg: #ffee00;
-  --bg-main: #ffee00;
-  --card-bg: rgba(0, 0, 0, 0.05);
-  --card-bg-light: #000000;
-  --text-main: #000000;
-  --text-heading: #000000;
-  --text-muted: rgba(0, 0, 0, 0.7);
-  --text-bio: rgba(0, 0, 0, 0.8);
-  --text-white: #ffee00;
-  --primary: #ff003c;
-  --primary-color: #ff003c;
-  --primary-rgb: 255, 0, 60;
-  --secondary: #00ffff;
-  --secondary-rgb: 0, 255, 255;
-  --border-color: rgba(0, 0, 0, 0.2);
-  --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.2);
-  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+    [data-theme="cyberpunk"] {
+      --body-bg: #ffee00;
+      --hero-bg: linear-gradient(135deg, #ffee00 0%, #e5d500 100%);
+      --nav-bg: rgba(255, 238, 0, 0.9);
+      --nav-dropdown-bg: #ffee00;
+      --bg-main: #ffee00;
+      --card-bg: rgba(0, 0, 0, 0.05);
+      --card-bg-light: #000000;
+      --text-main: #000000;
+      --text-heading: #000000;
+      --text-muted: rgba(0, 0, 0, 0.7);
+      --text-bio: rgba(0, 0, 0, 0.8);
+      --text-white: #ffee00;
+      --primary: #ff003c;
+      --primary-color: #ff003c;
+      --primary-rgb: 255, 0, 60;
+      --secondary: #00ffff;
+      --secondary-rgb: 0, 255, 255;
+      --border-color: rgba(0, 0, 0, 0.2);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.2);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
-[data-theme="business"] {
-  --body-bg: #ffffff;
-  --hero-bg: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
-  --nav-bg: rgba(255, 255, 255, 0.95);
-  --nav-dropdown-bg: #ffffff;
-  --bg-main: #ffffff;
-  --card-bg: #ffffff;
-  --card-bg-light: #ffffff;
-  --text-main: #1c1e21;
-  --text-heading: #1c1e21;
-  --text-muted: rgba(28, 30, 33, 0.7);
-  --text-bio: rgba(28, 30, 33, 0.8);
-  --text-white: #ffffff;
-  --primary: #1877f2;
-  --primary-color: #1877f2;
-  --primary-rgb: 24, 119, 242;
-  --secondary: #42b72a;
-  --secondary-rgb: 66, 183, 42;
-  --border-color: rgba(0, 0, 0, 0.1);
-  --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.1);
-  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
+    [data-theme="business"] {
+      --body-bg: #ffffff;
+      --hero-bg: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --nav-dropdown-bg: #ffffff;
+      --bg-main: #ffffff;
+      --card-bg: #ffffff;
+      --card-bg-light: #ffffff;
+      --text-main: #1c1e21;
+      --text-heading: #1c1e21;
+      --text-muted: rgba(28, 30, 33, 0.7);
+      --text-bio: rgba(28, 30, 33, 0.8);
+      --text-white: #ffffff;
+      --primary: #1877f2;
+      --primary-color: #1877f2;
+      --primary-rgb: 24, 119, 242;
+      --secondary: #42b72a;
+      --secondary-rgb: 66, 183, 42;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.1);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
 
-[data-theme="corporate"] {
-  --body-bg: #f8f9fa;
-  --hero-bg: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  --nav-bg: rgba(248, 249, 250, 0.95);
-  --nav-dropdown-bg: #f8f9fa;
-  --bg-main: #f8f9fa;
-  --card-bg: #ffffff;
-  --card-bg-light: #ffffff;
-  --text-main: #212529;
-  --text-heading: #212529;
-  --text-muted: rgba(33, 37, 41, 0.7);
-  --text-bio: rgba(33, 37, 41, 0.8);
-  --text-white: #ffffff;
-  --primary: #0d6efd;
-  --primary-color: #0d6efd;
-  --primary-rgb: 13, 110, 253;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --border-color: rgba(0, 0, 0, 0.1);
-  --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.1);
-  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
+    [data-theme="corporate"] {
+      --body-bg: #f8f9fa;
+      --hero-bg: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      --nav-bg: rgba(248, 249, 250, 0.95);
+      --nav-dropdown-bg: #f8f9fa;
+      --bg-main: #f8f9fa;
+      --card-bg: #ffffff;
+      --card-bg-light: #ffffff;
+      --text-main: #212529;
+      --text-heading: #212529;
+      --text-muted: rgba(33, 37, 41, 0.7);
+      --text-bio: rgba(33, 37, 41, 0.8);
+      --text-white: #ffffff;
+      --primary: #0d6efd;
+      --primary-color: #0d6efd;
+      --primary-rgb: 13, 110, 253;
+      --secondary: #6c757d;
+      --secondary-rgb: 108, 117, 125;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.1);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
 
-[data-theme="halloween"] {
-  --body-bg: #1a1a1a;
-  --hero-bg: linear-gradient(135deg, #212121 0%, #000000 100%);
-  --nav-bg: rgba(33, 33, 33, 0.95);
-  --nav-dropdown-bg: #212121;
-  --bg-main: #1a1a1a;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-bg-light: #000000;
-  --text-main: #f5f5f5;
-  --text-heading: #f5f5f5;
-  --text-muted: rgba(245, 245, 245, 0.7);
-  --text-bio: rgba(245, 245, 245, 0.8);
-  --text-white: #ffffff;
-  --primary: #ff6d00;
-  --primary-color: #ff6d00;
-  --primary-rgb: 255, 109, 0;
-  --secondary: #9c27b0;
-  --secondary-rgb: 156, 39, 176;
-  --border-color: rgba(255, 109, 0, 0.3);
-  --shadow-dropdown: 0 12px 36px rgba(255, 109, 0, 0.2);
-  --shadow-nav: 0 4px 20px rgba(255, 109, 0, 0.1);
-}
+    [data-theme="halloween"] {
+      --body-bg: #1a1a1a;
+      --hero-bg: linear-gradient(135deg, #212121 0%, #000000 100%);
+      --nav-bg: rgba(33, 33, 33, 0.95);
+      --nav-dropdown-bg: #212121;
+      --bg-main: #1a1a1a;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-bg-light: #000000;
+      --text-main: #f5f5f5;
+      --text-heading: #f5f5f5;
+      --text-muted: rgba(245, 245, 245, 0.7);
+      --text-bio: rgba(245, 245, 245, 0.8);
+      --text-white: #ffffff;
+      --primary: #ff6d00;
+      --primary-color: #ff6d00;
+      --primary-rgb: 255, 109, 0;
+      --secondary: #9c27b0;
+      --secondary-rgb: 156, 39, 176;
+      --border-color: rgba(255, 109, 0, 0.3);
+      --shadow-dropdown: 0 12px 36px rgba(255, 109, 0, 0.2);
+      --shadow-nav: 0 4px 20px rgba(255, 109, 0, 0.1);
+    }
 
-/* Base Global Overrides */
-/* Optimized background for performance */
+    /* Base Global Overrides */
+    /* Optimized background for performance */
     body::before {
       content: "";
       position: fixed;
@@ -301,10 +302,10 @@
       max-width: calc(100vw - 2.5rem);
       opacity: 1;
       transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-                  opacity 0.35s ease;
+        opacity 0.35s ease;
     }
 
-.nav-wrapper.nav-hidden {
+    .nav-wrapper.nav-hidden {
       transform: translateX(-50%) translateY(-140%) scale(0.88);
       opacity: 0;
       pointer-events: none;
@@ -821,6 +822,7 @@
     }
 
     @keyframes haloPulse {
+
       0%,
       100% {
         opacity: 0.12;
@@ -838,9 +840,11 @@
         opacity: 0;
         transform: translateY(40px) scale(0.96);
       }
+
       30% {
         opacity: 0.5;
       }
+
       100% {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -852,9 +856,11 @@
         opacity: 0;
         transform: perspective(900px) scale(0.82) translateZ(-60px) rotateX(4deg);
       }
+
       40% {
         opacity: 0.7;
       }
+
       100% {
         opacity: 1;
         transform: perspective(900px) scale(1) translateZ(0px) rotateX(0deg);
@@ -1100,8 +1106,8 @@
       border: 2px solid rgba(var(--primary-rgb), 0.28);
       box-shadow: 0 2px 12px rgba(var(--primary-rgb), 0.06);
       transition: transform 0.24s cubic-bezier(0.22, 0.61, 0.36, 1),
-                  box-shadow 0.24s ease,
-                  border-color 0.24s ease;
+        box-shadow 0.24s ease,
+        border-color 0.24s ease;
       position: relative;
       overflow: hidden;
     }
@@ -1219,8 +1225,8 @@
       border: 2px solid var(--border-color);
       box-shadow: var(--shadow-light);
       transition: transform 0.26s cubic-bezier(0.2, 0.7, 0.2, 1),
-                  box-shadow 0.26s ease,
-                  border-color 0.26s ease;
+        box-shadow 0.26s ease,
+        border-color 0.26s ease;
       position: relative;
       overflow: hidden;
     }
@@ -1412,8 +1418,8 @@
       border-left: 4px solid var(--primary-color);
       box-shadow: var(--shadow-light);
       transition: transform 0.23s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.23s ease,
-                  border-color 0.23s ease;
+        box-shadow 0.23s ease,
+        border-color 0.23s ease;
       position: relative;
       overflow: hidden;
     }
@@ -1730,6 +1736,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       .motion-reveal,
       .motion-reveal.reveal-up.in-view,
       .motion-reveal.reveal-depth.in-view {
@@ -1745,6 +1752,7 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
+
       html,
       body {
         width: 100%;
@@ -1752,7 +1760,7 @@
         overflow-x: hidden;
       }
 
-      body > * {
+      body>* {
         max-width: 100vw;
       }
 
@@ -2013,6 +2021,7 @@
     }
 
     @media (hover: none) {
+
       .project-card:hover,
       .tech-group:hover,
       .experience-card:hover,
@@ -2035,24 +2044,26 @@
         <a href="#experience">Experience</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
-        <a href="https://drive.google.com/file/d/1zdMf2vobxcGwUyGajNZN8jahZxus2YZh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="https://drive.google.com/drive/u/0/my-drive?usp=drive_link" target="_blank"
+          rel="noopener noreferrer">Resume</a>
       </div>
-      
-<div class="theme-selector">
-    <select id="theme-select">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="cupcake">Cupcake</option>
-        <option value="synthwave">Synthwave</option>
-        <option value="valentine">Valentine</option>
-        <option value="cyberpunk">Cyberpunk</option>
-        <option value="business">Business</option>
-        <option value="corporate">Corporate</option>
-        <option value="halloween">Halloween</option>
-    </select>
-</div>
 
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+      <div class="theme-selector">
+        <select id="theme-select">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="cupcake">Cupcake</option>
+          <option value="synthwave">Synthwave</option>
+          <option value="valentine">Valentine</option>
+          <option value="cyberpunk">Cyberpunk</option>
+          <option value="business">Business</option>
+          <option value="corporate">Corporate</option>
+          <option value="halloween">Halloween</option>
+        </select>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+        aria-controls="primary-navigation">
         <span class="material-icons" aria-hidden="true">menu</span>
       </button>
     </nav>
@@ -2063,7 +2074,8 @@
       <a href="#experience">Experience</a>
       <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
-      <a href="https://drive.google.com/file/d/1zdMf2vobxcGwUyGajNZN8jahZxus2YZh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a href="https://drive.google.com/drive/u/0/my-drive?usp=drive_link" target="_blank"
+        rel="noopener noreferrer">Resume</a>
     </div>
   </div>
 
@@ -2090,7 +2102,8 @@
         <span class="material-icons">code</span>
         View Projects
       </a>
-      <a href="https://drive.google.com/file/d/1zdMf2vobxcGwUyGajNZN8jahZxus2YZh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+      <a href="https://drive.google.com/drive/u/0/my-drive?usp=drive_link" target="_blank" rel="noopener noreferrer"
+        class="btn btn-secondary">
         <span class="material-icons">description</span>
         Resume
       </a>
@@ -2112,10 +2125,12 @@
         Building full stack web apps with <strong>MERN</strong> and <strong>Next.js</strong>
       </li>
       <li>
-        Focused on <strong>AI-integrated full stack websites</strong> with modern UI and <strong>AI automation</strong> services
+        Focused on <strong>AI-integrated full stack websites</strong> with modern UI and <strong>AI automation</strong>
+        services
       </li>
       <li>
-        Learning <strong> AI Automation</strong> and <strong>Machine Learning</strong> to build more intelligent products
+        Learning <strong> AI Automation</strong> and <strong>Machine Learning</strong> to build more intelligent
+        products
       </li>
       <li>
         Open to collaborating on <strong>e-commerce</strong>, <strong>edtech</strong>, and other modern web projects
@@ -2228,7 +2243,9 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>Tensor Security Academy (TSA)</h3>
-        <p>I independently built and maintain the TSA platform using Next.js, focusing on scalable architecture, strong security practices, and production-ready performance. I also integrated n8n-powered service booking automation with PostgreSQL for reliable data management.</p>
+        <p>I independently built and maintain the TSA platform using Next.js, focusing on scalable architecture, strong
+          security practices, and production-ready performance. I also integrated n8n-powered service booking automation
+          with PostgreSQL for reliable data management.</p>
         <div class="tech-tags">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">n8n</span>
@@ -2247,7 +2264,8 @@
 
       <div class="project-card">
         <h3>Arelix Labs — AI &amp; Software Platform</h3>
-        <p>Full-stack AI agency and software engineering platform built with Next.js App Router, Prisma ORM, PostgreSQL, Groq AI SDK integration, NextAuth authentication, and server-side automation.</p>
+        <p>Full-stack AI agency and software engineering platform built with Next.js App Router, Prisma ORM, PostgreSQL,
+          Groq AI SDK integration, NextAuth authentication, and server-side automation.</p>
         <div class="tech-tags">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">TypeScript</span>
@@ -2268,7 +2286,8 @@
 
       <div class="project-card">
         <h3>SSRN Transfer — US Car Rental Platform</h3>
-        <p>Project-based frontend development for SSRN Transfer, a US-based car rental platform. Engineered fast, clean, and responsive user interface templates using Jinja2, HTML5, CSS3, and JavaScript.</p>
+        <p>Project-based frontend development for SSRN Transfer, a US-based car rental platform. Engineered fast, clean,
+          and responsive user interface templates using Jinja2, HTML5, CSS3, and JavaScript.</p>
         <div class="tech-tags">
           <span class="tech-tag">Jinja2</span>
           <span class="tech-tag">HTML5</span>
@@ -2279,10 +2298,12 @@
         <div class="project-links">
         </div>
       </div>
-          
+
       <div class="project-card">
         <h3>AUST Robotics Club Website</h3>
-        <p>As Director of the Web Team, I led and coordinated the development team while actively coding and implementing the core features of this official club website (dynamic Notice Boards, educational course trackers, searchable events, project showroom, and secure admin panel).</p>
+        <p>As Director of the Web Team, I led and coordinated the development team while actively coding and
+          implementing the core features of this official club website (dynamic Notice Boards, educational course
+          trackers, searchable events, project showroom, and secure admin panel).</p>
         <div class="tech-tags">
           <span class="tech-tag">React</span>
           <span class="tech-tag">TypeScript</span>
@@ -2303,7 +2324,10 @@
 
       <div class="project-card">
         <h3>AUST Rover Challenge (ARC) Portal</h3>
-        <p>I served as Director and Lead Developer for the official national event portal powering the AUST Rover Challenge (which hosts LFR, Soccer Bot, Rover Run, and Hackathons). Personally coded and engineered the portal's core systems driven by our custom Universal Competition System (UCS) engine (live analytics, real-time leaderboards, automated certificate generators, and a secure admin command center).</p>
+        <p>I served as Director and Lead Developer for the official national event portal powering the AUST Rover
+          Challenge (which hosts LFR, Soccer Bot, Rover Run, and Hackathons). Personally coded and engineered the
+          portal's core systems driven by our custom Universal Competition System (UCS) engine (live analytics,
+          real-time leaderboards, automated certificate generators, and a secure admin command center).</p>
         <div class="tech-tags">
           <span class="tech-tag">React</span>
           <span class="tech-tag">TypeScript</span>
@@ -2324,7 +2348,8 @@
 
       <div class="project-card">
         <h3>AUSTCAIC Official Website</h3>
-        <p>Official web platform for AUST Cybersecurity and AI Club (austcaic.com). Engineered full web deployment, live debugging, and cloud hosting infrastructure.</p>
+        <p>Official web platform for AUST Cybersecurity and AI Club (austcaic.com). Engineered full web deployment, live
+          debugging, and cloud hosting infrastructure.</p>
         <div class="tech-tags">
           <span class="tech-tag">Deployment</span>
           <span class="tech-tag">Debugging</span>
@@ -2343,7 +2368,8 @@
 
       <div class="project-card">
         <h3>AUSTCAIC Poster Generator</h3>
-        <p>Internal graphics web app for the AUSTCAIC Graphics Team. Generates 300 DPI print-ready PNG posters with fixed brand guidelines, Satori rendering engine, and Groq LLaMA 3.3 + Pinecone AI notes assistant.</p>
+        <p>Internal graphics web app for the AUSTCAIC Graphics Team. Generates 300 DPI print-ready PNG posters with
+          fixed brand guidelines, Satori rendering engine, and Groq LLaMA 3.3 + Pinecone AI notes assistant.</p>
         <div class="tech-tags">
           <span class="tech-tag">Next.js 15</span>
           <span class="tech-tag">React 19</span>
@@ -2361,7 +2387,8 @@
 
       <div class="project-card">
         <h3>Lead Capture &amp; AI-Qualification System</h3>
-        <p>Full-stack lead capture system with AI-powered qualification (Groq lead scoring), n8n workflow webhook automation, Slack alerts, Sheets CRM logging, and automated personalized email generation.</p>
+        <p>Full-stack lead capture system with AI-powered qualification (Groq lead scoring), n8n workflow webhook
+          automation, Slack alerts, Sheets CRM logging, and automated personalized email generation.</p>
         <div class="tech-tags">
           <span class="tech-tag">n8n</span>
           <span class="tech-tag">Groq API</span>
@@ -2381,7 +2408,9 @@
 
       <div class="project-card">
         <h3>Linear AI - AI Automation Store</h3>
-        <p>I designed and built Linear AI as a full-stack automation commerce platform, with a React frontend and ASP.NET Core Web API backend powering product catalogs, admin-controlled offers, vouchers, discounts, order fulfillment, delivery of n8n templates/setup guides, product requests, and moderated user feedback.</p>
+        <p>I designed and built Linear AI as a full-stack automation commerce platform, with a React frontend and
+          ASP.NET Core Web API backend powering product catalogs, admin-controlled offers, vouchers, discounts, order
+          fulfillment, delivery of n8n templates/setup guides, product requests, and moderated user feedback.</p>
         <div class="tech-tags">
           <span class="tech-tag">React.js</span>
           <span class="tech-tag">ASP.NET Core Web API</span>
@@ -2416,7 +2445,7 @@
         </div>
       </div>
 
-  
+
 
       <div class="project-card">
         <h3>QuoteVerse - Quote Generator</h3>
@@ -2488,7 +2517,9 @@
 
       <div class="project-card">
         <h3>AI Sales Lead Research &amp; Outreach Agent</h3>
-        <p>Advanced multi-agent AI system for B2B sales intelligence. Takes a company name or URL, performs real-time web research, synthesizes a company intelligence profile, drafts a personalized cold email, and runs a strict fact-verification pass to ensure zero hallucinations.</p>
+        <p>Advanced multi-agent AI system for B2B sales intelligence. Takes a company name or URL, performs real-time
+          web research, synthesizes a company intelligence profile, drafts a personalized cold email, and runs a strict
+          fact-verification pass to ensure zero hallucinations.</p>
         <div class="tech-tags">
           <span class="tech-tag">LangGraph</span>
           <span class="tech-tag">Python</span>
@@ -2501,7 +2532,8 @@
           <a href="projects.html" class="project-btn btn-live">
             <span class="material-icons" style="font-size: 18px">open_in_new</span> Details
           </a>
-          <a href="https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent" target="_blank" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent" target="_blank"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size: 18px">code</span> GitHub
           </a>
         </div>
@@ -2509,7 +2541,9 @@
 
       <div class="project-card">
         <h3>SmartAir Mouse Pro</h3>
-        <p>Portfolio-grade computer vision app that turns hand gestures into lag-free virtual mouse controls. Features a 2D Kalman Filter, transparent AR desktop overlay with neon cursor trails, click-physics particle explosions, real-time HUD, and a Gradio browser sandbox.</p>
+        <p>Portfolio-grade computer vision app that turns hand gestures into lag-free virtual mouse controls. Features a
+          2D Kalman Filter, transparent AR desktop overlay with neon cursor trails, click-physics particle explosions,
+          real-time HUD, and a Gradio browser sandbox.</p>
         <div class="tech-tags">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">OpenCV</span>
@@ -2530,7 +2564,9 @@
 
       <div class="project-card">
         <h3>My Cutie Mood Mirror</h3>
-        <p>A charming real-time mood detection application that uses your webcam to recognize facial expressions and reflect your emotional state as a fun, animated visual mirror — mapping detected emotions to cute animated characters with dynamic color-coded feedback.</p>
+        <p>A charming real-time mood detection application that uses your webcam to recognize facial expressions and
+          reflect your emotional state as a fun, animated visual mirror — mapping detected emotions to cute animated
+          characters with dynamic color-coded feedback.</p>
         <div class="tech-tags">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">Computer Vision</span>
@@ -2549,7 +2585,9 @@
 
       <div class="project-card">
         <h3>ResearchMind</h3>
-        <p>Full-stack AI research system featuring 4 modes: Quick Research, ReAct Agent, Team Research (LangGraph pipeline), and Deep Consensus — a cost-aware multi-model workflow with claim-level verification, model disagreement mapping, and live token/cost tracking.</p>
+        <p>Full-stack AI research system featuring 4 modes: Quick Research, ReAct Agent, Team Research (LangGraph
+          pipeline), and Deep Consensus — a cost-aware multi-model workflow with claim-level verification, model
+          disagreement mapping, and live token/cost tracking.</p>
         <div class="tech-tags">
           <span class="tech-tag">LangGraph</span>
           <span class="tech-tag">Gemini</span>
@@ -2570,7 +2608,9 @@
 
       <div class="project-card">
         <h3>WattWatch — IoT Digital Twin</h3>
-        <p>Production-ready, event-driven digital twin for monitoring &amp; optimizing office electrical consumption. Features a 2D interactive floorplan, real-time SSE device updates, 15 controllable devices, a Gemini-powered Discord AI bot, and ESP32 hardware integration.</p>
+        <p>Production-ready, event-driven digital twin for monitoring &amp; optimizing office electrical consumption.
+          Features a 2D interactive floorplan, real-time SSE device updates, 15 controllable devices, a Gemini-powered
+          Discord AI bot, and ESP32 hardware integration.</p>
         <div class="tech-tags">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">Python</span>
@@ -2622,7 +2662,8 @@
         <h3>Solo Software Engineer</h3>
         <p class="company"><strong>Tensor Security Academy (TSA)</strong> | Current</p>
         <p>
-          Independently built and currently maintain the official TSA website in Next.js with a focus on scalability and security.
+          Independently built and currently maintain the official TSA website in Next.js with a focus on scalability and
+          security.
           Integrated n8n automation for service booking workflows and managed data operations with PostgreSQL.
         </p>
         <p style="margin-top: 1rem"><strong>Key Projects:</strong></p>
@@ -2644,7 +2685,10 @@
         <h3>Founding Panel Member &amp; Joint Secretary</h3>
         <p class="company"><strong>AUST Cybersecurity and AI Club (AUSTCAIC)</strong> | Current</p>
         <p>
-          Founding panel member and current Joint Secretary. Co-built the club from scratch, structuring operational workflows, leading cross-functional teams, and directing technical strategy. Architected and managed the full web infrastructure for the official club portal (austcaic.com), handling deployment pipelines, server hosting, live debugging, and internal digital tooling.
+          Founding panel member and current Joint Secretary. Co-built the club from scratch, structuring operational
+          workflows, leading cross-functional teams, and directing technical strategy. Architected and managed the full
+          web infrastructure for the official club portal (austcaic.com), handling deployment pipelines, server hosting,
+          live debugging, and internal digital tooling.
         </p>
         <p style="margin-top: 1rem"><strong>Key Projects:</strong></p>
         <div class="project-links" style="margin-top: 0.8rem">
@@ -2663,7 +2707,8 @@
         <div class="project-links" style="margin-top: 0.8rem">
           <a href="https://www.austrc.com/" target="_blank" class="project-btn btn-live">AUST RC Website</a>
           <a href="https://www.robomania.austrc.com/" target="_blank" class="project-btn btn-live">Robomania 2.0</a>
-          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-btn btn-live">Rover Challenge 2.0</a>
+          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" class="project-btn btn-live">Rover
+            Challenge 2.0</a>
         </div>
       </div>
 
@@ -2694,14 +2739,14 @@
     <div class="certificates-grid">
 
 
-<div class="certificate-card">
+      <div class="certificate-card">
         <img src="assets/Assistant Director cert.jpg" alt="Assistant Director Certificate" />
         <div class="cert-content">
           <p><strong>Assistant Director</strong><br />Website & App Development Team, AUST Robotics Club</p>
         </div>
       </div>
 
-    
+
 
       <div class="certificate-card">
         <img src="assets/best panel.jpg" alt="Best Panel member of Website Team Certificate" />
@@ -2710,7 +2755,7 @@
         </div>
       </div>
 
-       <div class="certificate-card">
+      <div class="certificate-card">
         <img src="assets/Video.png" alt="Video Editing Certificate" />
         <div class="cert-content">
           <p><strong>Champion</strong><br />Video Editing Course Certification</p>
@@ -2718,13 +2763,14 @@
       </div>
 
       <div class="certificate-card">
-        <img src="assets/certificate Machine Learning Basics with Python.jpg" alt="Machine Learning Basics with Python Certificate" />
+        <img src="assets/certificate Machine Learning Basics with Python.jpg"
+          alt="Machine Learning Basics with Python Certificate" />
         <div class="cert-content">
           <p><strong>Machine Learning Basics with Python</strong><br />Course Completion Certificate</p>
         </div>
       </div>
 
-     
+
 
       <div class="certificate-card">
         <img src="assets/ssex.jpeg" alt="Senior Sub Executive Certificate" />
@@ -2733,7 +2779,7 @@
         </div>
       </div>
 
-      
+
 
       <div class="certificate-card">
         <img src="assets/bestin.jpg" alt="Best House In-charge" />
@@ -2777,7 +2823,8 @@
     <p style="margin-top: 0.5rem">Built with passion and dedication to excellence</p>
   </footer>
 
-  <div class="certificate-preview" id="certificate-preview" aria-hidden="true" role="dialog" aria-label="Certificate preview">
+  <div class="certificate-preview" id="certificate-preview" aria-hidden="true" role="dialog"
+    aria-label="Certificate preview">
     <button class="certificate-preview-close" type="button" aria-label="Close certificate preview">
       <span class="material-icons" aria-hidden="true">close</span>
     </button>
@@ -2788,21 +2835,21 @@
     const navWrapper = document.querySelector(".nav-wrapper");
     const menuToggle = document.querySelector(".menu-toggle");
     const menuIcon = menuToggle.querySelector(".material-icons");
-    
+
     const themeSelect = document.getElementById("theme-select");
     const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
-    
+
     function applyTheme(theme) {
-        document.documentElement.setAttribute("data-theme", theme);
-        document.body.classList.toggle("dark", theme === "dark");
-        if (themeSelect) themeSelect.value = theme;
-        localStorage.setItem("portfolio-theme", theme);
+      document.documentElement.setAttribute("data-theme", theme);
+      document.body.classList.toggle("dark", theme === "dark");
+      if (themeSelect) themeSelect.value = theme;
+      localStorage.setItem("portfolio-theme", theme);
     }
-    
+
     applyTheme(savedTheme);
-    
+
     if (themeSelect) {
-        themeSelect.addEventListener("change", (e) => applyTheme(e.target.value));
+      themeSelect.addEventListener("change", (e) => applyTheme(e.target.value));
     }
 
     // Auto-hide navbar on scroll down, show on scroll up
@@ -3052,15 +3099,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

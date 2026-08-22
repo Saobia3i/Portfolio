@@ -16,7 +16,7 @@ const THEMES = [
 ];
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1zdMf2vobxcGwUyGajNZN8jahZxus2YZh/view?usp=drive_link";
+  "https://drive.google.com/drive/u/0/my-drive?usp=drive_link";
 
 interface NavLink {
   href: string;

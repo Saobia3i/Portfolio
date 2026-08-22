@@ -5,18 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Saobia Islam Tinni</title>
-  <meta name="description" content="Explore all projects by Saobia Islam Tinni — AI agents, computer vision tools, IoT dashboards, and full-stack web apps." />
+  <meta name="description"
+    content="Explore all projects by Saobia Islam Tinni — AI agents, computer vision tools, IoT dashboards, and full-stack web apps." />
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
   <!-- Devicon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   <style>
-    *, *::before, *::after {
-      margin: 0; padding: 0; box-sizing: border-box;
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -26,201 +32,202 @@
     }
 
     /* ===== THEME VARIABLES ===== */
-    :root, [data-theme="light"] {
-      --body-bg: radial-gradient(ellipse at 20% 10%, rgba(0,31,63,0.06) 0%, transparent 55%), radial-gradient(ellipse at 80% 50%, rgba(115,210,222,0.07) 0%, transparent 50%), linear-gradient(175deg,#fff 0%,#f4f6f8 30%,#edf1f5 60%,#f0f4f7 100%);
-      --nav-bg: rgba(255,255,255,0.82);
-      --nav-dropdown-bg: rgba(255,255,255,0.96);
+    :root,
+    [data-theme="light"] {
+      --body-bg: radial-gradient(ellipse at 20% 10%, rgba(0, 31, 63, 0.06) 0%, transparent 55%), radial-gradient(ellipse at 80% 50%, rgba(115, 210, 222, 0.07) 0%, transparent 50%), linear-gradient(175deg, #fff 0%, #f4f6f8 30%, #edf1f5 60%, #f0f4f7 100%);
+      --nav-bg: rgba(255, 255, 255, 0.82);
+      --nav-dropdown-bg: rgba(255, 255, 255, 0.96);
       --card-bg: #ffffff;
       --card-bg-light: #ffffff;
       --text-main: #001f3f;
       --text-heading: #001f3f;
-      --text-muted: rgba(0,31,63,0.75);
-      --text-bio: rgba(13,27,42,0.75);
+      --text-muted: rgba(0, 31, 63, 0.75);
+      --text-bio: rgba(13, 27, 42, 0.75);
       --primary-color: #001f3f;
-      --primary-rgb: 0,31,63;
+      --primary-rgb: 0, 31, 63;
       --secondary: #001f3f;
-      --secondary-rgb: 0,31,63;
-      --border-color: rgba(0,31,63,0.16);
-      --shadow-dropdown: 0 12px 36px rgba(0,31,63,0.14);
-      --shadow-nav: 0 8px 32px rgba(0,31,63,0.12), 0 2px 8px rgba(0,31,63,0.06);
-      --shadow-light: 0 10px 30px rgba(0,0,0,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(0,31,63,0.16);
+      --secondary-rgb: 0, 31, 63;
+      --border-color: rgba(0, 31, 63, 0.16);
+      --shadow-dropdown: 0 12px 36px rgba(0, 31, 63, 0.14);
+      --shadow-nav: 0 8px 32px rgba(0, 31, 63, 0.12), 0 2px 8px rgba(0, 31, 63, 0.06);
+      --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(0, 31, 63, 0.16);
       --radius: 14px;
     }
 
     [data-theme="dark"] {
       --body-bg: #000000;
-      --nav-bg: rgba(0,0,0,0.8);
-      --nav-dropdown-bg: rgba(0,0,0,0.9);
-      --card-bg: rgba(255,255,255,0.03);
+      --nav-bg: rgba(0, 0, 0, 0.8);
+      --nav-dropdown-bg: rgba(0, 0, 0, 0.9);
+      --card-bg: rgba(255, 255, 255, 0.03);
       --card-bg-light: #080c10;
       --text-main: #e8e8e8;
       --text-heading: #ffffff;
-      --text-muted: rgba(255,255,255,0.85);
-      --text-bio: rgba(255,255,255,0.9);
+      --text-muted: rgba(255, 255, 255, 0.85);
+      --text-bio: rgba(255, 255, 255, 0.9);
       --primary-color: #ffffff;
-      --primary-rgb: 255,255,255;
+      --primary-rgb: 255, 255, 255;
       --secondary: #00e5ff;
-      --secondary-rgb: 0,229,255;
-      --border-color: rgba(0,229,255,0.2);
-      --shadow-dropdown: 0 12px 36px rgba(0,0,0,0.5);
-      --shadow-nav: 0 4px 20px rgba(0,0,0,0.5);
-      --shadow-light: 0 10px 30px rgba(0,229,255,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(0,229,255,0.12);
+      --secondary-rgb: 0, 229, 255;
+      --border-color: rgba(0, 229, 255, 0.2);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.5);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.5);
+      --shadow-light: 0 10px 30px rgba(0, 229, 255, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(0, 229, 255, 0.12);
       --radius: 14px;
     }
 
     [data-theme="cupcake"] {
       --body-bg: #faf7f5;
-      --nav-bg: rgba(250,247,245,0.9);
+      --nav-bg: rgba(250, 247, 245, 0.9);
       --nav-dropdown-bg: #faf7f5;
       --card-bg: #ffffff;
       --card-bg-light: #ffffff;
       --text-main: #291334;
       --text-heading: #291334;
-      --text-muted: rgba(41,19,52,0.7);
-      --text-bio: rgba(41,19,52,0.8);
+      --text-muted: rgba(41, 19, 52, 0.7);
+      --text-bio: rgba(41, 19, 52, 0.8);
       --primary-color: #65c3c8;
-      --primary-rgb: 101,195,200;
+      --primary-rgb: 101, 195, 200;
       --secondary: #ef9fbc;
-      --secondary-rgb: 239,159,188;
-      --border-color: rgba(41,19,52,0.1);
-      --shadow-dropdown: 0 12px 36px rgba(41,19,52,0.1);
-      --shadow-nav: 0 4px 20px rgba(41,19,52,0.05);
-      --shadow-light: 0 10px 30px rgba(0,0,0,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(101,195,200,0.2);
+      --secondary-rgb: 239, 159, 188;
+      --border-color: rgba(41, 19, 52, 0.1);
+      --shadow-dropdown: 0 12px 36px rgba(41, 19, 52, 0.1);
+      --shadow-nav: 0 4px 20px rgba(41, 19, 52, 0.05);
+      --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(101, 195, 200, 0.2);
       --radius: 14px;
     }
 
     [data-theme="synthwave"] {
       --body-bg: #1a1025;
-      --nav-bg: rgba(26,16,37,0.9);
+      --nav-bg: rgba(26, 16, 37, 0.9);
       --nav-dropdown-bg: #1a1025;
-      --card-bg: rgba(255,255,255,0.05);
+      --card-bg: rgba(255, 255, 255, 0.05);
       --card-bg-light: #2d1b4e;
       --text-main: #f9f8fa;
       --text-heading: #f9f8fa;
-      --text-muted: rgba(249,248,250,0.7);
-      --text-bio: rgba(249,248,250,0.8);
+      --text-muted: rgba(249, 248, 250, 0.7);
+      --text-bio: rgba(249, 248, 250, 0.8);
       --primary-color: #e779c1;
-      --primary-rgb: 231,121,193;
+      --primary-rgb: 231, 121, 193;
       --secondary: #58c7f3;
-      --secondary-rgb: 88,199,243;
-      --border-color: rgba(231,121,193,0.3);
-      --shadow-dropdown: 0 12px 36px rgba(231,121,193,0.2);
-      --shadow-nav: 0 4px 20px rgba(231,121,193,0.1);
-      --shadow-light: 0 10px 30px rgba(231,121,193,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(231,121,193,0.2);
+      --secondary-rgb: 88, 199, 243;
+      --border-color: rgba(231, 121, 193, 0.3);
+      --shadow-dropdown: 0 12px 36px rgba(231, 121, 193, 0.2);
+      --shadow-nav: 0 4px 20px rgba(231, 121, 193, 0.1);
+      --shadow-light: 0 10px 30px rgba(231, 121, 193, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(231, 121, 193, 0.2);
       --radius: 14px;
     }
 
     [data-theme="valentine"] {
       --body-bg: #f0e6e6;
-      --nav-bg: rgba(240,230,230,0.9);
+      --nav-bg: rgba(240, 230, 230, 0.9);
       --nav-dropdown-bg: #f0e6e6;
       --card-bg: #ffffff;
       --card-bg-light: #ffffff;
       --text-main: #632c3b;
       --text-heading: #632c3b;
-      --text-muted: rgba(99,44,59,0.7);
-      --text-bio: rgba(99,44,59,0.8);
+      --text-muted: rgba(99, 44, 59, 0.7);
+      --text-bio: rgba(99, 44, 59, 0.8);
       --primary-color: #e96d7b;
-      --primary-rgb: 233,109,123;
+      --primary-rgb: 233, 109, 123;
       --secondary: #a990a9;
-      --secondary-rgb: 169,144,169;
-      --border-color: rgba(233,109,123,0.2);
-      --shadow-dropdown: 0 12px 36px rgba(233,109,123,0.15);
-      --shadow-nav: 0 4px 20px rgba(233,109,123,0.1);
-      --shadow-light: 0 10px 30px rgba(233,109,123,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(233,109,123,0.2);
+      --secondary-rgb: 169, 144, 169;
+      --border-color: rgba(233, 109, 123, 0.2);
+      --shadow-dropdown: 0 12px 36px rgba(233, 109, 123, 0.15);
+      --shadow-nav: 0 4px 20px rgba(233, 109, 123, 0.1);
+      --shadow-light: 0 10px 30px rgba(233, 109, 123, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(233, 109, 123, 0.2);
       --radius: 14px;
     }
 
     [data-theme="cyberpunk"] {
       --body-bg: #ffee00;
-      --nav-bg: rgba(255,238,0,0.9);
+      --nav-bg: rgba(255, 238, 0, 0.9);
       --nav-dropdown-bg: #ffee00;
-      --card-bg: rgba(0,0,0,0.05);
+      --card-bg: rgba(0, 0, 0, 0.05);
       --card-bg-light: #000000;
       --text-main: #000000;
       --text-heading: #000000;
-      --text-muted: rgba(0,0,0,0.7);
-      --text-bio: rgba(0,0,0,0.8);
+      --text-muted: rgba(0, 0, 0, 0.7);
+      --text-bio: rgba(0, 0, 0, 0.8);
       --primary-color: #ff003c;
-      --primary-rgb: 255,0,60;
+      --primary-rgb: 255, 0, 60;
       --secondary: #00ffff;
-      --secondary-rgb: 0,255,255;
-      --border-color: rgba(0,0,0,0.2);
-      --shadow-dropdown: 0 12px 36px rgba(0,0,0,0.2);
-      --shadow-nav: 0 4px 20px rgba(0,0,0,0.1);
-      --shadow-light: 0 10px 30px rgba(255,0,60,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(255,0,60,0.18);
+      --secondary-rgb: 0, 255, 255;
+      --border-color: rgba(0, 0, 0, 0.2);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.2);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.1);
+      --shadow-light: 0 10px 30px rgba(255, 0, 60, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(255, 0, 60, 0.18);
       --radius: 14px;
     }
 
     [data-theme="business"] {
       --body-bg: #ffffff;
-      --nav-bg: rgba(255,255,255,0.95);
+      --nav-bg: rgba(255, 255, 255, 0.95);
       --nav-dropdown-bg: #ffffff;
       --card-bg: #ffffff;
       --card-bg-light: #ffffff;
       --text-main: #1c1e21;
       --text-heading: #1c1e21;
-      --text-muted: rgba(28,30,33,0.7);
-      --text-bio: rgba(28,30,33,0.8);
+      --text-muted: rgba(28, 30, 33, 0.7);
+      --text-bio: rgba(28, 30, 33, 0.8);
       --primary-color: #1877f2;
-      --primary-rgb: 24,119,242;
+      --primary-rgb: 24, 119, 242;
       --secondary: #42b72a;
-      --secondary-rgb: 66,183,42;
-      --border-color: rgba(0,0,0,0.1);
-      --shadow-dropdown: 0 12px 36px rgba(0,0,0,0.1);
-      --shadow-nav: 0 4px 20px rgba(0,0,0,0.05);
-      --shadow-light: 0 10px 30px rgba(0,0,0,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(24,119,242,0.18);
+      --secondary-rgb: 66, 183, 42;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.1);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(24, 119, 242, 0.18);
       --radius: 14px;
     }
 
     [data-theme="corporate"] {
       --body-bg: #f8f9fa;
-      --nav-bg: rgba(248,249,250,0.95);
+      --nav-bg: rgba(248, 249, 250, 0.95);
       --nav-dropdown-bg: #f8f9fa;
       --card-bg: #ffffff;
       --card-bg-light: #ffffff;
       --text-main: #212529;
       --text-heading: #212529;
-      --text-muted: rgba(33,37,41,0.7);
-      --text-bio: rgba(33,37,41,0.8);
+      --text-muted: rgba(33, 37, 41, 0.7);
+      --text-bio: rgba(33, 37, 41, 0.8);
       --primary-color: #0d6efd;
-      --primary-rgb: 13,110,253;
+      --primary-rgb: 13, 110, 253;
       --secondary: #6c757d;
-      --secondary-rgb: 108,117,125;
-      --border-color: rgba(0,0,0,0.1);
-      --shadow-dropdown: 0 12px 36px rgba(0,0,0,0.1);
-      --shadow-nav: 0 4px 20px rgba(0,0,0,0.05);
-      --shadow-light: 0 10px 30px rgba(0,0,0,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(13,110,253,0.18);
+      --secondary-rgb: 108, 117, 125;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --shadow-dropdown: 0 12px 36px rgba(0, 0, 0, 0.1);
+      --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(13, 110, 253, 0.18);
       --radius: 14px;
     }
 
     [data-theme="halloween"] {
       --body-bg: #1a1a1a;
-      --nav-bg: rgba(33,33,33,0.95);
+      --nav-bg: rgba(33, 33, 33, 0.95);
       --nav-dropdown-bg: #212121;
-      --card-bg: rgba(255,255,255,0.05);
+      --card-bg: rgba(255, 255, 255, 0.05);
       --card-bg-light: #000000;
       --text-main: #f5f5f5;
       --text-heading: #f5f5f5;
-      --text-muted: rgba(245,245,245,0.7);
-      --text-bio: rgba(245,245,245,0.8);
+      --text-muted: rgba(245, 245, 245, 0.7);
+      --text-bio: rgba(245, 245, 245, 0.8);
       --primary-color: #ff6d00;
-      --primary-rgb: 255,109,0;
+      --primary-rgb: 255, 109, 0;
       --secondary: #9c27b0;
-      --secondary-rgb: 156,39,176;
-      --border-color: rgba(255,109,0,0.3);
-      --shadow-dropdown: 0 12px 36px rgba(255,109,0,0.2);
-      --shadow-nav: 0 4px 20px rgba(255,109,0,0.1);
-      --shadow-light: 0 10px 30px rgba(255,109,0,0.08);
-      --shadow-hover-light: 0 18px 50px rgba(255,109,0,0.2);
+      --secondary-rgb: 156, 39, 176;
+      --border-color: rgba(255, 109, 0, 0.3);
+      --shadow-dropdown: 0 12px 36px rgba(255, 109, 0, 0.2);
+      --shadow-nav: 0 4px 20px rgba(255, 109, 0, 0.1);
+      --shadow-light: 0 10px 30px rgba(255, 109, 0, 0.08);
+      --shadow-hover-light: 0 18px 50px rgba(255, 109, 0, 0.2);
       --radius: 14px;
     }
 
@@ -308,7 +315,8 @@
     .nav-links a::after {
       content: "";
       position: absolute;
-      left: 0.65rem; right: 0.65rem;
+      left: 0.65rem;
+      right: 0.65rem;
       bottom: 0.1rem;
       height: 1.5px;
       border-radius: 999px;
@@ -318,8 +326,13 @@
       transition: transform 0.22s ease;
     }
 
-    .nav-links a:hover { color: var(--secondary); }
-    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
 
     .nav-dropdown {
       display: none;
@@ -339,7 +352,9 @@
     }
 
     .nav-wrapper.menu-open .nav-dropdown {
-      opacity: 1; visibility: visible; transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
     .nav-dropdown a {
@@ -358,9 +373,12 @@
 
     .menu-toggle {
       display: none;
-      width: 34px; height: 34px;
-      border: 0; border-radius: 999px;
-      align-items: center; justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
       color: var(--text-muted);
       background: transparent;
       cursor: pointer;
@@ -368,9 +386,15 @@
       flex: 0 0 auto;
     }
 
-    .menu-toggle:hover { color: var(--secondary); background: rgba(var(--secondary-rgb), 0.12); }
+    .menu-toggle:hover {
+      color: var(--secondary);
+      background: rgba(var(--secondary-rgb), 0.12);
+    }
 
-    .theme-selector { flex: 0 1 auto; min-width: 0; }
+    .theme-selector {
+      flex: 0 1 auto;
+      min-width: 0;
+    }
 
     .theme-selector select {
       width: clamp(6.2rem, 12vw, 8rem);
@@ -413,7 +437,10 @@
       pointer-events: none;
     }
 
-    .page-header-inner { position: relative; z-index: 1; }
+    .page-header-inner {
+      position: relative;
+      z-index: 1;
+    }
 
     .back-btn {
       display: inline-flex;
@@ -447,7 +474,9 @@
       letter-spacing: -0.5px;
     }
 
-    .page-header h1 span { color: var(--secondary); }
+    .page-header h1 span {
+      color: var(--secondary);
+    }
 
     .page-header p {
       font-size: clamp(0.95rem, 1.8vw, 1.05rem);
@@ -479,7 +508,8 @@
       transition: all 0.22s ease;
     }
 
-    .filter-btn:hover, .filter-btn.active {
+    .filter-btn:hover,
+    .filter-btn.active {
       background: var(--secondary);
       border-color: var(--secondary);
       color: #fff;
@@ -512,8 +542,8 @@
       box-shadow: var(--shadow-light);
       overflow: hidden;
       transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1),
-                  box-shadow 0.28s ease,
-                  border-color 0.28s ease;
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -522,7 +552,8 @@
     .project-detail-card::after {
       content: "";
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 65%;
       height: 3px;
       background: linear-gradient(90deg, var(--secondary), rgba(var(--secondary-rgb), 0.3), transparent);
@@ -536,7 +567,9 @@
       box-shadow: var(--shadow-hover-light);
     }
 
-    .project-detail-card:hover::after { opacity: 1; }
+    .project-detail-card:hover::after {
+      opacity: 1;
+    }
 
     /* Card header band */
     .card-header-band {
@@ -567,17 +600,55 @@
       width: fit-content;
     }
 
-    .badge-ai     { background: rgba(99,102,241,0.12);  color: #6366f1; border: 1px solid rgba(99,102,241,0.25); }
-    .badge-cv     { background: rgba(20,184,166,0.12);  color: #14b8a6; border: 1px solid rgba(20,184,166,0.25); }
-    .badge-iot    { background: rgba(245,158,11,0.12);  color: #f59e0b; border: 1px solid rgba(245,158,11,0.25); }
-    .badge-full   { background: rgba(59,130,246,0.12);  color: #3b82f6; border: 1px solid rgba(59,130,246,0.25); }
-    .badge-fun    { background: rgba(236,72,153,0.12);  color: #ec4899; border: 1px solid rgba(236,72,153,0.25); }
+    .badge-ai {
+      background: rgba(99, 102, 241, 0.12);
+      color: #6366f1;
+      border: 1px solid rgba(99, 102, 241, 0.25);
+    }
 
-    body.dark .badge-ai  { color: #a5b4fc; }
-    body.dark .badge-cv  { color: #5eead4; }
-    body.dark .badge-iot { color: #fcd34d; }
-    body.dark .badge-full{ color: #93c5fd; }
-    body.dark .badge-fun { color: #f9a8d4; }
+    .badge-cv {
+      background: rgba(20, 184, 166, 0.12);
+      color: #14b8a6;
+      border: 1px solid rgba(20, 184, 166, 0.25);
+    }
+
+    .badge-iot {
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .badge-full {
+      background: rgba(59, 130, 246, 0.12);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    .badge-fun {
+      background: rgba(236, 72, 153, 0.12);
+      color: #ec4899;
+      border: 1px solid rgba(236, 72, 153, 0.25);
+    }
+
+    body.dark .badge-ai {
+      color: #a5b4fc;
+    }
+
+    body.dark .badge-cv {
+      color: #5eead4;
+    }
+
+    body.dark .badge-iot {
+      color: #fcd34d;
+    }
+
+    body.dark .badge-full {
+      color: #93c5fd;
+    }
+
+    body.dark .badge-fun {
+      color: #f9a8d4;
+    }
 
     .card-title {
       font-size: 1.25rem;
@@ -696,7 +767,10 @@
       box-shadow: 0 6px 18px rgba(var(--secondary-rgb), 0.18);
     }
 
-    .btn-live:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(var(--primary-rgb), 0.3); }
+    .btn-live:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(var(--primary-rgb), 0.3);
+    }
 
     .btn-github {
       background: transparent;
@@ -704,7 +778,10 @@
       border: 1.5px solid var(--primary-color);
     }
 
-    body.dark .btn-github { color: var(--secondary); border-color: var(--secondary); }
+    body.dark .btn-github {
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
 
     .btn-github:hover {
       transform: translateY(-2px);
@@ -742,7 +819,9 @@
       line-height: 1.6;
     }
 
-    .highlight-panel strong { color: var(--secondary); }
+    .highlight-panel strong {
+      color: var(--secondary);
+    }
 
     /* ===== ARCHITECTURE STEPS ===== */
     .arch-steps {
@@ -761,7 +840,8 @@
     }
 
     .step-num {
-      width: 20px; height: 20px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background: var(--secondary);
       color: #001f3f;
@@ -774,7 +854,9 @@
       margin-top: 1px;
     }
 
-    body.dark .step-num { color: #000; }
+    body.dark .step-num {
+      color: #000;
+    }
 
     /* ===== FOOTER ===== */
     footer {
@@ -787,18 +869,33 @@
 
     /* ===== ANIMATIONS ===== */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .motion-reveal { opacity: 0; }
+    .motion-reveal {
+      opacity: 0;
+    }
+
     .motion-reveal.in-view {
       animation: fadeInUp 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
       animation-delay: var(--motion-delay, 0ms);
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .motion-reveal, .motion-reveal.in-view { opacity: 1 !important; animation: none !important; }
+
+      .motion-reveal,
+      .motion-reveal.in-view {
+        opacity: 1 !important;
+        animation: none !important;
+      }
     }
 
     /* ===== RESPONSIVE ===== */
@@ -809,18 +906,46 @@
         max-width: calc(100vw - 1.4rem);
         align-items: stretch;
       }
-      nav { padding: 0.3rem 0.75rem; width: 100%; }
-      .menu-toggle { margin-left: auto; display: inline-flex; }
-      .nav-links { display: none; }
-      .nav-dropdown { display: flex; }
-      .projects-grid-full { grid-template-columns: 1fr; }
+
+      nav {
+        padding: 0.3rem 0.75rem;
+        width: 100%;
+      }
+
+      .menu-toggle {
+        margin-left: auto;
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-dropdown {
+        display: flex;
+      }
+
+      .projects-grid-full {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 600px) {
-      .page-header { padding: 6rem 1.2rem 2rem; }
-      .projects-section { width: calc(100% - 1rem); }
-      .card-body { padding: 1.2rem 1.2rem 0.8rem; }
-      .card-actions { padding: 0.8rem 1.2rem 1.2rem; }
+      .page-header {
+        padding: 6rem 1.2rem 2rem;
+      }
+
+      .projects-section {
+        width: calc(100% - 1rem);
+      }
+
+      .card-body {
+        padding: 1.2rem 1.2rem 0.8rem;
+      }
+
+      .card-actions {
+        padding: 0.8rem 1.2rem 1.2rem;
+      }
     }
   </style>
 </head>
@@ -838,7 +963,8 @@
         <a href="index.html#experience">Experience</a>
         <a href="index.html#certificates">Certificates</a>
         <a href="index.html#contact">Contact</a>
-        <a href="https://drive.google.com/file/d/1zdMf2vobxcGwUyGajNZN8jahZxus2YZh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="https://drive.google.com/drive/u/0/my-drive?usp=drive_link" target="_blank"
+          rel="noopener noreferrer">Resume</a>
       </div>
       <div class="theme-selector">
         <select id="theme-select">
@@ -853,7 +979,8 @@
           <option value="halloween">Halloween</option>
         </select>
       </div>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-dropdown">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+        aria-controls="nav-dropdown">
         <span class="material-icons" aria-hidden="true">menu</span>
       </button>
     </nav>
@@ -864,7 +991,8 @@
       <a href="index.html#experience">Experience</a>
       <a href="index.html#certificates">Certificates</a>
       <a href="index.html#contact">Contact</a>
-      <a href="https://drive.google.com/file/d/1zdMf2vobxcGwUyGajNZN8jahZxus2YZh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a href="https://drive.google.com/drive/u/0/my-drive?usp=drive_link" target="_blank"
+        rel="noopener noreferrer">Resume</a>
     </div>
   </div>
 
@@ -922,11 +1050,16 @@
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Company Discovery Agent → Parallel Web Research (Overview, News, Tech/Pain-points)</li>
-            <li><span class="material-icons">check_circle</span>Evidence Relevance Filter removes off-topic chunks before synthesis</li>
-            <li><span class="material-icons">check_circle</span>LLM-powered Outreach Writer crafts personalized cold emails</li>
-            <li><span class="material-icons">check_circle</span>Verification Agent checks every claim — flags or strips unverifiable ones</li>
-            <li><span class="material-icons">check_circle</span>FastAPI + Pydantic strict schema validation; Docker-ready for Render</li>
+            <li><span class="material-icons">check_circle</span>Company Discovery Agent → Parallel Web Research
+              (Overview, News, Tech/Pain-points)</li>
+            <li><span class="material-icons">check_circle</span>Evidence Relevance Filter removes off-topic chunks
+              before synthesis</li>
+            <li><span class="material-icons">check_circle</span>LLM-powered Outreach Writer crafts personalized cold
+              emails</li>
+            <li><span class="material-icons">check_circle</span>Verification Agent checks every claim — flags or strips
+              unverifiable ones</li>
+            <li><span class="material-icons">check_circle</span>FastAPI + Pydantic strict schema validation;
+              Docker-ready for Render</li>
           </ul>
 
           <div class="tech-tags">
@@ -943,7 +1076,8 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/AI-Sales-Lead-Research-Outreach-Agent" target="_blank"
+            rel="noopener noreferrer" class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -968,12 +1102,18 @@
           </p>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Custom 2D Kalman Filter + EMA smoothing + velocity-scaling acceleration</li>
-            <li><span class="material-icons">check_circle</span>AR transparent overlay: neon halo rings, fading trails, click ripples &amp; particles</li>
-            <li><span class="material-icons">check_circle</span>Hysteresis &amp; stabilized gesture recognition — prevents stutter clicking</li>
-            <li><span class="material-icons">check_circle</span>Guided calibration wizard for user-specific finger ratios &amp; arm reach</li>
-            <li><span class="material-icons">check_circle</span>Live session stats dashboard: clicks, distance, FPS, tracking confidence</li>
-            <li><span class="material-icons">check_circle</span>Programmatic WAV sound synthesis for async click audio feedback</li>
+            <li><span class="material-icons">check_circle</span>Custom 2D Kalman Filter + EMA smoothing +
+              velocity-scaling acceleration</li>
+            <li><span class="material-icons">check_circle</span>AR transparent overlay: neon halo rings, fading trails,
+              click ripples &amp; particles</li>
+            <li><span class="material-icons">check_circle</span>Hysteresis &amp; stabilized gesture recognition —
+              prevents stutter clicking</li>
+            <li><span class="material-icons">check_circle</span>Guided calibration wizard for user-specific finger
+              ratios &amp; arm reach</li>
+            <li><span class="material-icons">check_circle</span>Live session stats dashboard: clicks, distance, FPS,
+              tracking confidence</li>
+            <li><span class="material-icons">check_circle</span>Programmatic WAV sound synthesis for async click audio
+              feedback</li>
           </ul>
 
           <div class="tech-tags">
@@ -989,7 +1129,8 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/Saobia3i/SmartAir-Mouse-Pro" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/SmartAir-Mouse-Pro" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -1015,9 +1156,12 @@
 
           <ul class="feature-list">
             <li><span class="material-icons">check_circle</span>Real-time webcam facial expression recognition</li>
-            <li><span class="material-icons">check_circle</span>Maps detected emotions to animated visual representations</li>
-            <li><span class="material-icons">check_circle</span>Smooth, responsive UI with dynamic color-coded mood feedback</li>
-            <li><span class="material-icons">check_circle</span>Interactive and engaging — designed to feel personal and fun</li>
+            <li><span class="material-icons">check_circle</span>Maps detected emotions to animated visual
+              representations</li>
+            <li><span class="material-icons">check_circle</span>Smooth, responsive UI with dynamic color-coded mood
+              feedback</li>
+            <li><span class="material-icons">check_circle</span>Interactive and engaging — designed to feel personal and
+              fun</li>
           </ul>
 
           <div class="tech-tags">
@@ -1029,7 +1173,8 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/Saobia3i/my-cutie-mood-mirror" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/my-cutie-mood-mirror" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -1054,16 +1199,24 @@
           </p>
 
           <div class="highlight-panel">
-            <strong>4 Research Modes:</strong> Quick Research (fast structured output) · ReAct Agent (Thought→Action→Observation tool-using loop) · Team Research (LangGraph Planner→Researcher→Grader→Writer) · <strong>Deep Consensus</strong> (cost-aware multi-model cross-verification with disagreement mapping).
+            <strong>4 Research Modes:</strong> Quick Research (fast structured output) · ReAct Agent
+            (Thought→Action→Observation tool-using loop) · Team Research (LangGraph Planner→Researcher→Grader→Writer) ·
+            <strong>Deep Consensus</strong> (cost-aware multi-model cross-verification with disagreement mapping).
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Claim-level verification: strong / partial / weak / unsupported labels per claim</li>
-            <li><span class="material-icons">check_circle</span>Multi-model consensus: Gemini, Groq, OpenRouter compared side-by-side</li>
-            <li><span class="material-icons">check_circle</span>Model disagreement map — flags where providers conflict</li>
-            <li><span class="material-icons">check_circle</span>Live token &amp; cost tracking with stage-level prompt budgets</li>
-            <li><span class="material-icons">check_circle</span>Pinecone vector KB + DuckDuckGo web search tools for grounded retrieval</li>
-            <li><span class="material-icons">check_circle</span>Evidence deduplication, prompt compaction, early-stop provider routing</li>
+            <li><span class="material-icons">check_circle</span>Claim-level verification: strong / partial / weak /
+              unsupported labels per claim</li>
+            <li><span class="material-icons">check_circle</span>Multi-model consensus: Gemini, Groq, OpenRouter compared
+              side-by-side</li>
+            <li><span class="material-icons">check_circle</span>Model disagreement map — flags where providers conflict
+            </li>
+            <li><span class="material-icons">check_circle</span>Live token &amp; cost tracking with stage-level prompt
+              budgets</li>
+            <li><span class="material-icons">check_circle</span>Pinecone vector KB + DuckDuckGo web search tools for
+              grounded retrieval</li>
+            <li><span class="material-icons">check_circle</span>Evidence deduplication, prompt compaction, early-stop
+              provider routing</li>
           </ul>
 
           <div class="tech-tags">
@@ -1079,7 +1232,8 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/Saobia3i/researchMind" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/researchMind" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -1105,26 +1259,45 @@
 
           <div class="highlight-panel">
             <strong>Live:</strong>
-            <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer" style="color: var(--secondary)">wattwatch-f099.onrender.com</a>
+            <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer"
+              style="color: var(--secondary)">wattwatch-f099.onrender.com</a>
             &nbsp;|&nbsp;
-            <a href="https://watt-watch-chi.vercel.app" target="_blank" rel="noopener noreferrer" style="color: var(--secondary)">Vercel Mirror</a>
+            <a href="https://watt-watch-chi.vercel.app" target="_blank" rel="noopener noreferrer"
+              style="color: var(--secondary)">Vercel Mirror</a>
             &nbsp;|&nbsp; Discord Bot: <em>Smart Circuit Bot</em> (24/7 active)
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>2D interactive office floorplan — active lights glow, fans animate with CSS keyframes</li>
-            <li><span class="material-icons">check_circle</span>Live device control for 15 devices across 3 rooms, writing instantly to SQLite</li>
-            <li><span class="material-icons">check_circle</span>HTTP SSE (Server-Sent Events) stream pushes updates to web dashboard &amp; Discord bot instantly</li>
-            <li><span class="material-icons">check_circle</span>Gemini 2.5 Flash / Groq LLM translates raw telemetry into conversational office reports</li>
-            <li><span class="material-icons">check_circle</span>Discord commands: !status, !usage, !room, !occupants — all AI-powered</li>
-            <li><span class="material-icons">check_circle</span>ESP32 hardware path: ACS712 current sensors + 5-channel relay modules for physical deployment</li>
+            <li><span class="material-icons">check_circle</span>2D interactive office floorplan — active lights glow,
+              fans animate with CSS keyframes</li>
+            <li><span class="material-icons">check_circle</span>Live device control for 15 devices across 3 rooms,
+              writing instantly to SQLite</li>
+            <li><span class="material-icons">check_circle</span>HTTP SSE (Server-Sent Events) stream pushes updates to
+              web dashboard &amp; Discord bot instantly</li>
+            <li><span class="material-icons">check_circle</span>Gemini 2.5 Flash / Groq LLM translates raw telemetry
+              into conversational office reports</li>
+            <li><span class="material-icons">check_circle</span>Discord commands: !status, !usage, !room, !occupants —
+              all AI-powered</li>
+            <li><span class="material-icons">check_circle</span>ESP32 hardware path: ACS712 current sensors + 5-channel
+              relay modules for physical deployment</li>
           </ul>
 
           <div class="arch-steps">
-            <div class="arch-step"><div class="step-num">1</div><span>Python simulator / ESP32 chips push telemetry to Next.js API endpoints</span></div>
-            <div class="arch-step"><div class="step-num">2</div><span>API writes state updates to SQLite, triggering SSE broadcast</span></div>
-            <div class="arch-step"><div class="step-num">3</div><span>React dashboard + Discord bot receive real-time events simultaneously</span></div>
-            <div class="arch-step"><div class="step-num">4</div><span>LLM converts raw data → friendly conversational reports on demand</span></div>
+            <div class="arch-step">
+              <div class="step-num">1</div><span>Python simulator / ESP32 chips push telemetry to Next.js API
+                endpoints</span>
+            </div>
+            <div class="arch-step">
+              <div class="step-num">2</div><span>API writes state updates to SQLite, triggering SSE broadcast</span>
+            </div>
+            <div class="arch-step">
+              <div class="step-num">3</div><span>React dashboard + Discord bot receive real-time events
+                simultaneously</span>
+            </div>
+            <div class="arch-step">
+              <div class="step-num">4</div><span>LLM converts raw data → friendly conversational reports on
+                demand</span>
+            </div>
           </div>
 
           <div class="tech-tags">
@@ -1142,17 +1315,20 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://wattwatch-f099.onrender.com" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
-          <a href="https://github.com/Saobia3i/WattWatch" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/WattWatch" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT 6: Tensor Security Academy (TSA) ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 0ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 0ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1163,18 +1339,24 @@
           <p class="card-subtitle">Next.js · n8n Automation · PostgreSQL · Security Architecture</p>
 
           <p class="card-desc">
-            Official production web platform built for Tensor Security Academy, focusing on high-performance scalability, strong security practices, and reliable data management.
+            Official production web platform built for Tensor Security Academy, focusing on high-performance
+            scalability, strong security practices, and reliable data management.
           </p>
 
           <div class="highlight-panel">
-            <strong>Key Automation:</strong> Features n8n-powered service booking automation paired with PostgreSQL to handle customer registrations and schedule tasks securely and reliably.
+            <strong>Key Automation:</strong> Features n8n-powered service booking automation paired with PostgreSQL to
+            handle customer registrations and schedule tasks securely and reliably.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Independently built and maintained using Next.js with serverless API route endpoints</li>
-            <li><span class="material-icons">check_circle</span>n8n automation workflow orchestration for dynamic service booking and notifications</li>
-            <li><span class="material-icons">check_circle</span>PostgreSQL database implementation with optimized relational data integrity</li>
-            <li><span class="material-icons">check_circle</span>Secured forms and endpoints with production-ready best practices</li>
+            <li><span class="material-icons">check_circle</span>Independently built and maintained using Next.js with
+              serverless API route endpoints</li>
+            <li><span class="material-icons">check_circle</span>n8n automation workflow orchestration for dynamic
+              service booking and notifications</li>
+            <li><span class="material-icons">check_circle</span>PostgreSQL database implementation with optimized
+              relational data integrity</li>
+            <li><span class="material-icons">check_circle</span>Secured forms and endpoints with production-ready best
+              practices</li>
           </ul>
 
           <div class="tech-tags">
@@ -1187,17 +1369,20 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://www.tensorsecurityacademy.com/" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://www.tensorsecurityacademy.com/" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
-          <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/TSA1.1" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT 7: Arelix Labs ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 80ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 80ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1208,18 +1393,25 @@
           <p class="card-subtitle">Next.js 16 · Prisma ORM · PostgreSQL · Groq AI SDK · NextAuth · Tailwind CSS</p>
 
           <p class="card-desc">
-            Full-stack AI agency and software development platform. Engineered with Next.js App Router, Prisma ORM, PostgreSQL database layers, Groq AI SDK integrations, NextAuth authentication, and automated client service pipelines.
+            Full-stack AI agency and software development platform. Engineered with Next.js App Router, Prisma ORM,
+            PostgreSQL database layers, Groq AI SDK integrations, NextAuth authentication, and automated client service
+            pipelines.
           </p>
 
           <div class="highlight-panel">
-            <strong>Architecture Highlights:</strong> Built on modern Next.js App Router architecture, featuring automated data migrations with Prisma, secure authentication via NextAuth, and AI workflow orchestration.
+            <strong>Architecture Highlights:</strong> Built on modern Next.js App Router architecture, featuring
+            automated data migrations with Prisma, secure authentication via NextAuth, and AI workflow orchestration.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>Next.js App Router:</strong> Server components, server actions, and optimized route handlers.</li>
-            <li><span class="material-icons">check_circle</span><strong>Prisma + PostgreSQL:</strong> Type-safe database schema modeling, migrations, and relational queries.</li>
-            <li><span class="material-icons">check_circle</span><strong>Groq AI Integration:</strong> High-speed AI SDK pipelines for automated content generation and workflows.</li>
-            <li><span class="material-icons">check_circle</span><strong>NextAuth Security:</strong> Enterprise authentication and role-based access controls.</li>
+            <li><span class="material-icons">check_circle</span><strong>Next.js App Router:</strong> Server components,
+              server actions, and optimized route handlers.</li>
+            <li><span class="material-icons">check_circle</span><strong>Prisma + PostgreSQL:</strong> Type-safe database
+              schema modeling, migrations, and relational queries.</li>
+            <li><span class="material-icons">check_circle</span><strong>Groq AI Integration:</strong> High-speed AI SDK
+              pipelines for automated content generation and workflows.</li>
+            <li><span class="material-icons">check_circle</span><strong>NextAuth Security:</strong> Enterprise
+              authentication and role-based access controls.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1232,14 +1424,16 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/Saobia3i/Arelix-Labs" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/Arelix-Labs" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT: SSRN Transfer ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 100ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 100ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1250,17 +1444,23 @@
           <p class="card-subtitle">Jinja2 · HTML5 · CSS3 · JavaScript · Netlify</p>
 
           <p class="card-desc">
-            Project-based frontend development for SSRN Transfer, a US-based car rental platform. Built and maintained fast, responsive interface templates using Jinja2 to ensure consistent user experiences and seamless booking navigation.
+            Project-based frontend development for SSRN Transfer, a US-based car rental platform. Built and maintained
+            fast, responsive interface templates using Jinja2 to ensure consistent user experiences and seamless booking
+            navigation.
           </p>
 
           <div class="highlight-panel">
-            <strong>Client Work:</strong> Delivered custom frontend templates and layout components for a US-based client, optimized for mobile responsiveness and performance.
+            <strong>Client Work:</strong> Delivered custom frontend templates and layout components for a US-based
+            client, optimized for mobile responsiveness and performance.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>Jinja2 Templating:</strong> Dynamic server-rendered UI layout structures.</li>
-            <li><span class="material-icons">check_circle</span><strong>Responsive Design:</strong> Mobile-first UI layouts built for rental browsing.</li>
-            <li><span class="material-icons">check_circle</span><strong>Performance Optimized:</strong> Lightweight markup ensuring fast load times.</li>
+            <li><span class="material-icons">check_circle</span><strong>Jinja2 Templating:</strong> Dynamic
+              server-rendered UI layout structures.</li>
+            <li><span class="material-icons">check_circle</span><strong>Responsive Design:</strong> Mobile-first UI
+              layouts built for rental browsing.</li>
+            <li><span class="material-icons">check_circle</span><strong>Performance Optimized:</strong> Lightweight
+              markup ensuring fast load times.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1276,7 +1476,8 @@
       </article>
 
       <!-- ====== PROJECT 8: Linear AI ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 120ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 120ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1287,14 +1488,20 @@
           <p class="card-subtitle">React.js · ASP.NET Core Web API · n8n · Render</p>
 
           <p class="card-desc">
-            A full-stack automation commerce platform that facilitates product catalog browsing, admin-controlled discount offers, vouchers, order fulfillment, automated template delivery, product requests, and moderated user feedback.
+            A full-stack automation commerce platform that facilitates product catalog browsing, admin-controlled
+            discount offers, vouchers, order fulfillment, automated template delivery, product requests, and moderated
+            user feedback.
           </p>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>ASP.NET Core Web API backend orchestrating business operations, cart handling, and vouchers</li>
-            <li><span class="material-icons">check_circle</span>React frontend with clean, interactive state-driven interface elements</li>
-            <li><span class="material-icons">check_circle</span>n8n integration to automate the delivery of custom workflow templates to users</li>
-            <li><span class="material-icons">check_circle</span>Admin console allowing total control over products, user feedback approval, and orders</li>
+            <li><span class="material-icons">check_circle</span>ASP.NET Core Web API backend orchestrating business
+              operations, cart handling, and vouchers</li>
+            <li><span class="material-icons">check_circle</span>React frontend with clean, interactive state-driven
+              interface elements</li>
+            <li><span class="material-icons">check_circle</span>n8n integration to automate the delivery of custom
+              workflow templates to users</li>
+            <li><span class="material-icons">check_circle</span>Admin console allowing total control over products, user
+              feedback approval, and orders</li>
           </ul>
 
           <div class="tech-tags">
@@ -1307,17 +1514,20 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://linearai.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://linearai.onrender.com" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
-          <a href="https://github.com/Saobia3i/LinearAi_v1" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/LinearAi_v1" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT 8: AUST RC Website ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 160ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 160ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1328,19 +1538,28 @@
           <p class="card-subtitle">React · TypeScript · Vite · Firebase Suite</p>
 
           <p class="card-desc">
-            As the Director of the Web Team, I led and coordinated the development team while actively coding and engineering the official web portal for the AUST Robotics Club (AUSTRC). I personally designed and implemented the core interactive features, security rules, and real-time content updates.
+            As the Director of the Web Team, I led and coordinated the development team while actively coding and
+            engineering the official web portal for the AUST Robotics Club (AUSTRC). I personally designed and
+            implemented the core interactive features, security rules, and real-time content updates.
           </p>
 
           <div class="highlight-panel">
-            <strong>Key Features:</strong> Notice Board (searchable &amp; filterable announcements) · Comprehensive Events Tracker (workshop &amp; seminar records) · Educational Programs (learning directories &amp; skill courses) · Member Registrations &amp; Android App download link.
+            <strong>Key Features:</strong> Notice Board (searchable &amp; filterable announcements) · Comprehensive
+            Events Tracker (workshop &amp; seminar records) · Educational Programs (learning directories &amp; skill
+            courses) · Member Registrations &amp; Android App download link.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>Notice Board:</strong> Searchable &amp; filterable official club notices I coded and connected to Firestore.</li>
-            <li><span class="material-icons">check_circle</span><strong>Events Vault:</strong> Live documented archive mapping previous seminar and workshop photo layouts.</li>
-            <li><span class="material-icons">check_circle</span><strong>Research &amp; Projects Showroom:</strong> Showcase detailing member concept-to-prototype outcomes.</li>
-            <li><span class="material-icons">check_circle</span><strong>Governing Panel &amp; Hall of Fame:</strong> Interactive semester leaderboards and alumni archives.</li>
-            <li><span class="material-icons">check_circle</span><strong>Smart Admin Panel:</strong> Secure dashboard I implemented via Firebase Auth for real-time club management.</li>
+            <li><span class="material-icons">check_circle</span><strong>Notice Board:</strong> Searchable &amp;
+              filterable official club notices I coded and connected to Firestore.</li>
+            <li><span class="material-icons">check_circle</span><strong>Events Vault:</strong> Live documented archive
+              mapping previous seminar and workshop photo layouts.</li>
+            <li><span class="material-icons">check_circle</span><strong>Research &amp; Projects Showroom:</strong>
+              Showcase detailing member concept-to-prototype outcomes.</li>
+            <li><span class="material-icons">check_circle</span><strong>Governing Panel &amp; Hall of Fame:</strong>
+              Interactive semester leaderboards and alumni archives.</li>
+            <li><span class="material-icons">check_circle</span><strong>Smart Admin Panel:</strong> Secure dashboard I
+              implemented via Firebase Auth for real-time club management.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1360,7 +1579,8 @@
       </article>
 
       <!-- ====== NEW PROJECT: AUST Rover Challenge (ARC) Portal (powered by UCS) ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 200ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 200ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1371,25 +1591,39 @@
           <p class="card-subtitle">React · TypeScript · Node.js · Firebase · Tailwind CSS</p>
 
           <p class="card-desc">
-            The official national event management platform built for the prestigious AUST Rover Challenge (ARC) — a national championship encompassing LFR, Soccer Bot, Rover Run, and Hackathons. I served as Director of the Web Team and Lead Developer, managing the project lifecycle, directing the team, and personally coding critical systems driven by our custom Universal Competition System (UCS) engine.
+            The official national event management platform built for the prestigious AUST Rover Challenge (ARC) — a
+            national championship encompassing LFR, Soccer Bot, Rover Run, and Hackathons. I served as Director of the
+            Web Team and Lead Developer, managing the project lifecycle, directing the team, and personally coding
+            critical systems driven by our custom Universal Competition System (UCS) engine.
           </p>
 
-          <div class="highlight-panel" style="background: rgba(var(--primary-rgb), 0.04); border-color: var(--secondary)">
+          <div class="highlight-panel"
+            style="background: rgba(var(--primary-rgb), 0.04); border-color: var(--secondary)">
             <strong>Tech Specs (Robust Data Architecture):</strong>
-            Secure Admin Controls with granular permission systems · Scalable databases handling thousands of concurrent users · Real-time Synchronization across all portals · Automated workflows for registration and certification.
+            Secure Admin Controls with granular permission systems · Scalable databases handling thousands of concurrent
+            users · Real-time Synchronization across all portals · Automated workflows for registration and
+            certification.
           </div>
 
-          <div class="highlight-panel" style="background: rgba(var(--secondary-rgb), 0.05); border-color: rgba(var(--secondary-rgb), 0.3)">
+          <div class="highlight-panel"
+            style="background: rgba(var(--secondary-rgb), 0.05); border-color: rgba(var(--secondary-rgb), 0.3)">
             <strong>The Student Advantage:</strong>
-            🎓 <em>Instant Certification:</em> Get digital credentials the moment you win · 🏆 <em>Live Rankings:</em> Live national standings for competitors · 📚 <em>Resource Vault:</em> Premium robotics research and CAD models.
+            🎓 <em>Instant Certification:</em> Get digital credentials the moment you win · 🏆 <em>Live Rankings:</em>
+            Live national standings for competitors · 📚 <em>Resource Vault:</em> Premium robotics research and CAD
+            models.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>Live Analytics Dashboard:</strong> Real-time overview of registrations, active segments, and user trends.</li>
-            <li><span class="material-icons">check_circle</span><strong>Real-Time Leaderboard:</strong> Dynamic system ranking active teams automatically during matches.</li>
-            <li><span class="material-icons">check_circle</span><strong>Dynamic Segments:</strong> Hassle-free registration pipelines for LFR, Soccer Bot, Project Showcases, and Hackathons.</li>
-            <li><span class="material-icons">check_circle</span><strong>Automated Certificate Generation:</strong> Instant, verifiable digital certificates programmatically generated at runtime.</li>
-            <li><span class="material-icons">check_circle</span><strong>Admin Command Center:</strong> Secure management backend for real-time registrations and scoring updates.</li>
+            <li><span class="material-icons">check_circle</span><strong>Live Analytics Dashboard:</strong> Real-time
+              overview of registrations, active segments, and user trends.</li>
+            <li><span class="material-icons">check_circle</span><strong>Real-Time Leaderboard:</strong> Dynamic system
+              ranking active teams automatically during matches.</li>
+            <li><span class="material-icons">check_circle</span><strong>Dynamic Segments:</strong> Hassle-free
+              registration pipelines for LFR, Soccer Bot, Project Showcases, and Hackathons.</li>
+            <li><span class="material-icons">check_circle</span><strong>Automated Certificate Generation:</strong>
+              Instant, verifiable digital certificates programmatically generated at runtime.</li>
+            <li><span class="material-icons">check_circle</span><strong>Admin Command Center:</strong> Secure management
+              backend for real-time registrations and scoring updates.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1404,14 +1638,16 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://arc.austrc.com/aust-rover-challenge-2-0/" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT: AUSTCAIC Official Website ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 240ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 240ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1422,18 +1658,25 @@
           <p class="card-subtitle">Deployment · Debugging · Hosting · Web Infrastructure</p>
 
           <p class="card-desc">
-            Official website for the AUST Cybersecurity and AI Club (AUSTCAIC). As Joint Secretary, I spearheaded technical operations, managing end-to-end web deployment, server setup, live debugging, and cloud hosting infrastructure for austcaic.com.
+            Official website for the AUST Cybersecurity and AI Club (AUSTCAIC). As Joint Secretary, I spearheaded
+            technical operations, managing end-to-end web deployment, server setup, live debugging, and cloud hosting
+            infrastructure for austcaic.com.
           </p>
 
           <div class="highlight-panel">
-            <strong>Key Responsibilities:</strong> Primary focus on deployment pipelines, server hosting configurations, domain &amp; SSL setup, live environment debugging, and runtime performance optimization.
+            <strong>Key Responsibilities:</strong> Primary focus on deployment pipelines, server hosting configurations,
+            domain &amp; SSL setup, live environment debugging, and runtime performance optimization.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>Deployment Pipeline:</strong> Configured and executed production deployment routines for high reliability.</li>
-            <li><span class="material-icons">check_circle</span><strong>Hosting &amp; Server Setup:</strong> Managed DNS records, SSL certificates, and hosting environment configuration.</li>
-            <li><span class="material-icons">check_circle</span><strong>Live Debugging &amp; Maintenance:</strong> Diagnosed and fixed runtime script, routing, and styling issues across devices.</li>
-            <li><span class="material-icons">check_circle</span><strong>Performance &amp; Uptime:</strong> Monitored site speed, image optimization, and server uptime for the live club portal.</li>
+            <li><span class="material-icons">check_circle</span><strong>Deployment Pipeline:</strong> Configured and
+              executed production deployment routines for high reliability.</li>
+            <li><span class="material-icons">check_circle</span><strong>Hosting &amp; Server Setup:</strong> Managed DNS
+              records, SSL certificates, and hosting environment configuration.</li>
+            <li><span class="material-icons">check_circle</span><strong>Live Debugging &amp; Maintenance:</strong>
+              Diagnosed and fixed runtime script, routing, and styling issues across devices.</li>
+            <li><span class="material-icons">check_circle</span><strong>Performance &amp; Uptime:</strong> Monitored
+              site speed, image optimization, and server uptime for the live club portal.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1452,7 +1695,8 @@
       </article>
 
       <!-- ====== PROJECT: AUSTCAIC Poster Generator ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 280ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 280ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1460,23 +1704,37 @@
             Internal Graphics &amp; AI Tool
           </span>
           <h2 class="card-title">AUSTCAIC Poster Generator 🎨⚡</h2>
-          <p class="card-subtitle">Next.js 15 · React 19 · Satori + @resvg/resvg-js · Groq LLaMA 3.3 · Pinecone · Tailwind CSS v4</p>
+          <p class="card-subtitle">Next.js 15 · React 19 · Satori + @resvg/resvg-js · Groq LLaMA 3.3 · Pinecone ·
+            Tailwind CSS v4</p>
 
           <p class="card-desc">
-            Internal graphics web app engineered for the AUSTCAIC Graphics Team. Enables instant generation of 300 DPI print-ready PNG posters and social media banners adhering strictly to fixed brand guidelines — eliminating the need for design software. Powered by Satori &amp; resvg-js rendering engines and augmented with AI content assistance via Groq SDK and Pinecone.
+            Internal graphics web app engineered for the AUSTCAIC Graphics Team. Enables instant generation of 300 DPI
+            print-ready PNG posters and social media banners adhering strictly to fixed brand guidelines — eliminating
+            the need for design software. Powered by Satori &amp; resvg-js rendering engines and augmented with AI
+            content assistance via Groq SDK and Pinecone.
           </p>
 
           <div class="highlight-panel">
-            <strong>Core Automation &amp; AI:</strong> Features an AI Quick Notes assistant powered by Groq LLaMA 3.3 and Pinecone vector search that auto-generates headlines, subtitles, bullet lists, icon badges, and agenda tables directly from raw notes.
+            <strong>Core Automation &amp; AI:</strong> Features an AI Quick Notes assistant powered by Groq LLaMA 3.3
+            and Pinecone vector search that auto-generates headlines, subtitles, bullet lists, icon badges, and agenda
+            tables directly from raw notes.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>300 DPI Print-Ready PNG Exports:</strong> Generates high-resolution exports across standard presets (5x8 Poster, A4 Portrait, 5x2 Banner, FB/IG Post &amp; Story, or Custom dimensions).</li>
-            <li><span class="material-icons">check_circle</span><strong>Instant Live Preview:</strong> CSS-based live canvas rendering updates in real time with zero latency.</li>
-            <li><span class="material-icons">check_circle</span><strong>1000+ Searchable Lucide Badges:</strong> Search and place icons with custom canvas X/Y coordinates and scaling controls.</li>
-            <li><span class="material-icons">check_circle</span><strong>Dynamic Layout &amp; Reordering:</strong> Drag-and-drop or button reordering for text, tables, bullet lists, badges, QR codes, and framed images.</li>
-            <li><span class="material-icons">check_circle</span><strong>Interactive Table &amp; List Builders:</strong> Multi-column layouts, custom bullet icons, and event agenda tables with density auto-scaling.</li>
-            <li><span class="material-icons">check_circle</span><strong>Framed Image Uploads:</strong> Position images with Circle, Square, Rectangle, or Borderless frames using a 9-point alignment grid.</li>
+            <li><span class="material-icons">check_circle</span><strong>300 DPI Print-Ready PNG Exports:</strong>
+              Generates high-resolution exports across standard presets (5x8 Poster, A4 Portrait, 5x2 Banner, FB/IG Post
+              &amp; Story, or Custom dimensions).</li>
+            <li><span class="material-icons">check_circle</span><strong>Instant Live Preview:</strong> CSS-based live
+              canvas rendering updates in real time with zero latency.</li>
+            <li><span class="material-icons">check_circle</span><strong>1000+ Searchable Lucide Badges:</strong> Search
+              and place icons with custom canvas X/Y coordinates and scaling controls.</li>
+            <li><span class="material-icons">check_circle</span><strong>Dynamic Layout &amp; Reordering:</strong>
+              Drag-and-drop or button reordering for text, tables, bullet lists, badges, QR codes, and framed images.
+            </li>
+            <li><span class="material-icons">check_circle</span><strong>Interactive Table &amp; List Builders:</strong>
+              Multi-column layouts, custom bullet icons, and event agenda tables with density auto-scaling.</li>
+            <li><span class="material-icons">check_circle</span><strong>Framed Image Uploads:</strong> Position images
+              with Circle, Square, Rectangle, or Borderless frames using a 9-point alignment grid.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1494,7 +1752,8 @@
       </article>
 
       <!-- ====== NEW PROJECT: Lead Capture & AI-Qualification System ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 80ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 80ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1505,19 +1764,27 @@
           <p class="card-subtitle">n8n · Groq LLaMA 3.3 · HTML/CSS · Slack · Google Sheets · Gmail SMTP</p>
 
           <p class="card-desc">
-            Full-stack lead capture system with AI-powered qualification. Built responsive landing page integrated with n8n automation workflow featuring: webhook-triggered pipeline, Groq LLaMA 3.3 lead scoring (0-100, HOT/WARM/COLD classification), automated personalized email generation for qualified leads, Google Sheets CRM logging, and Slack real-time alerts. Deployed on Vercel.
+            Full-stack lead capture system with AI-powered qualification. Built responsive landing page integrated with
+            n8n automation workflow featuring: webhook-triggered pipeline, Groq LLaMA 3.3 lead scoring (0-100,
+            HOT/WARM/COLD classification), automated personalized email generation for qualified leads, Google Sheets
+            CRM logging, and Slack real-time alerts. Deployed on Vercel.
           </p>
 
           <div class="highlight-panel">
             <strong>AI Outreach &amp; Logging:</strong>
-            Eliminated manual lead qualification, achieving less than 1-minute response time for hot prospects using a 100% free tech stack.
+            Eliminated manual lead qualification, achieving less than 1-minute response time for hot prospects using a
+            100% free tech stack.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span><strong>Webhook Pipeline:</strong> n8n workflow triggered instantly upon landing page lead form submission.</li>
-            <li><span class="material-icons">check_circle</span><strong>Groq AI Scoring:</strong> Groq LLaMA 3.3 scores and classifies leads based on custom business criteria.</li>
-            <li><span class="material-icons">check_circle</span><strong>Personalized SMTP:</strong> Programmatically drafts and sends tailored follow-up emails to hot leads.</li>
-            <li><span class="material-icons">check_circle</span><strong>CRM Integration &amp; Alerts:</strong> Logs all data to Google Sheets CRM and alerts sales reps in real-time via Slack.</li>
+            <li><span class="material-icons">check_circle</span><strong>Webhook Pipeline:</strong> n8n workflow
+              triggered instantly upon landing page lead form submission.</li>
+            <li><span class="material-icons">check_circle</span><strong>Groq AI Scoring:</strong> Groq LLaMA 3.3 scores
+              and classifies leads based on custom business criteria.</li>
+            <li><span class="material-icons">check_circle</span><strong>Personalized SMTP:</strong> Programmatically
+              drafts and sends tailored follow-up emails to hot leads.</li>
+            <li><span class="material-icons">check_circle</span><strong>CRM Integration &amp; Alerts:</strong> Logs all
+              data to Google Sheets CRM and alerts sales reps in real-time via Slack.</li>
           </ul>
 
           <div class="tech-tags">
@@ -1532,14 +1799,16 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://lead-generation1.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://lead-generation1.vercel.app" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT 9: Robomania 2.0 ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 0ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 0ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1550,16 +1819,20 @@
           <p class="card-subtitle">React.js · Shadcn UI · Aceternity UI · Tailwind CSS</p>
 
           <p class="card-desc">
-            Sleek event website for the AUST Robotics Club flagship national robotics competition, showcasing event paths, registration dashboards, schedules, and team collaborations.
+            Sleek event website for the AUST Robotics Club flagship national robotics competition, showcasing event
+            paths, registration dashboards, schedules, and team collaborations.
           </p>
 
           <div class="highlight-panel">
-            <strong>Modern UI aesthetics:</strong> Built using React with Shadcn UI and Aceternity UI components to achieve a premium dark-themed layout, glowing grids, and micro-animations.
+            <strong>Modern UI aesthetics:</strong> Built using React with Shadcn UI and Aceternity UI components to
+            achieve a premium dark-themed layout, glowing grids, and micro-animations.
           </div>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Futuristic components featuring gradient text, motion reveals, and custom grids</li>
-            <li><span class="material-icons">check_circle</span>Seamless responsive layouts supporting high-traffic event access across devices</li>
+            <li><span class="material-icons">check_circle</span>Futuristic components featuring gradient text, motion
+              reveals, and custom grids</li>
+            <li><span class="material-icons">check_circle</span>Seamless responsive layouts supporting high-traffic
+              event access across devices</li>
             <li><span class="material-icons">check_circle</span>Interactive competition scheduling and rules viewer</li>
           </ul>
 
@@ -1572,10 +1845,12 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://www.robomania.austrc.com/" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://www.robomania.austrc.com/" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
-          <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/Robomania-2.0" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -1593,12 +1868,15 @@
           <p class="card-subtitle">React.js · Ant Design · Material UI (MUI)</p>
 
           <p class="card-desc">
-            A minimal, responsive quote generation application that fetches and delivers inspiring quotes, styled with sleek layout structures.
+            A minimal, responsive quote generation application that fetches and delivers inspiring quotes, styled with
+            sleek layout structures.
           </p>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Dynamic API fetches providing fresh quotes in real-time</li>
-            <li><span class="material-icons">check_circle</span>Clean, modern layout styled with UI packages (Ant Design &amp; Material UI)</li>
+            <li><span class="material-icons">check_circle</span>Dynamic API fetches providing fresh quotes in real-time
+            </li>
+            <li><span class="material-icons">check_circle</span>Clean, modern layout styled with UI packages (Ant Design
+              &amp; Material UI)</li>
             <li><span class="material-icons">check_circle</span>Fast, lightweight single-page application structure</li>
           </ul>
 
@@ -1611,17 +1889,20 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://quote-verse-psi.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://quote-verse-psi.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
-          <a href="https://github.com/Saobia3i/Quote-Verse" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/Quote-Verse" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT 11: iCanteen ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 160ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 160ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1632,13 +1913,17 @@
           <p class="card-subtitle">React.js · Laravel · MySQL · Tailwind CSS</p>
 
           <p class="card-desc">
-            Full-stack canteen management system streamlining food ordering, real-time queueing, digital menu management, and operations for students and canteen staff.
+            Full-stack canteen management system streamlining food ordering, real-time queueing, digital menu
+            management, and operations for students and canteen staff.
           </p>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Laravel PHP backend offering secure and robust API handling</li>
-            <li><span class="material-icons">check_circle</span>MySQL database mapping canteen inventory, orders, and authentication</li>
-            <li><span class="material-icons">check_circle</span>Responsive React layout optimized with Tailwind CSS and Ant Design elements</li>
+            <li><span class="material-icons">check_circle</span>Laravel PHP backend offering secure and robust API
+              handling</li>
+            <li><span class="material-icons">check_circle</span>MySQL database mapping canteen inventory, orders, and
+              authentication</li>
+            <li><span class="material-icons">check_circle</span>Responsive React layout optimized with Tailwind CSS and
+              Ant Design elements</li>
           </ul>
 
           <div class="tech-tags">
@@ -1651,10 +1936,12 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://i-canteen.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn btn-live">
+          <a href="https://i-canteen.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-live">
             <span class="material-icons" style="font-size:17px">visibility</span> Live Demo
           </a>
-          <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/iCanteen1" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -1672,13 +1959,16 @@
           <p class="card-subtitle">HTML5 · CSS3 · Vanilla JavaScript</p>
 
           <p class="card-desc">
-            A clean frontend development project illustrating custom responsive layout architectures, animations, and interactivity using only pure HTML, CSS, and Vanilla JS.
+            A clean frontend development project illustrating custom responsive layout architectures, animations, and
+            interactivity using only pure HTML, CSS, and Vanilla JS.
           </p>
 
           <ul class="feature-list">
             <li><span class="material-icons">check_circle</span>Fluid layouts styled without modern CSS frameworks</li>
-            <li><span class="material-icons">check_circle</span>Responsive grid configuration supporting multiple device screen viewports</li>
-            <li><span class="material-icons">check_circle</span>Simple DOM event handlers for navigation and state updates</li>
+            <li><span class="material-icons">check_circle</span>Responsive grid configuration supporting multiple device
+              screen viewports</li>
+            <li><span class="material-icons">check_circle</span>Simple DOM event handlers for navigation and state
+              updates</li>
           </ul>
 
           <div class="tech-tags">
@@ -1689,14 +1979,16 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/Saobia3i/cse-3100" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/Saobia3i/cse-3100" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
       </article>
 
       <!-- ====== PROJECT 13: Green Gadgets ====== -->
-      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack" style="--motion-delay: 80ms">
+      <article class="project-detail-card motion-reveal reveal-up" data-category="fullstack"
+        style="--motion-delay: 80ms">
         <div class="card-header-band"></div>
         <div class="card-body">
           <span class="project-badge badge-full">
@@ -1707,13 +1999,17 @@
           <p class="card-subtitle">MERN Stack (MongoDB, Express, React, Node.js)</p>
 
           <p class="card-desc">
-            Collaborative e-commerce portal showcasing eco-friendly gadgets, with shopping carts, search capabilities, and team coordination.
+            Collaborative e-commerce portal showcasing eco-friendly gadgets, with shopping carts, search capabilities,
+            and team coordination.
           </p>
 
           <ul class="feature-list">
-            <li><span class="material-icons">check_circle</span>Structured MERN platform built to handle catalog and shopping cart flows</li>
-            <li><span class="material-icons">check_circle</span>MongoDB integration holding relational-like schemas for green product details</li>
-            <li><span class="material-icons">check_circle</span>Collaborative development showcasing git branching strategies and workflows</li>
+            <li><span class="material-icons">check_circle</span>Structured MERN platform built to handle catalog and
+              shopping cart flows</li>
+            <li><span class="material-icons">check_circle</span>MongoDB integration holding relational-like schemas for
+              green product details</li>
+            <li><span class="material-icons">check_circle</span>Collaborative development showcasing git branching
+              strategies and workflows</li>
           </ul>
 
           <div class="tech-tags">
@@ -1726,7 +2022,8 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+          <a href="https://github.com/tahmidkhanshuvo/Green-Gadgets" target="_blank" rel="noopener noreferrer"
+            class="project-btn btn-github">
             <span class="material-icons" style="font-size:17px">code</span> GitHub
           </a>
         </div>
@@ -1743,7 +2040,7 @@
   <script>
     /* ===== THEME ===== */
     const themeSelect = document.getElementById("theme-select");
-    const savedTheme  = localStorage.getItem("portfolio-theme") || "dark";
+    const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
 
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
@@ -1779,7 +2076,7 @@
 
     /* ===== FILTER ===== */
     const filterBtns = document.querySelectorAll(".filter-btn");
-    const cards      = document.querySelectorAll(".project-detail-card");
+    const cards = document.querySelectorAll(".project-detail-card");
 
     filterBtns.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -1800,4 +2097,5 @@
     });
   </script>
 </body>
+
 </html>
