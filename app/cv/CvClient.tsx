@@ -453,11 +453,6 @@ export default function CvClient() {
                     </em>
                   </span>
                 </div>
-                <a href="https://ssrn-app.netlify.app/" target="_blank" rel="noopener noreferrer" className="contact-item item-date">
-                  Live Link
-                  {" "}
-                  <i className="fa-solid fa-up-right-from-square"></i>
-                </a>
               </div>
               <ul className="item-bullets">
                 <li>

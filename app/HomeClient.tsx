@@ -136,7 +136,7 @@ const PROJECTS: ProjectCardData[] = [
     description:
       "Project-based frontend development for SSRN Transfer, a US-based car rental platform. Engineered fast, clean, and responsive user interface templates using Jinja2, HTML5, CSS3, and JavaScript.",
     tags: ["Jinja2", "HTML5", "CSS3", "JavaScript", "Car Rental UI"],
-    links: [{ href: "https://ssrn-app.netlify.app/", label: "View Live", icon: "visibility", variant: "btn-live" }],
+    links: [],
   },
   {
     title: "AUST Robotics Club Website",
@@ -316,7 +316,6 @@ const EXPERIENCE: ExperienceEntry[] = [
     period: "2026 (Completed)",
     description:
       "Completed project-based frontend development for SSRN Transfer, a US-based car rental company. Building and maintaining interface templates using Jinja2 to deliver fast and consistent user experiences.",
-    projects: [{ href: "https://ssrn-app.netlify.app/", label: "SSRN Transfer Live" }],
   },
   {
     role: "Founding Panel Member & Joint Secretary",

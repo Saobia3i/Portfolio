@@ -496,9 +496,6 @@ export const PROJECTS: ProjectData[] = [
       </>,
     ],
     tags: ["Jinja2", "HTML5", "CSS3", "JavaScript", "Netlify"],
-    actions: [
-      { href: "https://ssrn-app.netlify.app/", label: "Live Demo", variant: "btn-live", icon: "live" },
-    ],
   },
   // ====== PROJECT 8: Linear AI ======
   {
